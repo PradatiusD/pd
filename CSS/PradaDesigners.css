@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {font-family: 'Bebas Neue';src: url('/CSS/BebasNeue.otf') format('opentype');}
+h1{font-family:'Bebas Neue'; font-weight:normal}
+body {margin: 0;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px;}
+.container{width:940px;margin-right: auto;margin-left: auto;*zoom: 1;}
+.span12 {width: 940px;}
+.span11 {width: 860px;}
+.span10 {width: 780px;}
+.span9 {width: 700px;}
+.span8 {width: 620px;}
+.span7 {width: 540px;}
+.span6 {width: 460px;}
+.span5 {width: 380px;}
+.span4 {width: 300px;}
+.span3 {width: 220px;}
+.span2 {width: 140px;}
+.span1 {width: 60px;}
+[class*="span"] {float: left; margin-left: 20px;}
+.logofont{font-family:'Bebas Neue'; font-size: 20px; margin-top: 5px; color:black}
+.logofont a{text-decoration:none; color:black}
+.logofont a:link,a:visited {color:black;text-decoration:none;}
+.logofont a:hover,a:active {color:#00b8ff;text-decoration:underline;}
+.row {margin-left: -20px;*zoom: 1;}
+.row:before,.row:after {display: table;content: "";line-height: 0;}
+.row:after {clear: both;}
+html {font-size: 100%;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display: block;}
+audio, canvas, video {display: inline-block; *display: inline; *zoom: 1;}
+p {margin: 0 0 9px;}
+#nav {width: 100%; float:left; height: 31px; background-color: #333; margin-bottom: 38px;  list-style: none; }
+#nav li {float:left; color:white;font-weight: bold;}
+#nav li a {display:block; padding: 8px 36px; text-decoration:none; color:white; font-size:17px; padding-bottom:5px}
+#nav li a:hover {text-decoration:none;background-color:orange; }
+.Servicesheader{font-family: 'Bebas Neue';
+font-weight: normal;
+font-size: 30px;}
+ul{list-style:none}
+/* 
+	LEVEL ONE
+*/
+ul.dropdown                         { position: relative; z-index:1000 }
+ul.dropdown li                      { float: left; zoom: 1;}
+ul.dropdown a:hover		            { color: #000; }
+ul.dropdown a:active                {}
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover, ul.dropdown li:hover { background: orange; position: relative; }
+ul.dropdown li.hover a              { color: black; }
+
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul 						{ width: 220px; visibility: hidden; position: absolute; top: 100%; left: 0; left: -40px; }
+ul.dropdown ul li 					{ font-weight: normal; background: #F93; color: white; 
+									  border-bottom: 1px solid #ccc; float: none; }
+									  
+                                    /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ border-right: none;width: 128px; display: inline-block; font-weight:normal} 
+
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+.main-box{border-style:solid;}
+form {margin: 0 0 18px;}
+label, input, button, select, textarea, legend {color: #333;}
+legend, label {text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3); color:black;}
+.btnwarning {  *zoom: 1;
+  padding: 4px 14px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 18px;
+  *line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #49afcd;
+  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+  border-color: #2f96b4 #2f96b4 #1f6377;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #2f96b4;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+.ContactBox{background-color:#f68728;  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color:#686563; box-shadow: 10px 10px 5px #888;}
+.ContactBox h2 {padding: 10px;color:white}
+.ContactForm{padding-left:3px; padding-right:3px; background-color:#535150;margin: 15px 35px 30px 35px;-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;}
+.ContactForm table {text-align:left;}
+.ContactForm table p {font-family: Arial, Helvetica, sans-serif; font-size: 14px; color:white}
+.ContactForm textarea{font-family: Arial, Helvetica, sans-serif;color:#999}
+.ContactForm input{font-family: Arial, Helvetica, sans-serif;}
+.NewsBox{background-color:#DDDADA;  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;}
+.NewsBox h2 {background-color:#ee8412; padding: 10px;color:#0B20BD}
+.NewsBox h3 {padding-left:10px}
+.NewsBox h4 {padding-left:10px}
+.NewsBox h5 {padding-left:10px}
+
+.NewsBox p{padding: 4px 17px 5px 15px; text-align:justify}
+.bottom{width: 100%; float:left; height: 31px; background-color: #333; margin-bottom: 38px;  list-style: none; color:white; margin-top: 16px}
+.bottom p {text-align:center; padding-top:6px}
+.portfoliosquare-header {color:black; font-family:'Bebas Neue'; font-size: 40px;
+line-height: 40px;margin-top:10px; border:thin #000 1px;}
+
+.img-polaroid {padding: 4px; background-color: #fff; border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);}
+.img-circle {-webkit-border-radius: 500px;-moz-border-radius: 500px;border-radius: 500px;}
+.Tabs{margin-top: 7px;text-align: justify;}
+html {font-size: 100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+
+/* Beginning of styling for our webpage*/
+
+body #slides { 
+	font:normal 62.5%/1.5 Helvetica, Arial, sans-serif;
+	letter-spacing:0;
+	color:#434343;
+	background:#efefef url(../Assets/Homepage-Slideshow/background.png) repeat top center;
+	padding:20px 0;
+	position:relative;
+	text-shadow:0 1px 0 rgba(255,255,255,.8);
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+#container {
+	width:580px;
+	padding:10px;
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+}
+
+#example {width:940px;height:250px;position:relative;margin-bottom:83px; left:45px}
+
+
+#frame {
+	position:absolute;
+	z-index:0;
+	width:930px;
+	height:240px;
+	top:-3px;
+	left:-80px;
+}
+
+/*
+	Slideshow
+*/
+
+#slides {
+	position:absolute;
+	top:15px;
+	left:4px;
+	z-index:100;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	width:930px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+.slides_container a {
+	width:930px;
+	height:240px;
+	display:block;
+}
+
+.slides_container a img {
+	display:block;
+}
+
+/*
+	Next/prev buttons
+*/
+
+#slides .next,#slides .prev {position:absolute;top:107px;left:-30px;width:24px;height:43px;display:block;z-index:101;}
+#slides .next {left:939px;}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	margin:26px auto 0;
+	width:100px;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../Assets/Homepage-Slideshow/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {background-position:0 -12px;}
+/*	Anchors*/
+a:link {color:#00b8ff;text-decoration:none;}
+a:hover,a:active {color:#00b8ff;text-decoration:underline;}
+.webshow{position:relative}
+.img-rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+a img {border:none}
+.socialmedia img:hover {opacity: 1;-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));-webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+-moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);}
+.socialmedia img {opacity: 0.8;-webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));}
