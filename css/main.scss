@@ -2,7 +2,10 @@
 
 @import "normalize.scss",
 "foundation.scss",
+"../plugins/css/_bookblock.scss",
+"../plugins/css/_demo1.scss",
 "bourbon/bourbon";
+
 
 @include font-face('Entypo', 'entypo/entypo');
 
