@@ -4599,7 +4599,7 @@ a.th {
 
 .bb-bookblock {
   width: 400px;
-  height: 300px;
+  height: 180px;
   margin: 0 auto;
   position: relative;
   z-index: 100;
@@ -4808,7 +4808,7 @@ a.th {
   height: 30px;
   text-align: center;
   border-radius: 2px;
-  background: #72b890;
+  background: #61868B;
   color: #fff;
   font-size: 0;
   margin: 2px; }

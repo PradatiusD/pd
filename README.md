@@ -6,8 +6,11 @@ The code for this project is intended as a starter template for mobile-first pro
 * Bourbon IO SASS mixin library (http://bourbon.io/docs/)
 * Entypo Pictogram suite with the social extension (http://entypo.com/)
 
+### Plugins I am using
+* Bookblock (http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/)
+
+
 ### Libraries that I would like to use
-* http://tympanus.net/codrops/licensing/
 * http://www.outyear.co.uk/smint/
 * http://jonobr1.github.io/diagonalFade/
 * http://jonobr1.github.io/two.js/#examples
