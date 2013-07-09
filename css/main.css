@@ -4867,7 +4867,7 @@ a.th {
 
 body, html {
   background-color: #010101;
-  background-image: url("../img/silly.png");
+  background-image: url("../img/silly.jpg");
   background-repeat: no-repeat;
   height: 100%; }
 
@@ -4887,7 +4887,7 @@ h2 {
   font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; }
 
 .circle {
-  background: rgba(241, 241, 239, 0.85);
+  background: #fcfae5;
   border-radius: 100%;
   margin: 1em auto;
   width: 300px;

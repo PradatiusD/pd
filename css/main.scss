@@ -20,7 +20,7 @@ $dark-blue:#69D2E7;
 
 body, html {
 	background-color:#010101;
-	background-image:url('../img/silly.png');
+	background-image:url('../img/silly.jpg');
 	background-repeat:no-repeat;
 	height:100%;
 }
@@ -45,7 +45,7 @@ h2 {
 }
 
 .circle {
-	background: $white;
+	background: rgb(252, 250, 229);
 	border-radius: 100%;
 	margin:1em auto;
 	width:300px;
