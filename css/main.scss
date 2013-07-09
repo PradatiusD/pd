@@ -13,14 +13,15 @@
 // Inspired by the http://www.colourlovers.com/palette/92095/Giant_Goldfish color scheme
 $dark-orange:#FA6900;
 $light-orange:#F38630;
-$white:#F1F1EE;
+$white:rgba(241, 241, 239, 0.85);
 $light-blue:#A7DBD8;
 $dark-blue:#69D2E7;
 
 
 body, html {
-	background-color:$dark-blue;
-	background-image:url('bg.png');
+	background-color:#010101;
+	background-image:url('../img/silly.png');
+	background-repeat:no-repeat;
 	height:100%;
 }
 

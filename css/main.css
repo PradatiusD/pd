@@ -4866,8 +4866,9 @@ a.th {
   src: url("entypo-social/entypo-social.eot?#iefix") format("embedded-opentype"), url("entypo-social/entypo-social.woff") format("woff"), url("entypo-social/entypo-social.ttf") format("truetype"), url("entypo-social/entypo-social.svg#Entypo-social") format("svg"); }
 
 body, html {
-  background-color: #69d2e7;
-  background-image: url("bg.png");
+  background-color: #010101;
+  background-image: url("../img/silly.png");
+  background-repeat: no-repeat;
   height: 100%; }
 
 .entypo {
@@ -4877,7 +4878,7 @@ body, html {
   font-family: 'Entypo-social'; }
 
 .entypo, .entypo-social {
-  color: #f1f1ee; }
+  color: rgba(241, 241, 239, 0.85); }
 
 h2 {
   color: #f38630;
@@ -4886,7 +4887,7 @@ h2 {
   font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; }
 
 .circle {
-  background: #f1f1ee;
+  background: rgba(241, 241, 239, 0.85);
   border-radius: 100%;
   margin: 1em auto;
   width: 300px;
@@ -4910,7 +4911,7 @@ h2 {
   text-align: center;
   font-size: 3em; }
   .social .entypo-social, .social .entypo {
-    color: #f1f1ee;
+    color: rgba(241, 241, 239, 0.85);
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s; }
@@ -4927,7 +4928,7 @@ h2 {
     height: 403px; }
 
 .welcome {
-  background: #f1f1ee;
+  background: rgba(241, 241, 239, 0.85);
   display: block;
   padding: 0.5em 1em; }
   .welcome h1 {
