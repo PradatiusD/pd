@@ -80,7 +80,7 @@
             })();
                    Page.init();
 
-// Code to cycle information with change of buttons
+// Cycle information with change of buttons
 jQuery(document).ready(function($){
     currentPage = 0;
     var portfolioDesc = $('.portfolio-desc article').length;
@@ -114,4 +114,30 @@ jQuery(document).ready(function($){
         fadez(currentPage);
     })
 
+})
+
+jQuery(document).ready(function($){
+    // Function which cycles through each page checking for the nested
+    // image height.  After adding it to an array, the function then gets
+    // the max value of the array and the sets the book to that height.
+    // This function is fired on DOM ready and on window.resize so that
+    // the bookblock best displays itself no matter how the user is
+    // seeing the function.
+
+    function fixBookblockHeight () {
+        $('.bb-custom-wrapper .bb-bookblock').height()
+        var bookImgHeight = [];
+        var bookPages = $('.bb-item').length - 1;
+        for (var i = 0; i < bookPages; i++) {
+            var pageImgHeight = $('.bb-item img').eq(i).height();
+            bookImgHeight.push(pageImgHeight);
+        };
+        var biggestImg = Math.max.apply(Math,bookImgHeight);
+        $('.bb-custom-wrapper .bb-bookblock').css('height',biggestImg);
+    }
+
+    fixBookblockHeight();
+    $(window).resize(function() {
+       fixBookblockHeight(); 
+    });
 })

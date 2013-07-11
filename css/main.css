@@ -4951,7 +4951,8 @@ h2 {
   margin: 0.5em auto;
   position: relative;
   top: 8px;
-  height: 403px; }
+  height: 403px;
+  overflow-y: scroll; }
   .portfolio-desc article h2 {
     font-size: 1.5em;
     font-weight: 200;
