@@ -12,15 +12,17 @@
 
 // Inspired by the http://www.colourlovers.com/palette/92095/Giant_Goldfish color scheme
 $dark-orange:#FA6900;
-$light-orange:#F38630;
-$white:rgba(241, 241, 239, 0.85);
+$light-orange:#F28232;
+$white:white;
 $light-blue:#A7DBD8;
 $dark-blue:#69D2E7;
 
 
 body, html {
 	background-color:#010101;
-	background-image:url('../img/silly.jpg');
+	@media only screen and (min-width:768px) {
+		background-image:url('../img/silly.jpg');
+	}
 	background-repeat:no-repeat;
 	height:100%;
 }
@@ -41,11 +43,12 @@ h2 {
 	color:$light-orange;
 	margin:1em 1em 0em 1em;
 	padding-bottom:0.5em;
-	font-family:$lucida-grande;
+	font-family:'Open Sans', $lucida-grande;
+	font-weight:200;
 }
 
 .circle {
-	background: rgb(252, 250, 229);
+	background: $white;
 	border-radius: 100%;
 	margin:1em auto;
 	width:300px;
@@ -92,24 +95,39 @@ h2 {
 }
 
 .welcome {
-	background: $white;
 	display: block;
 	padding: 0.5em 1em;
 
 	h1 {
-		font-family: $verdana;
-		font-weight:200;
+		font-family:'Open Sans',  $verdana;
+		font-weight:300;
 		color: #E97F1D;
 		border-bottom: 1px solid #FF7A00;
 		padding-bottom: 0.25em;
 		margin-bottom: 0.25em;
 		font-size:2em;
 	}
+	h2 {
+		font-family:'Open Sans',  $verdana;
+		font-weight: 300;
+		text-align: center;
+	}
+
 	p {
-		font-family: $helvetica;
+		font-family:'Open Sans',  $helvetica;
 		font-weight:300;
 		font-size:1.2em;
-		color:#066375;
+		color:$white;
+		span {
+			font-weight: 400;
+		}
+	}
+
+	p.center {
+		text-align: center;
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		padding: 1em;
 	}
 }
 
@@ -123,7 +141,7 @@ h2 {
 	overflow-y:scroll;
     h2 {
     	font-size: 1.5em;
-		font-weight: 200;
+		font-weight: 400;
 		margin: 0.75em 0 0 0;
 		padding: 0.25em .25em;
 		border-bottom: 1px solid #F38630;

@@ -4867,9 +4867,11 @@ a.th {
 
 body, html {
   background-color: #010101;
-  background-image: url("../img/silly.jpg");
   background-repeat: no-repeat;
   height: 100%; }
+  @media only screen and (min-width: 768px) {
+    body, html {
+      background-image: url("../img/silly.jpg"); } }
 
 .entypo {
   font-family: 'Entypo'; }
@@ -4878,16 +4880,17 @@ body, html {
   font-family: 'Entypo-social'; }
 
 .entypo, .entypo-social {
-  color: rgba(241, 241, 239, 0.85); }
+  color: white; }
 
 h2 {
-  color: #f38630;
+  color: #f28232;
   margin: 1em 1em 0em 1em;
   padding-bottom: 0.5em;
-  font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif; }
+  font-family: "Open Sans", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+  font-weight: 200; }
 
 .circle {
-  background: #fcfae5;
+  background: white;
   border-radius: 100%;
   margin: 1em auto;
   width: 300px;
@@ -4911,12 +4914,12 @@ h2 {
   text-align: center;
   font-size: 3em; }
   .social .entypo-social, .social .entypo {
-    color: rgba(241, 241, 239, 0.85);
+    color: white;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s; }
     .social .entypo-social:hover, .social .entypo:hover {
-      color: #f38630;
+      color: #f28232;
       font-size: 1.2em; }
 
 .bb-custom-wrapper {
@@ -4928,22 +4931,32 @@ h2 {
     height: 403px; }
 
 .welcome {
-  background: rgba(241, 241, 239, 0.85);
   display: block;
   padding: 0.5em 1em; }
   .welcome h1 {
-    font-family: Verdana, Geneva, sans-serif;
-    font-weight: 200;
+    font-family: "Open Sans", Verdana, Geneva, sans-serif;
+    font-weight: 300;
     color: #E97F1D;
     border-bottom: 1px solid #FF7A00;
     padding-bottom: 0.25em;
     margin-bottom: 0.25em;
     font-size: 2em; }
+  .welcome h2 {
+    font-family: "Open Sans", Verdana, Geneva, sans-serif;
+    font-weight: 300;
+    text-align: center; }
   .welcome p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.2em;
-    color: #066375; }
+    color: white; }
+    .welcome p span {
+      font-weight: 400; }
+  .welcome p.center {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1em; }
 
 .portfolio-desc article {
   background: white;
@@ -4955,7 +4968,7 @@ h2 {
   overflow-y: scroll; }
   .portfolio-desc article h2 {
     font-size: 1.5em;
-    font-weight: 200;
+    font-weight: 400;
     margin: 0.75em 0 0 0;
     padding: 0.25em .25em;
     border-bottom: 1px solid #F38630; }
