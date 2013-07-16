@@ -4889,22 +4889,35 @@ h2 {
   font-family: "Open Sans", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   font-weight: 200; }
 
-.circle {
-  background: white;
-  border-radius: 100%;
-  margin: 1em auto;
-  width: 300px;
-  text-align: center;
-  padding: 55px;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  transition: all 1s; }
-  .circle:hover {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg); }
+.logo {
+  position: relative;
+  width: 345px;
+  height: 345px;
+  display: block;
+  margin: 0 auto; }
+  .logo #canvas {
+    position: absolute;
+    left: 0px;
+    z-index: 0;
+    top: -22px; }
+  .logo .circle {
+    background: white;
+    border-radius: 100%;
+    margin: 1em auto;
+    width: 300px;
+    text-align: center;
+    padding: 55px;
+    position: relative;
+    z-index: 1000;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s; }
+    .logo .circle:hover {
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg); }
 
 .subheader {
   color: #69d2e7;

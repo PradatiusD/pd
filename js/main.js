@@ -140,4 +140,50 @@ jQuery(document).ready(function($){
     $(window).resize(function() {
        fixBookblockHeight(); 
     });
+
+    ///dad
+
+    var arcCanvasSize = 345;
+    $('#canvas').css({
+        'width':arcCanvasSize,
+        'height':arcCanvasSize
+    })
+    var archtype = Raphael("canvas", arcCanvasSize, arcCanvasSize);
+    archtype.customAttributes.arc = function (xloc, yloc, value, total, R) {
+        var alpha = 360 / total * value,
+            a = (90 - alpha) * Math.PI / 180,
+            x = xloc + R * Math.cos(a),
+            y = yloc - R * Math.sin(a),
+            path;
+        if (total == value) {
+            path = [
+                ["M", xloc, yloc - R],
+                ["A", R, R, 0, 1, 1, xloc - 0.01, yloc - R]
+            ];
+        } else {
+            path = [
+                ["M", xloc, yloc - R],
+                ["A", R, R, 0, +(alpha > 180), 1, x, y]
+            ];
+        }
+        return {
+            path: path
+        };
+    };
+
+    //make an centered arc with a radius of arcCanvasSize * 0.45 (because we have to account for the
+    //size of the circle stroke) that grows from 0 to 99.99% for 2000 seconds.
+
+    var my_arc = archtype.path().attr({
+        "stroke": "#ee8411",
+            "stroke-width": 4,
+        arc: [arcCanvasSize/2, arcCanvasSize/2, 0, 100, arcCanvasSize*0.45]
+    });
+
+    my_arc.animate({
+        arc: [arcCanvasSize/2, arcCanvasSize/2, 99.99, 100, arcCanvasSize*0.45]
+    }, 3000, function(){ 
+            $('#canvas').animate({'opacity': 0},1000)
+        }); 
+
 })

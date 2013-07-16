@@ -47,18 +47,34 @@ h2 {
 	font-weight:200;
 }
 
-.circle {
-	background: $white;
-	border-radius: 100%;
-	margin:1em auto;
-	width:300px;
-	text-align:center;
-	padding:55px;
-	@include transition (all 1s);
-	&:hover {
-		@include transform (rotate(180deg))
+.logo {
+	position:relative;
+	width: 345px;
+	height: 345px;
+	display: block;
+	margin: 0 auto;
+	#canvas {
+		position: absolute;
+        left: 0px;
+        z-index: 0;
+        top: -22px;
+	}
+	.circle {
+		background: $white;
+		border-radius: 100%;
+		margin:1em auto;
+		width:300px;
+		text-align:center;
+		padding:55px;
+		position:relative;
+		z-index:1000;
+		@include transition (all 1s);
+		&:hover {
+			@include transform (rotate(180deg))
+		}
 	}
 }
+
 
 .subheader {
 	color:$dark-blue;
