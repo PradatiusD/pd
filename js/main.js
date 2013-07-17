@@ -183,7 +183,10 @@ jQuery(document).ready(function($){
     my_arc.animate({
         arc: [arcCanvasSize/2, arcCanvasSize/2, 99.99, 100, arcCanvasSize*0.45]
     }, 3000, function(){ 
-            $('#canvas').animate({'opacity': 0},1000)
+            $('#canvas').animate({'opacity': 0},1000);
+            $('#postRaphaelmessage').animate({'opacity': 1},1000, function(){
+                $('#postRaphaelmessage').animate({'opacity': 0},3000)
+            });
         }); 
 
 })

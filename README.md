@@ -8,6 +8,9 @@ The code for this project is intended as a starter template for mobile-first pro
 
 ### Plugins I am using
 * Bookblock (http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/)
+* Super Scroll Orama http://johnpolacek.github.io/superscrollorama/
+* Tabulous.js http://git.aaronlumsden.com/tabulous.js/
+
 
 
 ### Libraries that I would like to use
@@ -15,7 +18,6 @@ The code for this project is intended as a starter template for mobile-first pro
 * http://jonobr1.github.io/diagonalFade/
 * http://jonobr1.github.io/two.js/#examples
 * http://labs.voronianski.com/jquery.avgrund.js/
-* http://johnpolacek.github.io/superscrollorama/
 * http://demo.tutorialzine.com/2011/09/shuffle-letters-effect-jquery/
 * http://www.turnjs.com/#
 * http://markdalgleish.com/projects/stellar.js/
