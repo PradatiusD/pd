@@ -4998,24 +4998,32 @@ h2 {
     font-size: 0.9em;
     margin: 0.8em 0; }
 
-#tabs, #tabs2, #tabs3, #tabs4, #tabs5 {
-  width: 500px;
+#tabs {
+  width: 666px;
   margin: 0 auto;
   margin-bottom: 40px; }
-
-#tabs li, #tabs2 li, #tabs3 li, #tabs4 li, #tabs5 li {
-  float: left;
-  margin-right: 2px; }
-
-#tabs li a, #tabs2 li a, #tabs3 li a, #tabs4 li a, #tabs5 li a {
-  display: block;
-  padding: 17px 30px;
-  background: #544f6b;
-  text-decoration: none;
-  color: #8478B3; }
-
-#tabs li a:hover, #tabs2 li a:hover, #tabs3 li a:hover, #tabs4 li a:hover, #tabs5 li a:hover {
-  background: #4e4a63; }
+  #tabs ul {
+    margin: 0 auto; }
+    #tabs ul li {
+      float: left;
+      margin-right: 2px;
+      list-style-type: none;
+      font-family: 'Open Sans';
+      font-weight: 200; }
+      #tabs ul li a {
+        display: block;
+        padding: 17px 30px;
+        background: #f28232;
+        text-decoration: none;
+        color: white; }
+        #tabs ul li a:hover {
+          background: white;
+          color: #fa6900; }
+  @media only screen and (max-width: 480px) {
+    #tabs {
+      width: 480px; }
+      #tabs ul li a {
+        padding: 13px; } }
 
 #tabs_container {
   padding: 40px;

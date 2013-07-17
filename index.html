@@ -113,6 +113,44 @@
         <div id="fade5">
             <section class="row">
                 <div class="small-12 large-8 large-centered columns welcome">
+                    <h2>What I offer</h2>
+                </div>
+            </section>
+            <section id="tabs" class="row">
+                <ul>
+                    <li><a href="#tabs-1" title="">Web Dev.</a></li>
+                    <li><a href="#tabs-2" title="">Branding</a></li>
+                    <li><a href="#tabs-3" title="">Design</a></li>
+                    <li><a href="#tabs-4">Strategy</a></li>
+                    <li><a href="#tabs-5" title="">Photography</a></li>
+                </ul>
+                <div id="tabs_container">
+                    <div id="tabs-1">
+                        <p>I build around your content, using WordPress.  I spend most of my time, creating, and/or customizing WordPress themes that display your content in the best light.  As a coder, I'm a big fan of SASS, Bourbon, jQuery, Raphael.js, Git, and Foundation, and have had experience working with platforms like Magento, BigCommerce and Prestashop. More importantly, I teach my family and clients technology all the time, and I work with you to ensure you can feel comfortable about understanding and managing your website.</p>
+                        <br><br><br><br>
+                    </div>
+                    <div id="tabs-2">
+                        <p>A logo to many is just a fancy picture to put on a website.  But in reality, brand identities are crucial visual cues of repeatable quality.  For example, would you buy a Macbook Pro on Amazon that, instead of an apple behind the screen, had a banana?  Would you eat a McDonalds burger on the other side of the world if it weren't wrapped, presented, and decorated as in your hometown?  No.  Why?  Because you associate those fonts, colors, and past experiences with those logos.  For this reason, I spend hours thoughtfully creating and building an identity that is both authentic and reasoned.</p>
+                        <br><br><br><br>
+                    </div>
+                    <div id="tabs-3">
+                        <p>When you hand out a business card, or present your company's vision on PowerPoint, you are selling an impression.  Too often I notice business owners share cards as if they were portable trash and not as if.  For this reason, each time I design and order to print a business card, I use only the highest quality cardstock to ensure that each card raises a pair of eyebrows.</p>
+                        <br><br><br><br>
+                    </div>
+                    <div id="tabs-4">
+                        <p>Clients come to me not because I am a designer or a developer, but because I am a consultant that can design and develop.  A total of 21 people and organizations--from a celebrity clarivoyant to nationally competitive start-ups in healthcare and construction industries--have entrusted me with communicating and displaying their marketing messaging in its most succinct, clear form.  While by no means I guarantee the perfect answers, I'll work with you to find the right questions to ask to push your pitch forward.</p>
+                        <br><br><br><br>
+                    </div>
+                    <div id="tabs-5">
+                        <p>Located in Pembroke Pines, my space has lighting equipment specially built for still product and portrait photography.</p>
+                        <br><br><br><br>
+                    </div>
+                </div>
+            </section>
+       </div>
+       <div id="fade6">
+            <section class="row">
+                <div class="small-12 large-8 large-centered columns welcome">
                     <h2>Let's talk</h2>
                     <p class="center">If you would like me to stop by your company and listen to your story, send me a quick e-mail to <a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :).">daniel@pradadesigners.com</a> and we'll start the conversation.</p>
                 </div>
@@ -134,31 +172,7 @@
         <br>
         <br>
         <br>
-            <div id="tabs">
-                <ul>
-                    <li><a href="#tabs-1" title="">Web Development</a></li>
-                    <li><a href="#tabs-2" title="">Branding</a></li>
-                    <li><a href="#tabs-3" title="">Marketing Materials</a></li>
-                    <li><a href="#tabs-4">Strategy</a></li>
-                    <li><a href="#tabs-5" title="">Studio Photography</a></li>
-                </ul>
-                <div id="tabs_container">
-                    <div id="tabs-1">
-                        <p>I build around your content, using WordPress.  I spend most of my time, creating, and/or customizing WordPress themes that display your content in the best light.  As a coder, I'm a big fan of SASS, Bourbon, jQuery, Raphael.js, Git, and Foundation, and have had experience working with platforms like Magento, BigCommerce and Prestashop. More importantly, I teach my family and clients technology all the time, and I work with you to ensure you can feel comfortable about understanding and managing your website.</p>
-                    </div>
-                    <div id="tabs-2">
-                        <p>A logo to many is just a fancy picture to put on a website.  But in reality, brand identities are crucial visual cues of repeatable quality.  For example, would you buy a Macbook Pro on Amazon that, instead of an apple behind the screen, had a banana?  Would you eat a McDonalds burger on the other side of the world if it weren't wrapped, presented, and decorated as in your hometown?  No.  Why?  Because you associate those logos, fonts, colors, images, and ideas with those logos.  For this reason, I spend hours thoughtfully creating and building an identity that is both authentic and reasoned.</p>
-                    </div>
-                    <div id="tabs-3">
-                        <p>When you hand out a business card, or present your company's vision on PowerPoint, you are selling an impression.  Too often I notice business owners share cards as if they were portable trash and not as if.  For this reason, each time I design and order to print a business card, I use only the highest quality cardstock to ensure that each card raises a pair of eyebrows.</p>
-                    </div>
-                    <div id="tabs-4">
-                        <p>Clients come to me not because I am a designer or a developer, but because I am a consultant that can design and develop.  A total of 21 people and organizations--from a celebrity clarivoyant to nationally competitive start-ups in healthcare and construction industries--have entrusted me with communicating and displaying their marketing messaging in its most succinct, clear form.  While by no means I guarantee the perfect answers, I'll work with you to find the right questions to ask to push your pitch forward.</p>
-                    </div>
-                    <div id="tabs-5">
-                        <p>Located in Pembroke Pines, my space has lighting equipment specially built for still product and portrait photography.</p>
-                    </div>
-                </div><!--End tabs container-->
+
         <br>
         <br>
 <script type="text/javascript" src="plugins/js/TweenMax.min.js"></script>
@@ -169,11 +183,12 @@
     $(document).ready(function() {
         var controller = $.superscrollorama();
         // individual element tween examples
-        // controller.addTween('#fade1', TweenMax.from( $('#fade1'), .5, {css:{opacity: 0}}));
+        
         controller.addTween('#fade2', TweenMax.from( $('#fade2'), .5, {css:{opacity: 0}}));
         controller.addTween('#fade3', TweenMax.from( $('#fade3'), .5, {css:{opacity: 0}}));
         controller.addTween('#fade4', TweenMax.from( $('#fade4'), .5, {css:{opacity: 0}}));
         controller.addTween('#fade5', TweenMax.from( $('#fade5'), .5, {css:{opacity: 0}}));
+        controller.addTween('#fade6', TweenMax.from( $('#fade6'), .5, {css:{opacity: 0}}));
 
         $('#tabs').tabulous({
             effect: 'flip'

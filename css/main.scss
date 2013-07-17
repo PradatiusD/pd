@@ -178,29 +178,42 @@ h2 {
     }
 }
 
+
 // For Tabulous
 
-#tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
-	width: 500px;
+#tabs {
+	width: 666px;
+
 	margin: 0 auto;
 	margin-bottom: 40px;
+	ul {
+		margin:0 auto;
+		li {
+			float: left;
+			margin-right: 2px;
+			list-style-type:none;
+			font-family: 'Open Sans';
+			font-weight: 200;
+			a {
+				display: block;
+				padding: 17px 30px;
+				background: $light-orange;
+				text-decoration: none;
+				color: $white;
+				&:hover {
+					background:$white;
+					color:$dark-orange;
+				}
+			}
+		}		
+	}
+// Meda query for #tabs
+@media only screen and (max-width:480px) {
+	width:480px;
+	ul li a {
+		padding:13px;
+	}
 }
-
-#tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li {
-	float: left;
-	margin-right: 2px;
-}
-
-#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
-	display: block;
-	padding: 17px 30px;
-	background: #544f6b;
-	text-decoration: none;
-	color: #8478B3;
-}
-
-#tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
-	background: rgb(78, 74, 99);
 }
 
 #tabs_container {
