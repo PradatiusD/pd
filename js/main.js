@@ -80,68 +80,9 @@
             })();
                    Page.init();
 
-// Cycle information with change of buttons
-jQuery(document).ready(function($){
-    currentPage = 0;
-    var portfolioDesc = $('.portfolio-desc article').length;
-    function fadez (showSelector) {
-        $('.portfolio-desc article').hide();
-        $('.portfolio-desc article').eq(showSelector).fadeIn('slow');
-    }
 
-    $('#bb-nav-next').click(function(){
-        if (currentPage < portfolioDesc-1) {
-            currentPage++;
-            fadez(currentPage);
-            //  console.log('Current page is '+currentPage)
-        }
-    })
-
-    $('#bb-nav-prev').click(function(){
-        if (currentPage > 0) {
-            currentPage--;
-            fadez(currentPage);
-        }
-    })
-
-    $('#bb-nav-first').click(function(){
-            currentPage=0;
-            fadez(currentPage);            
-    })
-
-    $('#bb-nav-last').click(function(){
-        currentPage=portfolioDesc-1;
-        fadez(currentPage);
-    })
-
-})
 
 jQuery(document).ready(function($){
-    // Function which cycles through each page checking for the nested
-    // image height.  After adding it to an array, the function then gets
-    // the max value of the array and the sets the book to that height.
-    // This function is fired on DOM ready and on window.resize so that
-    // the bookblock best displays itself no matter how the user is
-    // seeing the function.
-
-    function fixBookblockHeight () {
-        $('.bb-custom-wrapper .bb-bookblock').height()
-        var bookImgHeight = [];
-        var bookPages = $('.bb-item').length - 1;
-        for (var i = 0; i < bookPages; i++) {
-            var pageImgHeight = $('.bb-item img').eq(i).height();
-            bookImgHeight.push(pageImgHeight);
-        };
-        var biggestImg = Math.max.apply(Math,bookImgHeight);
-        $('.bb-custom-wrapper .bb-bookblock').css('height',biggestImg);
-    }
-
-    fixBookblockHeight();
-    $(window).resize(function() {
-       fixBookblockHeight(); 
-    });
-
-    ///dad
 
     var arcCanvasSize = 345;
     $('#canvas').css({
@@ -188,5 +129,72 @@ jQuery(document).ready(function($){
                 $('#postRaphaelmessage').animate({'opacity': 0},3000)
             });
         }); 
+
+    // Function which cycles through each page checking for the nested
+    // image height.  After adding it to an array, the function then gets
+    // the max value of the array and the sets the book to that height.
+    // This function is fired on DOM ready and on window.resize so that
+    // the bookblock best displays itself no matter how the user is
+    // seeing the function.
+    var Bookblockcall = 0;
+    function fixBookblockHeight () {
+        var bookImgHeight = [];
+        var bookPages = $('.bb-item').length - 1;
+        for (var i = 0; i < bookPages; i++) {
+            var pageImgHeight = $('.bb-item img').eq(i).height();
+            bookImgHeight.push(pageImgHeight);
+        };
+        var biggestImg = Math.max.apply(Math,bookImgHeight);
+        $('.bb-custom-wrapper .bb-bookblock').css('height',biggestImg);
+    }
+
+    fixBookblockHeight();
+    $(window).resize(function() {
+       fixBookblockHeight(); 
+    });
+
+    ///Check after 1.5 second if everything is right 
+    setTimeout(function(){
+        var BookblockHeight = $('.bb-custom-wrapper .bb-bookblock').height();
+        console.log('Bookblock height is '+BookblockHeight+"px and this is call "+Bookblockcall+" of the fixBookblockHeight function");
+        Bookblockcall++
+        // Fix if images haven't loaded quickly enough
+        if (BookblockHeight===0) {
+            fixBookblockHeight();
+        }
+    },1500)
+
+    // Cycle Bookblock pages with change of buttons
+    currentPage = 0;
+    var portfolioDesc = $('.portfolio-desc article').length;
+    function fadez (showSelector) {
+        $('.portfolio-desc article').hide();
+        $('.portfolio-desc article').eq(showSelector).fadeIn('slow');
+    }
+
+    $('#bb-nav-next').click(function(){
+        if (currentPage < portfolioDesc-1) {
+            currentPage++;
+            fadez(currentPage);
+            //  console.log('Current page is '+currentPage)
+        }
+    })
+
+    $('#bb-nav-prev').click(function(){
+        if (currentPage > 0) {
+            currentPage--;
+            fadez(currentPage);
+        }
+    })
+
+    $('#bb-nav-first').click(function(){
+            currentPage=0;
+            fadez(currentPage);            
+    })
+
+    $('#bb-nav-last').click(function(){
+        currentPage=portfolioDesc-1;
+        fadez(currentPage);
+    })
 
 })
