@@ -4889,6 +4889,11 @@ h2 {
   font-family: "Open Sans", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   font-weight: 200; }
 
+h6 {
+  color: #3D3A3A; }
+  h6 a {
+    color: rgba(250, 105, 0, 0.55); }
+
 .logo {
   position: relative;
   width: 345px;
@@ -4977,8 +4982,7 @@ h2 {
   margin: 0.5em auto;
   position: relative;
   top: 8px;
-  height: 403px;
-  overflow-y: scroll; }
+  height: 403px; }
   .portfolio-desc article h2 {
     font-size: 1.5em;
     font-weight: 400;

@@ -48,6 +48,13 @@ h2 {
 	font-weight:200;
 }
 
+h6 {
+	color: #3D3A3A;
+	a {
+		color:rgba(250, 105, 0, 0.55);
+	}
+}
+
 .logo {
 	position:relative;
 	width: 345px;
@@ -155,7 +162,6 @@ h2 {
     position: relative;
 	top: 8px;
 	height:403px;
-	overflow-y:scroll;
     h2 {
     	font-size: 1.5em;
 		font-weight: 400;
