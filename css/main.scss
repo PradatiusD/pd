@@ -185,6 +185,51 @@ h6 {
     }
 }
 
+// For Raphael circles
+
+.slide-decks {
+	article {
+		position:relative;
+		display: block;
+
+		strong, p, b {
+			position:absolute;
+			top: 0;
+			left:0;
+			text-align: center;
+			z-index:1000;
+			opacity: 0;
+		}
+
+		b {
+			font-weight: 200;
+			font-size: 2em;
+			text-align: center;
+			display: block;
+			width: 100%;
+			top: 25%;
+			color:#F0F0F0;
+		}
+
+		p {
+			top: 40%;
+			width: 60%;
+			margin: 0 20%;
+			a {
+				color:rgba(240, 240, 240, 0.86);
+			}
+		}
+
+	span {
+			svg {
+				display:block;
+				margin: 0 auto;
+				position:relative;
+			}
+		}
+	}
+}
+
 
 // For Tabulous
 
