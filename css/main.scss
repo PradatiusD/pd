@@ -201,7 +201,7 @@ h6 {
 			top: 0;
 			left:0;
 			text-align: center;
-			z-index:1000;
+			z-index:50;
 			opacity: 0;
 		}
 
@@ -225,7 +225,7 @@ h6 {
 			display: block;
 			top: 0;
 			left: 0;
-			z-index: 2000;
+			z-index: 70;
 			opacity: 0;
 			@include transition (0.5s);
 			&:hover {
@@ -250,7 +250,7 @@ h6 {
 			top: 9%;
 			left: 0;
 			width: 100%;
-			z-index: 1000;
+			z-index: 50;
 			font-size: 9em;
 		}
 
@@ -261,6 +261,24 @@ h6 {
 				position:relative;
 			}
 		}
+	}
+}
+
+// Reveal modal
+
+.reveal-modal {
+	h2 {
+		margin-left:0;
+		margin-bottom:0;
+		padding-bottom:0;
+	}
+	p.subheader {
+		border-left: 10px solid #69D2E7;
+		text-align: left;
+		padding-left: 1em;
+		margin-left: 1em;
+		font-size: 1.5em;
+		color: #5F5F5F;
 	}
 }
 
