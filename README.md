@@ -12,6 +12,8 @@ The code for this project is intended as a starter template for mobile-first pro
 * Tabulous.js http://git.aaronlumsden.com/tabulous.js/
 
 
+### Licensing
+Please respect the licenses of the individual plugins and frameworks utilized in this project.
 
 ### Libraries that I would like to use
 * http://www.outyear.co.uk/smint/

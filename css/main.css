@@ -5004,7 +5004,10 @@ h6 {
 
 .slide-decks article {
   position: relative;
-  display: block; }
+  display: block;
+  width: 300px;
+  height: 250px;
+  margin: 0.5em auto; }
   .slide-decks article strong, .slide-decks article p, .slide-decks article b {
     position: absolute;
     top: 0;
@@ -5018,14 +5021,40 @@ h6 {
     text-align: center;
     display: block;
     width: 100%;
-    top: 25%;
-    color: #F0F0F0; }
+    top: 54%;
+    color: #F0F0F0;
+    font-family: 'Open Sans Condensed', sans-serif; }
+  .slide-decks article a.overlay {
+    background: rgba(0, 0, 0, 0.52);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s; }
+    .slide-decks article a.overlay:hover {
+      opacity: 1; }
   .slide-decks article p {
-    top: 40%;
+    top: 37%;
     width: 60%;
     margin: 0 20%; }
     .slide-decks article p a {
       color: rgba(240, 240, 240, 0.86); }
+  .slide-decks article span.entypo {
+    color: #FFF;
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 9%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 9em; }
   .slide-decks article span svg {
     display: block;
     margin: 0 auto;

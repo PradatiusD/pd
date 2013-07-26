@@ -12,7 +12,7 @@
         <meta name="author" content="http://twitter.com/PradaDesigners">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400italic|Open+Sans:400,800,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/main.css">
         <script src="plugins/js/modernizr.custom.js"></script>
     </head>
@@ -34,6 +34,10 @@
             <span class="welcome" id="fade2">
                 <h1>PRADA DESIGNERS</h1>
                 <p>A boutique design & development consultancy that prides itself in making its clients <span>happy</span>.</p>
+                <br>
+                <br>
+                <br>
+                <br>
             </span>
         </section>
         <div id="fade3">
@@ -131,13 +135,15 @@
             <section class="row">
                 <div class="small-12 large-8 large-centered columns welcome">
                     <h2>Custom Presentations</h2>
+                    <p class="center">Each presentation below involved not only designing, but crafting and compressing the messaging to a point where it could be told visually.</p>
                 </div>
             </section>
            <section class="row slide-decks">
                 <div class="large-4 small-12 columns">
                     <article>
                         <b>ScholarSort</b>
-                        <p>This <a target="_blank" href="assets/ScholarSort.pptx">presentation</a> helped us clutch 1st place at Start up Weekend Orlando EDU.</p>
+                        <a target="_blank" href="assets/ScholarSort.pptx" class="overlay"></a>
+                        <span class="entypo">&#127891;</span>
                         <span id="canvas1">
                         </span>
                     </article>
@@ -145,7 +151,8 @@
                 <div class="large-4 small-12 columns">
                     <article>
                         <b>WHS</b>
-                        <p>A rich <a target="_blank" href="assets/WHS.pptx">visual explanation</a> of this breakthrough construction technology.</p>
+                        <a class="overlay" target="_blank" href="assets/WHS.pptx"></a>
+                        <span class="entypo">&#127758;</span>
                         <span id="canvas2">
                         </span>
                     </article>
@@ -153,7 +160,8 @@
                 <div class="large-4 small-12 columns">
                     <article>
                         <b>Coachify</b>
-                        <p><a target="_blank" href="assets/coachify-brochure.pdf">Brochure</a> for Healthcare based Start-up.</p>
+                        <a class="overlay" target="_blank" href="assets/coachify-brochure.pdf"></a>
+                        <span class="entypo">&#128227;</span>
                         <span id="canvas3">
                         </span>
                     </article>
@@ -238,6 +246,12 @@
 <script src="plugins/js/jquery.superscrollorama.js"></script>
 <script>
     $(document).ready(function() {
+
+        // Define circles globally so that they can be edited
+        var circle1;
+        var circle2;
+        var circle3;
+
         var controller = $.superscrollorama();
         // individual element tween examples
         
@@ -263,16 +277,23 @@
                                         },1000, ">");
                     }
 
-                    stretchCircle(250, 'canvas1');
-                    stretchCircle(250, 'canvas2');
-                    stretchCircle(250, 'canvas3');
+                    setTimeout(function(){
+                        stretchCircle(250, 'canvas1', 'circle1');
+                        },0)
+                    setTimeout(function(){
+                        stretchCircle(250, 'canvas2', 'circle2');
+                        },125)
+                    setTimeout(function(){
+                        stretchCircle(250, 'canvas3', 'circle3');
+                        },250)
 
-                    $('.slide-decks article b, .slide-decks article p').animate({'opacity':1}, 500);
+                    $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':1}, 500);
 
                 },
                 onReverseComplete: function () {
                     $('#canvas1, #canvas2, #canvas3').empty();
-                    $('.slide-decks article b, .slide-decks article p').animate({'opacity':0}, 500);
+
+                    $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':0}, 500);
                 },
 
                 onComplete: function(){
