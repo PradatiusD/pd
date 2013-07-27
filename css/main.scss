@@ -95,10 +95,14 @@ h6 {
 	font-size:3em;
 	.entypo-social, .entypo {
 		color:$white;
+		width: 47px;
+		margin: 0;
+		display: inline-block;
+		border-radius: 100em;
+
 		@include transition (all 0.5s);
 		&:hover {
-			color:$light-orange;
-			font-size:1.2em;
+			background:$light-orange;
 		}		
 	}
 
@@ -264,7 +268,7 @@ h6 {
 	}
 }
 
-// Reveal modal
+// Reveal modal for custom presentations option
 
 .reveal-modal {
 	h2 {
@@ -275,10 +279,23 @@ h6 {
 	p.subheader {
 		border-left: 10px solid #69D2E7;
 		text-align: left;
-		padding-left: 1em;
-		margin-left: 1em;
-		font-size: 1.5em;
+		padding-left: 0.5em;
+		margin-left: 0.5em;
+		font-size: 1.3em;
 		color: #5F5F5F;
+	}
+
+	a.button {
+		font-family: 'Open Sans', $helvetica;
+		font-weight: 200;
+		span.entypo {
+			font-size: 31px;
+			padding: 0;
+			margin: 0;
+			position: relative;
+			right: 5px;
+			top: 2px;
+		}
 	}
 }
 
@@ -311,25 +328,39 @@ h6 {
 			}
 		}		
 	}
-// Meda query for #tabs
-@media only screen and (max-width:480px) {
-	width:480px;
-	ul li a {
-		padding:13px;
+
+	#tabs_container {
+		padding: 40px;
+		overflow: hidden;
+		position: relative;
+		background: white;
+		div {
+			margin-right: 40px;
+		}
+	}
+// Media query for #tabs on mobile browsers
+	@media only screen and (min-width:481px) and (max-width:652px) {
+		width:480px;
+		ul li a {
+			padding:13px;
+		}
+	}
+	@media only screen and (max-width:480px) {
+		width: 90%;
+		margin: 0 auto;
+		ul li a {
+			padding: 1em 0.5em;
+			font-size: 0.8em;
+			margin: 0;
+		}
+		#tabs_container {
+			font-size: 0.9em;
+			#tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5 {
+			}
+		}
 	}
 }
-}
 
-#tabs_container {
-	padding: 40px;
-	overflow: hidden;
-	position: relative;
-	background: white;
-}
-
-#tabs_container div {
-	margin-right: 40px;
-}
 
 .transition {
 	-webkit-transition: all .3s ease-in-out;

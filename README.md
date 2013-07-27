@@ -1,15 +1,19 @@
+![Logo](/img/pd-logo.png "Logo")
 # Prada Designers Website
 
-The code for this project is intended as a starter template for mobile-first projects, using the frameworks which I find to be the more time consuming to set up but by far the most useful in the long run.  Here are some of the files included in this project.
-* Foundation Front-end Framework (http://foundation.zurb.com/docs/)
-	* Using the SCSS standalone branch (https://github.com/zurb/foundation/tree/scss-standalone)
-* Bourbon IO SASS mixin library (http://bourbon.io/docs/)
-* Entypo Pictogram suite with the social extension (http://entypo.com/)
+This was originally meant as a starter template for mobile-first projects, using the frameworks which I find to be the more time consuming to set up but by far the most useful in the long run.  Now it's just turned to the source code of my site.
 
-### Plugins I am using
-* Bookblock (http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/)
-* Super Scroll Orama http://johnpolacek.github.io/superscrollorama/
-* Tabulous.js http://git.aaronlumsden.com/tabulous.js/
+### SASS/SCSS/Custom fonts utilized
+__If you would like to get these four tools without any other additions (besides jQuery, Zepto, and, Modernizr), just use the [first version](https://github.com/PradatiusD/pd/tree/v0.1) of this project.
+* [Foundation's Front-end Framework](http://foundation.zurb.com/docs/)
+	* Using the [SCSS standalone branch](https://github.com/zurb/foundation/tree/scss-standalone)
+* [Bourbon.io](http://bourbon.io/docs/) SASS mixin library
+* [Entypo Pictogram suite](http://entypo.com/) with the social extension 
+
+###Javascript & jQuery Plugins utilized
+* [Bookblock](http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/)
+* [Super Scroll Orama](http://johnpolacek.github.io/superscrollorama/)
+* [Tabulous.js](http://git.aaronlumsden.com/tabulous.js/)
 
 
 ### Licensing
