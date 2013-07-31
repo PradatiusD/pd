@@ -4937,11 +4937,31 @@ h6 {
     margin: 0;
     display: inline-block;
     border-radius: 100em;
+    position: relative;
+    top: 0;
+    left: 0;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s; }
     .social .entypo-social:hover, .social .entypo:hover {
-      background: #f28232; }
+      background: #f28232;
+      opacity: 1; }
+      .social .entypo-social:hover span.friend-count, .social .entypo:hover span.friend-count {
+        opacity: 1; }
+    .social .entypo-social span.friend-count, .social .entypo span.friend-count {
+      font-family: 'Open Sans';
+      background: white;
+      color: orange;
+      border-radius: 10em;
+      font-size: 11px;
+      padding: 4px;
+      opacity: 0;
+      position: absolute;
+      right: 0px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+      top: 29px; }
 
 .bb-custom-wrapper {
   margin-top: 1em;

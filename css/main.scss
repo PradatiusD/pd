@@ -99,10 +99,29 @@ h6 {
 		margin: 0;
 		display: inline-block;
 		border-radius: 100em;
-
+		position:relative;
+		top:0;
+		left:0;
 		@include transition (all 0.5s);
 		&:hover {
 			background:$light-orange;
+			opacity:1;
+			span.friend-count {
+				opacity:1;
+			}
+		}
+		span.friend-count {
+		    font-family: 'Open Sans';
+		    background: white;
+		    color: orange;
+		    border-radius: 10em;
+		    font-size: 11px;
+		    padding: 4px;
+		    opacity:0;
+		    position:absolute;
+		    right:0px;
+			@include transition (all 0.5s);
+			top:29px;
 		}		
 	}
 

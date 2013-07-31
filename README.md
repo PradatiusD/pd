@@ -1,6 +1,6 @@
 ![Logo](/img/pd-logo.png "Logo")
 # Prada Designers Website
-
+=======
 This was originally meant as a starter template for mobile-first projects, using the frameworks which I find to be the more time consuming to set up but by far the most useful in the long run.  Now it's just turned to the source code of my site.
 
 ### SASS/SCSS/Custom fonts utilized

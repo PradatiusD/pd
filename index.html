@@ -215,7 +215,7 @@
             </section>
             <section class="row">
                 <div class="social small-12 columns">
-                    <a target="_blank" href="https://github.com/PradatiusD" class="entypo-social">&#62208;</a><a target="_blank" href="http://twitter.com/PradaDesigners" class="entypo-social">&#62217;</a><a target="_blank" href="https://www.facebook.com/PradaDesigners" class="entypo-social">&#62220;</a><a target="_blank" href="http://pinterest.com/PradaDesigners" class="entypo-social">&#62226;</a><a target="_blank" href="http://www.linkedin.com/company/prada-designers" class="entypo-social">&#62232;</a><a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)." class="entypo">&#9993;</a>   
+                    <a target="_blank" href="https://github.com/PradatiusD" class="entypo-social">&#62208;<span class="friend-count friend-github"></span></a><a target="_blank" href="http://twitter.com/PradaDesigners" class="entypo-social">&#62217;<span class="friend-count friend-twitter"></span></a><a target="_blank" href="https://www.facebook.com/PradaDesigners" class="entypo-social">&#62220;<span class="friend-count friend-facebook"></span></a><a target="_blank" href="http://pinterest.com/PradaDesigners" class="entypo-social">&#62226;</a><a target="_blank" href="http://www.linkedin.com/company/prada-designers" class="entypo-social">&#62232;</a><a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)." class="entypo">&#9993;</a>   
                 </div>
             </section>
         </div>
@@ -249,7 +249,7 @@
     <div id="whs" class="reveal-modal medium">
         <h2>World Housing Solution</h2>
         <p class="subheader">Showcasing technology visually</p>
-        <p>In this project I broke down the numerous benefits of this company's flagship building technology and rebuilt a <strong>visually compelling presentation based on easily digestible.</strong></p>
+        <p>In this project I broke down the numerous benefits of this company's flagship building technology and rebuilt a <strong>visually compelling presentation based on easily digestible components.</strong></p>
         <a target="_blank" href="assets/WHS.pptx" class="button"><span class="entypo">&#128229;</span> Download the file!</a>
         <h4><small><u>Note:</u> The file size of this PPT is 31.5MB.</small></h4>
         <a class="close-reveal-modal">&#215;</a>
@@ -297,13 +297,13 @@
                     }
 
                     setTimeout(function(){
-                        stretchCircle(250, 'canvas1', 'circle1');
+                        stretchCircle(250, 'canvas1');
                         },0)
                     setTimeout(function(){
-                        stretchCircle(250, 'canvas2', 'circle2');
+                        stretchCircle(250, 'canvas2');
                         },125)
                     setTimeout(function(){
-                        stretchCircle(250, 'canvas3', 'circle3');
+                        stretchCircle(250, 'canvas3');
                         },250)
 
                     $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':1}, 500);
@@ -337,6 +337,44 @@
 <script src="js/foundation/foundation.reveal.js"></script>
 <script>
     $(document).foundation();
+</script>
+<script>
+    jQuery(document).ready(function($){
+        // Get follower counts via JSONP for Facebook, Twitter, and GitHub
+
+        $.ajax({
+            url: 'https://graph.facebook.com/https://www.facebook.com/PradaDesigners',
+            dataType: 'jsonp',
+            jsonp: 'callback',
+        }).done(function (information) {
+                $('.friend-facebook').text(information.likes);
+            })
+
+        $.ajax({
+            url: 'https://twitter.com/users/PradaDesigners.json',
+            dataType: 'jsonp',
+            jsonp: 'callback',
+        }).done(function (information) {
+                $('.friend-twitter').text(information.followers_count);
+            })
+
+        $.ajax({
+            url: 'https://api.github.com/users/PradatiusD',
+            dataType: 'jsonp',
+            jsonp: 'callback',
+        }).done(function (information) {
+                $('.friend-github').text(information.data.followers);
+            })
+        // If any of these spans remain empty after 1.5 seconds, remove them from the DOM
+        setTimeout(function(){
+            $('.friend-count').each(function(i, obj){
+                var countText = $(this).text();
+                if (countText === '') {
+                    $(this).remove();
+                }
+            })
+        },1500)
+    })
 </script>
 <script type="text/javascript">
 
