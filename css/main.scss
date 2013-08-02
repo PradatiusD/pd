@@ -93,7 +93,7 @@ h6 {
 .social {
 	text-align: center;
 	font-size:3em;
-	.entypo-social, .entypo {
+	.entypo-social, .entypo, i {
 		color:$white;
 		width: 47px;
 		margin: 0;
@@ -109,21 +109,28 @@ h6 {
 			span.friend-count {
 				opacity:1;
 			}
-		}
-		span.friend-count {
-		    font-family: 'Open Sans';
-		    background: white;
-		    color: orange;
-		    border-radius: 10em;
-		    font-size: 11px;
-		    padding: 4px;
-		    opacity:0;
-		    position:absolute;
-		    right:0px;
-			@include transition (all 0.5s);
-			top:29px;
-		}		
+		}	
 	}
+	span.friend-count {
+	    font-family: 'Open Sans';
+	    background: white;
+	    color: orange;
+	    border-radius: 10em;
+	    font-size: 11px;
+	    padding: 4px;
+	    opacity:0;
+	    position:absolute;
+	    right:0px;
+		@include transition (all 0.5s);
+		top:29px;
+	}
+	i {
+		font-size:0.6em;
+		padding:0.25em;
+		span {
+			display: none;
+		}
+	}	
 
 }
 
@@ -218,6 +225,16 @@ h6 {
 		height: 250px;
 		margin: 0.5em auto;
 
+		i {
+			color: #FFF;
+			position: absolute;
+			font-size: 4.5em;
+			z-index: 50;
+			top: 24%;
+			left: 38%;
+			margin: 0 auto;
+			display: none;
+		}
 
 		strong, p, b {
 			position:absolute;

@@ -13,6 +13,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         <script src="plugins/js/modernizr.custom.js"></script>
     </head>
@@ -142,6 +143,7 @@
                 <div class="large-4 small-12 columns">
                     <article>
                         <b>ScholarSort</b>
+                        <i class="icon-book"></i>
                         <a class="overlay" data-reveal-id="scholarsort"></a>
                         <span class="entypo">&#127891;</span>
                         <span id="canvas1">
@@ -151,6 +153,7 @@
                 <div class="large-4 small-12 columns">
                     <article>
                         <b>WHS</b>
+                        <i class="icon-home"></i>
                         <a class="overlay" data-reveal-id="whs"></a>
                         <span class="entypo">&#127758;</span>
                         <span id="canvas2">
@@ -160,6 +163,7 @@
                 <div class="large-4 small-12 columns">
                     <article>
                         <b>Coachify</b>
+                        <i class="icon-trophy"></i>
                         <a class="overlay" data-reveal-id="coachify"></a>
                         <span class="entypo">&#128227;</span>
                         <span id="canvas3">
@@ -215,7 +219,10 @@
             </section>
             <section class="row">
                 <div class="social small-12 columns">
-                    <a target="_blank" href="https://github.com/PradatiusD" class="entypo-social">&#62208;<span class="friend-count friend-github"></span></a><a target="_blank" href="http://twitter.com/PradaDesigners" class="entypo-social">&#62217;<span class="friend-count friend-twitter"></span></a><a target="_blank" href="https://www.facebook.com/PradaDesigners" class="entypo-social">&#62220;<span class="friend-count friend-facebook"></span></a><a target="_blank" href="http://pinterest.com/PradaDesigners" class="entypo-social">&#62226;</a><a target="_blank" href="http://www.linkedin.com/company/prada-designers" class="entypo-social">&#62232;</a><a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)." class="entypo">&#9993;</a>   
+                    <a target="_blank" href="https://github.com/PradatiusD" class="entypo-social">&#62208;<span class="friend-count friend-github"></span></a><a target="_blank" href="http://twitter.com/PradaDesigners" class="entypo-social">&#62217;<span class="friend-count friend-twitter"></span></a><a target="_blank" href="https://www.facebook.com/PradaDesigners" class="entypo-social">&#62220;<span class="friend-count friend-facebook"></span></a><a target="_blank" href="http://pinterest.com/PradaDesigners" class="entypo-social">&#62226;</a><a target="_blank" href="http://www.linkedin.com/company/prada-designers" class="entypo-social">&#62232;</a><a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)." class="entypo">&#9993;</a>
+                </div>
+                <div class="social font-awesome small-12 columns">
+                    <a target="_blank" href="https://github.com/PradatiusD"><i class="icon-github-alt"></i><span class="friend-count friend-github"></span></a><a target="_blank" href="http://twitter.com/PradaDesigners"><i class="icon-twitter"></i><span class="friend-count friend-twitter"></span></a><a target="_blank" href="https://www.facebook.com/PradaDesigners"><i class="icon-facebook"></i><span class="friend-count friend-facebook"></span></a><a target="_blank" href="http://pinterest.com/PradaDesigners"><i class="icon-pinterest"></i></a><a target="_blank" href="http://www.linkedin.com/company/prada-designers"><i class="icon-linkedin"></i></a><a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)."><i class="icon-envelope"></i></a>
                 </div>
             </section>
         </div>
@@ -223,6 +230,7 @@
         <br>
         <br>
         <br>
+
         <br>
         <br>
         <br>
@@ -259,8 +267,6 @@
         <h2>Coachify</h2>
         <p class="subheader">Making corporate wellness fun(ny)!</p>
         <p>Corporate wellness has not won awards for being sexy as an industry, so my challenge was to design a light-hearted story that follows a <strong>real use case, and concludes with a concise summary</strong> of all the advantages this platform offers to coachees interested in personal improvement.</p>
-        <a class="button" target="_blank" href="assets/coachify-brochure.pdf"><span class="entypo">&#128229;</span> Download the file!</a>
-        <h4><small><u>Note:</u> The file size of this PDF is 1.8MB.</small></h4>
         <a class="close-reveal-modal">&#215;</a>
     </div>
 
@@ -374,6 +380,12 @@
                 }
             })
         },1500)
+
+        // Also for contact icons make sure you hide entypo if its windows and show alternate
+        if (navigator.appVersion.indexOf("Windows")!=-1){
+            $('.social, article .entypo').hide();
+            $('.social.font-awesome, article i').show();
+        }
     })
 </script>
 <script type="text/javascript">

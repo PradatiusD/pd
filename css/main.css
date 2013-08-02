@@ -4931,7 +4931,7 @@ h6 {
 .social {
   text-align: center;
   font-size: 3em; }
-  .social .entypo-social, .social .entypo {
+  .social .entypo-social, .social .entypo, .social i {
     color: white;
     width: 47px;
     margin: 0;
@@ -4943,25 +4943,30 @@ h6 {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s; }
-    .social .entypo-social:hover, .social .entypo:hover {
+    .social .entypo-social:hover, .social .entypo:hover, .social i:hover {
       background: #f28232;
       opacity: 1; }
-      .social .entypo-social:hover span.friend-count, .social .entypo:hover span.friend-count {
+      .social .entypo-social:hover span.friend-count, .social .entypo:hover span.friend-count, .social i:hover span.friend-count {
         opacity: 1; }
-    .social .entypo-social span.friend-count, .social .entypo span.friend-count {
-      font-family: 'Open Sans';
-      background: white;
-      color: orange;
-      border-radius: 10em;
-      font-size: 11px;
-      padding: 4px;
-      opacity: 0;
-      position: absolute;
-      right: 0px;
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      transition: all 0.5s;
-      top: 29px; }
+  .social span.friend-count {
+    font-family: 'Open Sans';
+    background: white;
+    color: orange;
+    border-radius: 10em;
+    font-size: 11px;
+    padding: 4px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    top: 29px; }
+  .social i {
+    font-size: 0.6em;
+    padding: 0.25em; }
+    .social i span {
+      display: none; }
 
 .bb-custom-wrapper {
   margin-top: 1em;
@@ -5031,6 +5036,15 @@ h6 {
   width: 300px;
   height: 250px;
   margin: 0.5em auto; }
+  .slide-decks article i {
+    color: #FFF;
+    position: absolute;
+    font-size: 4.5em;
+    z-index: 50;
+    top: 24%;
+    left: 38%;
+    margin: 0 auto;
+    display: none; }
   .slide-decks article strong, .slide-decks article p, .slide-decks article b {
     position: absolute;
     top: 0;

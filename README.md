@@ -1,14 +1,15 @@
 ![Logo](/img/pd-logo.png "Logo")
 # Prada Designers Website
-=======
+===
 This was originally meant as a starter template for mobile-first projects, using the frameworks which I find to be the more time consuming to set up but by far the most useful in the long run.  Now it's just turned to the source code of my site.
 
 ### SASS/SCSS/Custom fonts utilized
-__If you would like to get these four tools without any other additions (besides jQuery, Zepto, and, Modernizr), just use the [first version](https://github.com/PradatiusD/pd/tree/v0.1) of this project.
+**If you would like to get these four tools without any other additions** (besides jQuery, Zepto, and, Modernizr), just use the [first version](https://github.com/PradatiusD/pd/tree/v0.1) of this project.
 * [Foundation's Front-end Framework](http://foundation.zurb.com/docs/)
 	* Using the [SCSS standalone branch](https://github.com/zurb/foundation/tree/scss-standalone)
 * [Bourbon.io](http://bourbon.io/docs/) SASS mixin library
-* [Entypo Pictogram suite](http://entypo.com/) with the social extension 
+* [Entypo Pictogram suite](http://entypo.com/) with the social extension. *A major issue* with using version 2.0 or less (they are still currently working on a ew set) is that Windows and Mac display this custom font way differently, and the social extension simply does not show at all.
+* FontAwesome 
 
 ###Javascript & jQuery Plugins utilized
 * [Bookblock](http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/)
