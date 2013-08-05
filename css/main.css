@@ -4968,6 +4968,9 @@ h6 {
     .social i span {
       display: none; }
 
+.social.font-awesome {
+  display: none; }
+
 .bb-custom-wrapper {
   margin-top: 1em;
   width: 100%;
