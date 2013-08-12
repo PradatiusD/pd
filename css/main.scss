@@ -21,7 +21,7 @@ $dark-blue:#69D2E7;
 body, html {
 	background-color:#010101;
 	@media only screen and (min-width:768px) {
-		background-image:url('../img/serious.png');
+		// background-image:url('../img/serious.png');
 
 	}
 	background-repeat:no-repeat;
@@ -88,7 +88,25 @@ h6 {
 	color:$dark-blue;
 	text-align:center;
 }
+.white-bg {
+	background:white;
+}
 
+.letterwall {
+	color: #3D3C3C;
+	font-family: 'Lato';
+	text-transform: uppercase;
+	font-size: 2em;
+	font-weight: 300;
+	line-height: 1.1em;
+	text-align: justify;
+	border-top: 2px solid #3D3C3C;
+	padding: 13px 18px;
+	border-bottom: 1px solid #3D3C3C;
+	span {
+		color:#3d3c3c;
+	}
+}
 
 .social {
 	text-align: center;

@@ -15,6 +15,7 @@ This was originally meant as a starter template for mobile-first projects, using
 * [Bookblock](http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/)
 * [Super Scroll Orama](http://johnpolacek.github.io/superscrollorama/)
 * [Tabulous.js](http://git.aaronlumsden.com/tabulous.js/)
+* jQuery UI
 
 
 ### Licensing
