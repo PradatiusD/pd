@@ -4931,6 +4931,27 @@ h6 {
   background: url("paper.jpg");
   background-size: 100%; }
 
+#fade4 {
+  opacity: 1;
+  background: url("paper.jpg");
+  background-size: 100%;
+  padding: 3em;
+  margin: 3em 0 0em;
+  border-top: 4px #808080 solid;
+  border-bottom: 4px #808080 solid; }
+
+.servicesTitle h2 {
+  background: rgba(126, 9, 9, 0.84);
+  padding: 1em;
+  color: #FFF;
+  font-size: 2em;
+  font-family: 'Open Sans Condensed';
+  text-align: center;
+  margin-bottom: 1em;
+  position: relative;
+  bottom: 84px;
+  left: 49px; }
+
 .letterwall {
   position: relative;
   top: 0;
@@ -5075,6 +5096,9 @@ h6 {
     font-size: 0.9em;
     margin: 0.8em 0; }
 
+#fade2 {
+  background: url("pw_maze_black.png"); }
+
 .slide-decks article {
   position: relative;
   display: block;
@@ -5179,9 +5203,9 @@ h6 {
       #tabs ul li a {
         display: block;
         padding: 17px 30px;
-        background: #f28232;
+        background: #383D39;
         text-decoration: none;
-        color: white; }
+        color: #CC0; }
         #tabs ul li a:hover {
           background: white;
           color: #fa6900; }
