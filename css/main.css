@@ -4896,7 +4896,7 @@ h6 {
   width: 345px;
   height: 345px;
   display: block;
-  margin: 0 auto; }
+  margin: 2em auto 0; }
   .logo #canvas {
     position: absolute;
     left: 0px;
@@ -4925,7 +4925,8 @@ h6 {
   font-family: 'Lato';
   font-size: 2.3em;
   text-align: center;
-  color: #464646; }
+  color: #464646;
+  font-weight: 200; }
   #postRaphaelmessage h1 span {
     color: #ADADAD;
     text-transform: uppercase;
@@ -4947,16 +4948,16 @@ h6 {
   background: url("black_lozenge.png"); }
 
 .servicesTitle h2 {
-  background: rgba(126, 9, 9, 0.84);
+  background: rgba(48, 48, 48, 0.84);
   padding: 1em;
   color: #FFF;
   font-size: 2em;
-  font-family: 'Open Sans Condensed';
   text-align: center;
   margin-bottom: 1em;
   position: relative;
   bottom: 84px;
-  left: 49px; }
+  left: 49px;
+  font-family: 'Lato'; }
 
 .letterwall {
   position: relative;
@@ -5198,9 +5199,12 @@ h6 {
     padding: 40px;
     overflow: hidden;
     position: relative;
-    background: white; }
+    background: #383D39; }
     #tabs #tabs_container div {
       margin-right: 40px; }
+      #tabs #tabs_container div p {
+        color: #7E7E7B;
+        font-weight: 200; }
   @media only screen and (min-width: 481px) and (max-width: 652px) {
     #tabs {
       width: 480px; }
