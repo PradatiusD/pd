@@ -84,6 +84,8 @@
 
 jQuery(document).ready(function($){
 
+    // FOR RAPHAEL CIRCLE BEHIND LOGO ON PAGE LOAD 
+
     var arcCanvasSize = 345;
     $('#canvas').css({
         'width':arcCanvasSize,
@@ -112,8 +114,9 @@ jQuery(document).ready(function($){
         };
     };
 
-    //make an centered arc with a radius of arcCanvasSize * 0.45 (because we have to account for the
-    //size of the circle stroke) that grows from 0 to 99.99% for 2000 seconds.
+    //make an centered arc with a radius of arcCanvasSize * 0.45 (because we 
+    // have to account for the size of the circle stroke) that grows
+    // from 0 to 99.99% for 2000 seconds.
 
     var my_arc = archtype.path().attr({
         "stroke": "#cccc00",
@@ -124,9 +127,21 @@ jQuery(document).ready(function($){
     my_arc.animate({
         arc: [arcCanvasSize/2, arcCanvasSize/2, 99.99, 100, arcCanvasSize*0.45]
     }, 3000, function(){ 
-            $('#canvas').animate({'opacity': 0},1000);
-            $('#postRaphaelmessage').animate({'opacity': 1},1000, function(){
-                $('#postRaphaelmessage').animate({'opacity': 0},3000)
+    
+    // Trigger set of fades directly after Raphael animation
+
+            $('#canvas').animate({'opacity': 0},1000, function() {
+                $('#postRaphaelmessage').animate({'opacity': 1},1000, function(){
+                    $('#postRaphaelmessage span').animate({'opacity': 1},1000, function () {
+
+                   var cycledObject = $('#canvas, i.icon-angle-down');
+                    function cycleOpacity() {
+                        cycledObject.animate({opacity:'+=1'}, 3000);
+                        cycledObject.animate({opacity:'-=1'}, 3000, cycleOpacity);
+                    }
+                           cycleOpacity();
+                    });
+                });                
             });
         }); 
 
