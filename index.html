@@ -22,30 +22,28 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
     <section class="row">
-        <div class="small-12 columns large-6 large-offset-6">
+        <div class="small-12 columns large-4 large-offset-4">
             <div class="logo">
                 <div id="canvas" style=""></div>
                 <div class="circle" style="">
                     <a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)."><img src="img/pd-logo.png" alt="Prada Designers Logo"></a>      
                 </div>
-                <span id="postRaphaelmessage" class="welcome" style="opacity:0">
-                    <p >Welcome. Scroll down to learn more.</p>
-                </span>
             </div>
         </div>
+        <div class="large-4 columns">
+            <span id="postRaphaelmessage" class="welcome" style="opacity:0">
+                    <p >Welcome to Prada Designers. Scroll down to learn more.</p>
+            </span>
+        </div>
+                        
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="white-bg">
-        <section  id="fade1">
-                <div >
-                    <p class="letterwall">We are art that talks business.  Don't doubt it.  Luck is the residue of design.  We are ludicrously good looking.  We are humble.  We are <span class="brighten">Prada Designers</span>, not the Prada Purse company franchise. Key lime pie is objectively orgasmic.  Great design is about empathy towards the consumer.  Ballet dancing <span class="brighten">is a design & development consultancy that prides</span> itself in obliterating its enemies. Frisbee should be an olympic sport.  He blurted incoherently, "<span class="brighten">itself in making its</span>".  Running out of thoughtful things to say. I'm making my<span class="brighten"> clients happy</span> by working on this website (as opposed to theirs, right?).</p>             
-                </div>
-        </section>
-    </div>
+    <section  id="fade1">
+            <div  class="letterwall">
+                <p>We are <span class="redden">art</span> that talks <span class="redden">business</span>.  Don't doubt it.  <span class="redden">Luck</span> is the residue of <span class="redden">design</span>.  We are ludicrously <span class="redden">good-looking</span>.  We are <span class="redden">humble</span>.  We are <span class="yellowen">Prada Designers</span>, not the Italian Prada Purse <span class="redden">company</span> franchise. Key lime pie is objectively <span class="redden">orgasmic</span>.  Great <span class="redden">design</span> is about <span class="redden">empathy</span> towards the <span class="redden">consumer</span>.  <span class="redden">Modern</span> Flamenco dancing <span class="yellowen">is a design & development consultancy that prides</span> itself in obliterating its enemies. Frisbee should be an olympic sport.  He blurted incoherently as if trying to fit a phrase into a larger <span class="redden">poetic</span> form, "<span class="yellowen">itself in making its</span>".  Running out of <span class="redden">thoughtful</span> things to say. I'm making my<span class="yellowen"> clients happy</span> by working on this <span class="redden">website</span>(as opposed to theirs, right?).</p>
+                <aside class="slogan-bg"></aside>
+                <aside class="slogan"><h1>Executed brilliance.</h1></aside>
+            </div>
+    </section>
         <div id="fade2">
             <section class="row">
                 <div class="small-12 large-8 large-centered columns welcome">
@@ -288,7 +286,31 @@
         var controller = $.superscrollorama();
         // individual element tween examples
         
-        controller.addTween('#fade1', TweenMax.from( $('#fade1'), .5, {css:{opacity: 0}}));
+        controller.addTween('#fade1', 
+            TweenMax.from( $('#fade1'), .5, {
+                css:{opacity: 0},
+                onStart : function() {
+                        setTimeout(function(){
+                                $('.slogan').animate({
+                                    opacity: 1
+                                },2000)
+                                $('.slogan-bg').animate({
+                                    width: '600px',
+                                    opacity: 1
+                                },1000)
+
+                        }, 4000)
+                },
+                onReverseComplete: function () {
+                    $('.slogan').animate({
+                            opacity: 0
+                    },2000)
+                    $('.slogan-bg').animate({
+                        width: '0',
+                        opacity: 0
+                    },1000)                    
+                }
+            }));
         controller.addTween('#fade2', TweenMax.from( $('#fade2'), .5, {css:{opacity: 0}}));
         controller.addTween('#fade3', 
             TweenMax.from( $('#fade3'), .5, {
@@ -399,9 +421,12 @@
 <script>
     // For leterwall
     jQuery(document).ready(function(){
-        $(".brighten").approach({
-            "color": "#FA6900"
-          }, 400);
+        $(".yellowen").approach({
+            "color": "#cccc00"
+          }, 700);
+        $(".redden").approach({
+            "color": "#ff0005"
+          }, 200);
     })
 </script>
 <script type="text/javascript">

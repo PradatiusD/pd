@@ -116,7 +116,7 @@ jQuery(document).ready(function($){
     //size of the circle stroke) that grows from 0 to 99.99% for 2000 seconds.
 
     var my_arc = archtype.path().attr({
-        "stroke": "#ee8411",
+        "stroke": "#cccc00",
             "stroke-width": 4,
         arc: [arcCanvasSize/2, arcCanvasSize/2, 0, 100, arcCanvasSize*0.45]
     });
