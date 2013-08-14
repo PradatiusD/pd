@@ -4867,8 +4867,12 @@ a.th {
 
 body, html {
   background-color: #010101;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-repeat: no-repeat;
   height: 100%; }
+
+h1, h2, h3, h4, h5, h6, p, strong, b {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .entypo {
   font-family: 'Entypo'; }
@@ -4880,10 +4884,9 @@ body, html {
   color: white; }
 
 h2 {
-  color: #f28232;
+  color: #cccc00;
   margin: 1em 1em 0em 1em;
   padding-bottom: 0.5em;
-  font-family: "Open Sans", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   font-weight: 200; }
 
 h6 {
@@ -4922,7 +4925,6 @@ h6 {
 
 #postRaphaelmessage h1 {
   text-transform: none;
-  font-family: 'Lato';
   font-size: 2.3em;
   text-align: center;
   color: #464646;
@@ -4956,8 +4958,7 @@ h6 {
   margin-bottom: 1em;
   position: relative;
   bottom: 84px;
-  left: 49px;
-  font-family: 'Lato'; }
+  left: 49px; }
 
 .letterwall {
   position: relative;
@@ -4965,7 +4966,6 @@ h6 {
   left: 0; }
   .letterwall p {
     color: #3D3C3C;
-    font-family: 'Lato';
     text-transform: uppercase;
     font-size: 2em;
     font-weight: 300;
@@ -4993,14 +4993,13 @@ h6 {
     -moz-transition: all 0.5s;
     transition: all 0.5s; }
     .social .entypo-social:hover, .social .entypo:hover, .social i:hover {
-      background: #f28232;
+      background: #cccc00;
       opacity: 1; }
       .social .entypo-social:hover span.friend-count, .social .entypo:hover span.friend-count, .social i:hover span.friend-count {
         opacity: 1; }
   .social span.friend-count {
-    font-family: 'Open Sans';
     background: white;
-    color: orange;
+    color: #cccc00;
     border-radius: 10em;
     font-size: 11px;
     padding: 4px;
@@ -5023,16 +5022,47 @@ h6 {
 .bb-custom-wrapper {
   margin-top: 1em;
   width: 100%;
-  text-align: left; }
+  text-align: left;
+  position: relative;
+  left: 0;
+  top: 0; }
   .bb-custom-wrapper .bb-bookblock {
     width: 100%;
     height: 403px; }
+    .bb-custom-wrapper .bb-bookblock .portfolio-desc {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 3000;
+      width: 100%;
+      max-width: 970px; }
+      .bb-custom-wrapper .bb-bookblock .portfolio-desc article {
+        background: rgba(0, 0, 0, 0.86);
+        padding: 0.5em 3em;
+        margin: 0.5em auto;
+        height: auto;
+        opacity: 0; }
+        .bb-custom-wrapper .bb-bookblock .portfolio-desc article h2 {
+          font-size: 1.5em;
+          font-weight: 400;
+          border-bottom: 1px solid #FFF;
+          color: #FFF;
+          text-transform: uppercase;
+          margin-left: 0; }
+          .bb-custom-wrapper .bb-bookblock .portfolio-desc article h2 span {
+            font-size: 0.9em;
+            text-transform: none;
+            font-style: oblique;
+            font-weight: 200; }
+        .bb-custom-wrapper .bb-bookblock .portfolio-desc article p {
+          color: #FFF;
+          font-size: 1em;
+          font-weight: 300; }
 
 .welcome {
   display: block;
   padding: 0.5em 1em; }
   .welcome h1 {
-    font-family: "Open Sans", Verdana, Geneva, sans-serif;
     font-weight: 300;
     color: #E97F1D;
     border-bottom: 1px solid #FF7A00;
@@ -5040,11 +5070,9 @@ h6 {
     margin-bottom: 0.25em;
     font-size: 2em; }
   .welcome h2 {
-    font-family: "Open Sans", Verdana, Geneva, sans-serif;
     font-weight: 300;
     text-align: center; }
   .welcome p {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.2em;
     color: white; }
@@ -5055,32 +5083,6 @@ h6 {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding: 1em; }
-
-.portfolio-desc article {
-  background: white;
-  padding: 0.5em;
-  margin: 0.5em auto;
-  position: relative;
-  top: 8px;
-  height: 403px; }
-  .portfolio-desc article h2 {
-    font-size: 1.5em;
-    font-weight: 400;
-    margin: 0.75em 0 0 0;
-    padding: 0.25em .25em;
-    border-bottom: 1px solid #F38630; }
-  .portfolio-desc article h3.subheader {
-    font-size: 1.2em;
-    text-align: left;
-    border-left: 7px solid #C4F1FA;
-    padding-left: 10px;
-    margin: 0.5em;
-    color: #1E7B92; }
-  .portfolio-desc article p {
-    color: #186A75;
-    padding: 0 0.5em;
-    font-size: 0.9em;
-    margin: 0.8em 0; }
 
 #fade2 {
   background: url("pw_maze_black.png"); }
@@ -5114,8 +5116,7 @@ h6 {
     display: block;
     width: 100%;
     top: 54%;
-    color: #F0F0F0;
-    font-family: 'Open Sans Condensed', sans-serif; }
+    color: #F0F0F0; }
   .slide-decks article a.overlay {
     background: rgba(0, 0, 0, 0.52);
     height: 100%;
@@ -5164,7 +5165,6 @@ h6 {
   font-size: 1.3em;
   color: #5F5F5F; }
 .reveal-modal a.button {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200; }
   .reveal-modal a.button span.entypo {
     font-size: 31px;
@@ -5184,7 +5184,6 @@ h6 {
       float: left;
       margin-right: 2px;
       list-style-type: none;
-      font-family: 'Open Sans';
       font-weight: 200; }
       #tabs ul li a {
         display: block;
@@ -5194,7 +5193,7 @@ h6 {
         color: #CC0; }
         #tabs ul li a:hover {
           background: white;
-          color: #fa6900; }
+          color: #cccc00; }
   #tabs #tabs_container {
     padding: 40px;
     overflow: hidden;
