@@ -13,7 +13,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         <script src="plugins/js/modernizr.custom.js"></script>
     </head>
@@ -38,9 +38,9 @@
             </div>
         </div>
     </section>
-    <section id="fade1">
+    <section id="fade1" class="hide-for-small">
         <div class="letterwall">
-            <p>We are <span class="whiten">art</span> that talks <span class="whiten">business</span>.  We firmly believe that  <span class="whiten">luck</span> is the residue of <span class="whiten">design</span>.  We are two ludicrously <span class="whiten">good-looking</span> siblings trying to make it big as advisors to growing <span class="whiten">small business</span> and <span class="whiten">start-ups</span>.  We are <span class="whiten">humble</span>.  We are <span class="yellowen">Prada Designers</span>, not the fashion <span class="whiten">company</span>. Key lime pie is objectively <span class="whiten">orgasmic</span>.  Great <span class="whiten">design</span> is about <span class="whiten">empathy</span> towards the <span class="whiten">consumer</span>.  <span class="whiten">Modern</span> Flamenco dancing <span class="yellowen">is a design & development consultancy that prides</span> itself in obliterating its enemies. Frisbee should be an olympic sport.  He blurted incoherently as if trying to fit a <span class="whiten">phrase</span> into a larger <span class="whiten">poetic</span> form, "<span class="yellowen">itself in making its</span>".  Running out of <span class="whiten">thoughtful</span> things to say. I'm making my<span class="yellowen"> clients happy</span> by working on this <span class="whiten">website</span>(as opposed to theirs, right?).</p>
+            <p>We firmly believe that  <span class="whiten">luck</span> is the residue of <span class="whiten">design</span>.  We are two ludicrously <span class="whiten">good-looking</span> siblings trying to make it big as advisors to growing <span class="whiten">small business</span> and <span class="whiten">start-ups</span>.  We are <span class="whiten">humble</span>.  We are <span class="yellowen">Prada Designers</span>, not the fashion <span class="whiten">company</span>. Key lime pie is objectively <span class="whiten">orgasmic</span>.  Great <span class="whiten">design</span> is about <span class="whiten">empathy</span> towards the <span class="whiten">consumer</span>.  <span class="whiten">Modern</span> Flamenco dancing <span class="yellowen">is a design & development consultancy that prides</span> itself in obliterating its enemies. Frisbee should be an olympic sport.  He blurted incoherently as if trying to fit a <span class="whiten">phrase</span> into a larger <span class="whiten">poetic</span> form, "<span class="yellowen">itself in making its</span>".  Running out of <span class="whiten">thoughtful</span> things to say. I'm making my<span class="yellowen"> clients happy</span> by working on this <span class="whiten">website</span>(as opposed to theirs, right?).</p>
         </div>
     </section>
     <div id="fade4">
@@ -159,13 +159,12 @@ text-transform: uppercase;">Portfolio</h2>
                                     <p><strong><a target="_blank" href="http://estrellamorena.com">Website</a></strong> and <strong><a target="_blank" href="http://github.com/PradatiusD/morena">GitHub</a></strong></p>
                                 </article>
                             </aside>
+                            <nav>
+                                <a id="bb-nav-prev" href="#"><i class="icon-chevron-left"></i></a>
+                                <a id="bb-nav-next" href="#"><i class="icon-chevron-right"></i></a>
+                            </nav>
                         </div>
-                        <nav>
-                            <a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
-                            <a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
-                            <a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
-                            <a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
-                        </nav>
+
                     </div>
                 </div>
             </div>
@@ -373,7 +372,7 @@ text-transform: uppercase;">Portfolio</h2>
 </script>
 <script>
     jQuery(document).ready(function($){
-        // Get follower counts via JSONP for Facebook, Twitter, and GitHub
+        // Get follower/friends counts via JSONP for Facebook, Twitter, and GitHub
 
         $.ajax({
             url: 'https://graph.facebook.com/https://www.facebook.com/PradaDesigners',
@@ -427,10 +426,10 @@ text-transform: uppercase;">Portfolio</h2>
     // For hover opacity on portfolio desc
         $('#bb-bookblock').hover(
             function(){
-                $('.portfolio-desc article').animate({opacity: 1},1000)
+                $('.portfolio-desc article, .bb-bookblock nav').stop().animate({opacity: 1},1000)
             },
             function(){
-                $('.portfolio-desc article').animate({opacity: 0},1000)
+                $('.portfolio-desc article, .bb-bookblock nav').stop().animate({opacity: 0},1000)
             })
     })
 </script>

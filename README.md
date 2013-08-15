@@ -9,13 +9,14 @@ This was originally meant as a starter template for mobile-first projects, using
 	* Using the [SCSS standalone branch](https://github.com/zurb/foundation/tree/scss-standalone)
 * [Bourbon.io](http://bourbon.io/docs/) SASS mixin library
 * [Entypo Pictogram suite](http://entypo.com/) with the social extension. *A major issue* with using version 2.0 or less (they are still currently working on a ew set) is that Windows and Mac display this custom font way differently, and the social extension simply does not show at all.
-* FontAwesome 
+* [FontAwesome](http://fortawesome.github.io/Font-Awesome/)
 
 ###Javascript & jQuery Plugins utilized
 * [Bookblock](http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/)
 * [Super Scroll Orama](http://johnpolacek.github.io/superscrollorama/)
 * [Tabulous.js](http://git.aaronlumsden.com/tabulous.js/)
-* jQuery UI
+* [Approach.js](http://srobbin.com/jquery-plugins/approach/)
+* [jQuery UI](http://jqueryui.com/)
 
 
 ### Licensing

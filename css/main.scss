@@ -245,6 +245,28 @@ h6 {
 			    }
 			}
 		} 
+		nav {
+			#bb-nav-prev, #bb-nav-next {
+				position: absolute;
+				color: #FFF;
+				z-index: 2000;
+				background: rgba(0, 0, 0, 0.86);
+				border-radius: 100%;
+				font-size: 2em;
+				opacity: 1;
+				height: 50px;
+				width: 50px;
+				text-align: center;
+				padding-top: 9px;
+				margin: 20% 1em 1em 1em;	
+			}
+			#bb-nav-prev {
+				left:0px;
+			}
+			#bb-nav-next {
+		    	right:0px;
+			}
+		}
 	}
 }
 
