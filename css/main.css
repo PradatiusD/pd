@@ -4940,6 +4940,12 @@ h6 {
   position: relative;
   bottom: 84px;
   left: 49px; }
+  @media only screen and (max-width: 480px) {
+    .servicesTitle h2 {
+      bottom: 0;
+      left: 0;
+      margin: 1em 0;
+      font-size: 1.5em; } }
 
 .letterwall {
   position: relative;
@@ -5021,8 +5027,10 @@ h6 {
         background: rgba(0, 0, 0, 0.86);
         padding: 0.5em 3em;
         margin: 0.5em auto;
-        height: auto;
         opacity: 0; }
+        @media only screen and (max-width: 481px) {
+          .bb-custom-wrapper .bb-bookblock .portfolio-desc article {
+            display: none; } }
         .bb-custom-wrapper .bb-bookblock .portfolio-desc article h2 {
           font-size: 1.5em;
           font-weight: 400;
@@ -5039,6 +5047,15 @@ h6 {
           color: #FFF;
           font-size: 1em;
           font-weight: 300; }
+        .bb-custom-wrapper .bb-bookblock .portfolio-desc article p.info-links {
+          position: absolute;
+          right: 0px;
+          bottom: 8px;
+          background: #FFF;
+          padding: 5px 10px;
+          margin: 0;
+          border-top-left-radius: 1em;
+          color: #000; }
     .bb-custom-wrapper .bb-bookblock nav #bb-nav-prev, .bb-custom-wrapper .bb-bookblock nav #bb-nav-next {
       position: absolute;
       color: #FFF;
@@ -5052,6 +5069,14 @@ h6 {
       text-align: center;
       padding-top: 9px;
       margin: 20% 1em 1em 1em; }
+      @media only screen and (max-width: 480px) {
+        .bb-custom-wrapper .bb-bookblock nav #bb-nav-prev, .bb-custom-wrapper .bb-bookblock nav #bb-nav-next {
+          background: rgba(161, 172, 42, 0.86);
+          border-radius: 100%;
+          font-size: 1em;
+          height: 30px;
+          width: 30px;
+          margin: 65% 7em 1em 7em; } }
     .bb-custom-wrapper .bb-bookblock nav #bb-nav-prev {
       left: 0px; }
     .bb-custom-wrapper .bb-bookblock nav #bb-nav-next {
@@ -5173,7 +5198,7 @@ h6 {
     top: 2px; }
 
 #tabs {
-  width: 666px;
+  width: 699px;
   margin: 0 auto;
   margin-bottom: 40px; }
   #tabs ul {
@@ -5202,6 +5227,8 @@ h6 {
       #tabs #tabs_container div p {
         color: #7E7E7B;
         font-weight: 200; }
+      #tabs #tabs_container div span.thicken {
+        font-weight: 400; }
   @media only screen and (min-width: 481px) and (max-width: 652px) {
     #tabs {
       width: 480px; }
@@ -5209,8 +5236,10 @@ h6 {
         padding: 13px; } }
   @media only screen and (max-width: 480px) {
     #tabs {
-      width: 90%;
-      margin: 0 auto; }
+      width: 120%;
+      margin: 0 auto;
+      position: relative;
+      right: 10%; }
       #tabs ul li a {
         padding: 1em 0.5em;
         font-size: 0.8em;

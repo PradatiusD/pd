@@ -130,6 +130,12 @@ h6 {
 	position: relative;
 	bottom: 84px;
 	left: 49px;
+	@media only screen and (max-width:480px) {
+		bottom: 0;
+		left: 0;
+		margin: 1em 0;
+		font-size: 1.5em;
+	} 
 }
 
 .letterwall {
@@ -221,8 +227,10 @@ h6 {
 				background: rgba(0, 0, 0, 0.86);
 				padding: 0.5em 3em;
 				margin: 0.5em auto;
-				height: auto;
 				opacity: 0;
+				@media only screen and (max-width:481px) {
+					display:none;
+				}
 			    h2 {
 					font-size: 1.5em;
 					font-weight: 400;
@@ -243,6 +251,16 @@ h6 {
 					font-size: 1em;
 					font-weight: 300;
 			    }
+			    p.info-links {
+			    	position: absolute;
+					right: 0px;
+					bottom: 8px;
+					background: #FFF;
+					padding: 5px 10px;
+					margin: 0;
+					border-top-left-radius: 1em;
+					color: #000;
+			    }
 			}
 		} 
 		nav {
@@ -258,7 +276,15 @@ h6 {
 				width: 50px;
 				text-align: center;
 				padding-top: 9px;
-				margin: 20% 1em 1em 1em;	
+				margin: 20% 1em 1em 1em;
+				@media only screen and (max-width:480px) {
+					background: rgba(161, 172, 42, 0.86);
+					border-radius: 100%;
+					font-size: 1em;
+					height: 30px;
+					width: 30px;
+					margin: 65% 7em 1em 7em;
+				}	
 			}
 			#bb-nav-prev {
 				left:0px;
@@ -432,7 +458,7 @@ h6 {
 // For Tabulous
 
 #tabs {
-	width: 666px;
+	width: 699px;
 
 	margin: 0 auto;
 	margin-bottom: 40px;
@@ -468,6 +494,9 @@ h6 {
 				color: #7E7E7B;
 				font-weight: 200;
 			}
+			span.thicken {
+				font-weight:400;
+			}
 		}
 	}
 // Media query for #tabs on mobile browsers
@@ -478,8 +507,10 @@ h6 {
 		}
 	}
 	@media only screen and (max-width:480px) {
-		width: 90%;
+		width: 120%;
 		margin: 0 auto;
+		position: relative;
+		right: 10%;
 		ul li a {
 			padding: 1em 0.5em;
 			font-size: 0.8em;
