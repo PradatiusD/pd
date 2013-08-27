@@ -4936,7 +4936,9 @@ h6 {
   margin: 3em 0 0em;
   border-top: 4px #808080 solid;
   border-bottom: 4px #808080 solid;
-  background: url("black_lozenge.png"); }
+  background: url("black_lozenge.png");
+  background-size: 76px 76px;
+  background-repeat: repeat; }
 
 .servicesTitle h2 {
   background: rgba(48, 48, 48, 0.84);
@@ -4948,7 +4950,7 @@ h6 {
   position: relative;
   bottom: 84px;
   left: 49px; }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 1058px) {
     .servicesTitle h2 {
       bottom: 0;
       left: 0;
@@ -5098,6 +5100,10 @@ h6 {
       text-align: center;
       padding-top: 9px;
       margin: 20% 1em 1em 1em; }
+      @media only screen and (min-width: 481px) and (max-width: 768px) {
+        .bb-custom-wrapper .bb-bookblock nav #bb-nav-prev, .bb-custom-wrapper .bb-bookblock nav #bb-nav-next {
+          margin: 0 1em 1em 1em;
+          top: 44%; } }
       @media only screen and (max-width: 480px) {
         .bb-custom-wrapper .bb-bookblock nav #bb-nav-prev, .bb-custom-wrapper .bb-bookblock nav #bb-nav-next {
           top: 103%;
@@ -5136,6 +5142,10 @@ h6 {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding: 1em; }
+
+@media only screen and (max-device-width: 1024px) {
+  #fade1 {
+    display: none; } }
 
 #fade2 {
   background: url("pw_maze_black.png"); }

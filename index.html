@@ -10,10 +10,9 @@
         <meta name="description" content="A family branding, design & development shop aimed at revitalizing small businesses">
         <meta name="keywords" content="Web Development, Photography, Websites, Design, Business Cards, Custom Powerpoint Slides">
         <meta name="author" content="http://twitter.com/PradaDesigners">
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         <script src="plugins/js/modernizr.custom.js"></script>
     </head>
@@ -34,7 +33,7 @@
             </div>
         </div>
     </section>
-    <section id="fade1" class="hide-for-small">
+    <section id="fade1">
         <div class="letterwall">
             <p>We firmly believe that  <span class="whiten">luck</span> is the residue of <span class="whiten">design</span>.  We are two ludicrously <span class="whiten">good-looking</span> siblings trying to make it big as advisors to growing <span class="whiten">small business</span> and <span class="whiten">start-ups</span>.  We are <span class="whiten">humble</span>.  We are <span class="yellowen">Prada Designers</span>, not the fashion <span class="whiten">company</span>. Key lime pie is objectively <span class="whiten">orgasmic</span>.  Great <span class="whiten">design</span> is about <span class="whiten">empathy</span> towards the <span class="whiten">consumer</span>.  <span class="whiten">Modern</span> Flamenco dancing <span class="yellowen">is a design & development consultancy that prides</span> itself in obliterating its enemies. Frisbee should be an olympic sport.  He blurted incoherently as if trying to fit a <span class="whiten">phrase</span> into a larger <span class="whiten">poetic</span> form, "<span class="yellowen">itself in making its</span>".  Running out of <span class="whiten">thoughtful</span> things to say. I'm making my<span class="yellowen"> clients happy</span> by working on this <span class="whiten">website</span>(as opposed to theirs, right?).</p>
         </div>
@@ -422,12 +421,12 @@
     // For hover opacity on portfolio desc
         $('#bb-bookblock').hover(
             function(){
-                if ($('body').width() > 480) {
+                if ($('body').width() > 480 && navigator.userAgent.match(/iPad/i) = null) {
                     $('.portfolio-desc article, .bb-bookblock nav').stop().animate({opacity: 1},1000)
                 }  
             },
             function(){
-                if ($('body').width() > 480) {
+                if ($('body').width() > 480 && navigator.userAgent.match(/iPad/i) = null) {
                     $('.portfolio-desc article, .bb-bookblock nav').stop().animate({opacity: 0},1000)
                 }
             })
