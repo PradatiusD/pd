@@ -85,12 +85,18 @@
 jQuery(document).ready(function($){
 
     // FOR RAPHAEL CIRCLE BEHIND LOGO ON PAGE LOAD 
+    if ($('body').width() > 480) {
+        var arcCanvasSize = 345;
+    } 
+    else {
+        var arcCanvasSize = 300;
+    }
 
-    var arcCanvasSize = 345;
     $('#canvas').css({
         'width':arcCanvasSize,
         'height':arcCanvasSize
     })
+
     var archtype = Raphael("canvas", arcCanvasSize, arcCanvasSize);
     archtype.customAttributes.arc = function (xloc, yloc, value, total, R) {
         var alpha = 360 / total * value,

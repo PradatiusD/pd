@@ -11,7 +11,7 @@
         <meta name="keywords" content="Web Development, Photography, Websites, Design, Business Cards, Custom Powerpoint Slides">
         <meta name="author" content="http://twitter.com/PradaDesigners">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
@@ -24,7 +24,7 @@
     <div class="logo">
         <div id="canvas" style=""></div>
         <div class="circle" style="">
-            <a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)."><img src="img/pd-logo.png" alt="Prada Designers Logo"></a>      
+            <a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)."><img src="img/pd-logo.png" alt="Prada Designers Logo" width="190" height="190"></a>      
         </div>
     </div>
     <section class="row">
@@ -80,17 +80,7 @@
         <div id="fade2">
             <section class="row">
                 <div class="small-12 large-4 columns welcome">
-                    <h2 style="margin: 0 0 1em 0;
-background: #CC0;
-color: #000;
-font-size: 1.5em;
-padding-top: 10px;
-position: relative;
-bottom: 12px;
-width: 208px;
-right: 75px;
-font-family: 'Lato';
-text-transform: uppercase;">Portfolio</h2>
+                    <h2 class="portfolioTitle">Portfolio</h2>
                 </div>
             </section>
             <section class="row">
@@ -98,7 +88,7 @@ text-transform: uppercase;">Portfolio</h2>
                     <div class="bb-custom-wrapper" style="position:relative;z-index:3000">
                         <div id="bb-bookblock" class="bb-bookblock">
                             <div class="bb-item">
-                                <a href="http://lovingdaymiami.com"><img src="img/slide-fleur.jpg" alt="" width="970"></a>
+                                <a href="http://fleurmiami.com"><img src="img/slide-fleur.jpg" alt="" width="970"></a>
                             </div>
                             <div class="bb-item">
                                 <a href="http://lovingdaymiami.com"><img src="img/slide-loving.jpg" alt="" width="970"></a>
@@ -316,38 +306,40 @@ text-transform: uppercase;">Portfolio</h2>
             TweenMax.from( $('#fade3'), .5, {
                 css:{opacity: 0},
                 onStart : function() {
+                    if ($('body').width() > 480) {
+                        function stretchCircle (canvasSize,  HTMLid) {
+                            // Creates square canvas with size CanvasSize inside the contents of HTMLid
+                        var paper = Raphael(HTMLid, canvasSize, canvasSize);
 
-                    function stretchCircle (canvasSize,  HTMLid) {
-                        // Creates square canvas with size CanvasSize inside the contents of HTMLid
-                    var paper = Raphael(HTMLid, canvasSize, canvasSize);
+                            // Creates centered circle
+                        var circle = paper.circle(canvasSize/2, canvasSize/2, 10);
 
-                        // Creates centered circle
-                    var circle = paper.circle(canvasSize/2, canvasSize/2, 10);
+                            // Sets the fill and stroke
+                            circle.attr({"fill": "#CC0"});
 
-                        // Sets the fill and stroke
-                        circle.attr({"fill": "#CC0"});
+                            circle.animate({"r": canvasSize/2
+                                            },1000, ">");
+                        }
 
-                        circle.animate({"r": canvasSize/2
-                                        },1000, ">");
+                        setTimeout(function(){
+                            stretchCircle(250, 'canvas1');
+                            },0)
+                        setTimeout(function(){
+                            stretchCircle(250, 'canvas2');
+                            },125)
+                        setTimeout(function(){
+                            stretchCircle(250, 'canvas3');
+                            },250)
+
+                        $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':1}, 500);
                     }
-
-                    setTimeout(function(){
-                        stretchCircle(250, 'canvas1');
-                        },0)
-                    setTimeout(function(){
-                        stretchCircle(250, 'canvas2');
-                        },125)
-                    setTimeout(function(){
-                        stretchCircle(250, 'canvas3');
-                        },250)
-
-                    $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':1}, 500);
-
                 },
                 onReverseComplete: function () {
-                    $('#canvas1, #canvas2, #canvas3').empty();
+                    if ($('body').width() > 480) {
+                        $('#canvas1, #canvas2, #canvas3').empty();
 
-                    $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':0}, 500);
+                        $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':0}, 500);
+                    }
                 },
 
                 onComplete: function(){
