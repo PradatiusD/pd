@@ -127,7 +127,8 @@ h6 {
 	background: url('black_lozenge.png');
 	background-size:76px 76px;
 	background-repeat:repeat;
-
+	position: relative;
+	z-index: 3000;
 }
 
 .servicesTitle h2 {
@@ -377,6 +378,8 @@ h6 {
 
 #fade2 {
 	background: url('pw_maze_black.png');
+	z-index: 1000;
+	position: relative;
 }
 
 // For Raphael circles
@@ -733,3 +736,83 @@ footer {
 	display: block;
 	clear: both;
 }
+
+
+#examples-pin { position: relative; width: 100%; height: 600px; overflow: hidden; margin-bottom: -200px; }
+.pin-frame {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden; 
+	h2 {
+		background: rgba(0, 0, 0, 0.61);
+		margin: 0.5em 0.75em;
+		padding: 0.25em 0.5em;
+		display: inline-block;
+		font-size:3.2em;
+	}
+	div.tagline {
+		background: rgba(0, 0, 0, 0.48);
+		display:inline-block;
+		margin-left: 2.4em;
+		p {
+			color:white;
+			font-size:2em;
+			margin: 0.25em 0.4em;
+			font-weight:200;
+			display: inline-block;
+			padding: 0.25em;
+		}
+	}
+
+}
+
+.bg1 {
+	background:url(../img/bg1.jpg);
+
+}
+
+.bg2 {
+	background:url(../img/bg2.jpg);
+}
+
+.bg3 {
+	background:url(../img/bg3.jpg);
+}
+
+.bg4 {
+	background:url(../img/bg4.jpg);
+}
+
+.bg5 {
+	background-image:url(../img/bg5.png);
+}
+
+.bg1, .bg2, .bg3, .bg4, .bg5 {
+	background-size:100% auto;
+	background-repeat:no-repeat;
+}
+
+#pin-frame-slide {
+	margin-left:-100%; 
+}
+#pin-frame-wipe  {  top:100%; }
+#pin-frame-wipe h2  { color: #D92B00; }
+#pin-frame-bounce  { 
+}
+#pin-frame-color  {  }
+#pin-frame-unpin  { top:100%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
