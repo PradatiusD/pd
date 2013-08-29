@@ -773,7 +773,9 @@ footer {
 }
 
 .bg2 {
-	background:url(../img/bg2.jpg);
+	background:url('black_lozenge.png');
+	background-size:76px 76px;
+	background-repeat:repeat;
 }
 
 .bg3 {
@@ -788,7 +790,7 @@ footer {
 	background-image:url(../img/bg5.png);
 }
 
-.bg1, .bg2, .bg3, .bg4, .bg5 {
+.bg1, .bg3, .bg4, .bg5 {
 	background-size:100% auto;
 	background-repeat:no-repeat;
 }
@@ -804,7 +806,12 @@ footer {
 #pin-frame-unpin  { top:100%; }
 
 
+#notepad {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 11%;
 
+}
 
 
 
