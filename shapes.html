@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="plugins/js/raphael.min.js"></script>
+</head>
+<body>
+    
+
+    <div id="notepad"></div>
+
+    <script>
+        // Creates canvas 320 × 200 at id Notepad
+    var paper = Raphael(document.getElementById("notepad"), 320, 200);
+
+    // Create line at 10,10 that goes to 20, 20
+    var shape = paper.path("M10,10 \
+                L40,40 \
+                L10,40 \
+                L10,10Z \
+            ").attr({
+                stroke: "red",
+                "stroke-width": 4,
+                fill:"blue"
+            });
+
+    var path1 = "M10,10 L40,40 L10,40 L10,10Z"
+    var path2 = "M10,40 L50,90 L60,30 L10,40Z"
+
+    function constantAnimate () { 
+        shape.animate({ path:path2, "stroke-width":10},2000, function(){
+                    shape.animate({
+                        path:path1, 
+                        "stroke-width":4},2000, function() {
+                            constantAnimate();
+                        })
+                    })
+    }
+
+    constantAnimate()
+    </script>
+</body>
+</html>
