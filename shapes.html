@@ -22,20 +22,26 @@
                 fill:"blue"
             });
 
-    var path1 = "M10,10 L40,40 L10,40 L10,10Z"
-    var path2 = "M10,40 L50,90 L60,30 L10,40Z"
+    var paths = ["M30,10 L60,40 L10,100 L10,10Z", "M10,40 L50,90 L60,30 L10,40Z", "M30,40 L50,40 L80,45 L30,40Z"]
 
-    function constantAnimate () { 
-        shape.animate({ path:path2, "stroke-width":10},2000, function(){
-                    shape.animate({
-                        path:path1, 
-                        "stroke-width":4},2000, function() {
-                            constantAnimate();
-                        })
-                    })
+
+    var pathsCounter = -1;
+    function constantAnimation () {
+        pathsCounter++;
+
+        if (pathsCounter< paths.length) {
+            shape.animate({ path: paths[pathsCounter]}, 1000, function(){
+                    constantAnimation();    
+            })
+        } else {
+            pathsCounter = -1;
+            constantAnimation();
+        }
+
     }
 
-    constantAnimate()
+    constantAnimation();
+
     </script>
 </body>
 </html>
