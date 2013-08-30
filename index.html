@@ -52,7 +52,8 @@
                         <span>
                             <h2>Our Services</h2><br>
                             <div class="tagline">
-                                <p>We offer the following:</p>
+                                <p>We work with all types <br>
+                                    of busines owners</p>
                             </div>
                             
                         </span>
@@ -70,10 +71,10 @@
                     </div>
                     <div id="pin-frame-wipe" class="pin-frame bg3">
                         <span>
-                            <h2>Photography</h2><br>
+                            <h2>Strategy</h2><br>
                             <div class="tagline">
-                                <p>Done from our own studio, we <br>
-                                    ensure your enterprise glows.</p>                                
+                                <p>Why get a designer or a developer when you can have <br>
+                                    consultants that do both?</p>                                
                             </div>
                         </span>                        
                     </div>
@@ -88,10 +89,10 @@
                     </div>
                     <div id="pin-frame-color" class="pin-frame bg5">
                         <span>
-                            <h2>Strategy</h2><br>
+                            <h2>Photography</h2><br>
                             <div class="tagline">
-                                <p>Why get a designer or a developer when you can have <br>
-                                    consultants that do both?</p>                                
+                                <p>Done from our own studio, we <br>
+                                    ensure your enterprise glows.</p>                                
                             </div>
                         </span>                             
                     </div>
@@ -106,8 +107,9 @@
 
         <div id="fade2">
             <section class="row">
-                <div class="small-12 large-4 columns welcome">
-                    <h2 class="portfolioTitle">Portfolio</h2>
+                <div class="small-12 large-8 large-centered columns welcome">
+                    <h2>Portfolio</h2>
+                    <p class="center">Go ahead and explore our sites.</p>
                 </div>
             </section>
             <section class="row">
@@ -418,7 +420,7 @@
                         $('#examples-pin').css('height','100%');
                     }, 
                     onUnpin: function() {
-                        $('#examples-pin').css('height','800px');
+                        $('#examples-pin').css('height','1000px');
                     }
                 });
     });
@@ -489,12 +491,14 @@
     // For hover opacity on portfolio desc
         $('#bb-bookblock').hover(
             function(){
-                if ($('body').width() > 480 && navigator.userAgent.match(/iPad/i) = null) {
+                var isiPad = navigator.userAgent.match(/iPad/i) != null;
+                if ($('body').width() > 480 && isiPad===false) {
                     $('.portfolio-desc article, .bb-bookblock nav').stop().animate({opacity: 1},1000)
                 }  
             },
             function(){
-                if ($('body').width() > 480 && navigator.userAgent.match(/iPad/i) = null) {
+                var isiPad = navigator.userAgent.match(/iPad/i) != null;
+                if ($('body').width() > 480 && isiPad===false) {
                     $('.portfolio-desc article, .bb-bookblock nav').stop().animate({opacity: 0},1000)
                 }
             })
