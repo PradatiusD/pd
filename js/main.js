@@ -17,6 +17,17 @@
                         initEvents();
                     },
 
+
+
+            // Cycle Bookblock pages with change of buttons
+            currentPage = 0;
+            var portfolioDesc = $('.portfolio-desc article').length;
+
+            function fadez (showSelector) {
+                $('.portfolio-desc article').hide();
+                $('.portfolio-desc article').eq(showSelector).fadeIn('slow');
+            }
+
                     initEvents = function() {
                         
                         var $slides = config.$bookBlock.children();
@@ -24,22 +35,37 @@
                         // add navigation events
                         config.$navNext.on( 'click touchstart', function() {
                             config.$bookBlock.bookblock( 'next' );
+
+                            if (currentPage < portfolioDesc-1) {
+                                currentPage++;
+                                fadez(currentPage);
+                            }
+
                             return false;
                         } );
 
                         config.$navPrev.on( 'click touchstart', function() {
                             config.$bookBlock.bookblock( 'prev' );
+
+                            if (currentPage < portfolioDesc-1) {
+                                currentPage++;
+                                fadez(currentPage);
+                            }
                             return false;
                         } );
 
                         config.$navFirst.on( 'click touchstart', function() {
                             config.$bookBlock.bookblock( 'first' );
                             return false;
+                            currentPage=0;
+                            fadez(currentPage);   
                         } );
 
                         config.$navLast.on( 'click touchstart', function() {
                             config.$bookBlock.bookblock( 'last' );
                             return false;
+                            currentPage=portfolioDesc-1;
+                            fadez(currentPage);
                         } );
                         
                         // add swipe events
@@ -81,141 +107,54 @@
                    Page.init();
 
 
+            // For hover opacity on portfolio desc
+                $('#bb-bookblock').hover(
+                    function(){
+                        var isiPad = navigator.userAgent.match(/iPad/i) != null;
+                        if ($('body').width() > 480 && isiPad===false) {
+                            $('.portfolio-desc article, .bb-bookblock nav').stop().animate({opacity: 1},1000)
+                        }  
+                    },
+                    function(){
+                        var isiPad = navigator.userAgent.match(/iPad/i) != null;
+                        if ($('body').width() > 480 && isiPad===false) {
+                            $('.portfolio-desc article, .bb-bookblock nav').stop().animate({opacity: 0},1000)
+                        }
+                    })
 
-jQuery(document).ready(function($){
 
-    // FOR RAPHAEL CIRCLE BEHIND LOGO ON PAGE LOAD 
-    if ($('body').width() > 480) {
-        var arcCanvasSize = 345;
-    } 
-    else {
-        var arcCanvasSize = 300;
-    }
+            // Function which cycles through each page checking for the nested
+            // image height.  After adding it to an array, the function then gets
+            // the max value of the array and the sets the book to that height.
+            // This function is fired on DOM ready and on window.resize so that
+            // the bookblock best displays itself no matter how the user is
+            // seeing the function.
+            var Bookblockcall = 0;
+            function fixBookblockHeight () {
+                var bookImgHeight = [];
+                var bookPages = $('.bb-item').length - 1;
+                for (var i = 0; i < bookPages; i++) {
+                    var pageImgHeight = $('.bb-item img').eq(i).height();
+                    bookImgHeight.push(pageImgHeight);
+                };
+                var biggestImg = Math.max.apply(Math,bookImgHeight);
+                $('.bb-custom-wrapper .bb-bookblock').css('height',biggestImg);
+            }
 
-    $('#canvas').css({
-        'width':arcCanvasSize,
-        'height':arcCanvasSize
-    })
-
-    var archtype = Raphael("canvas", arcCanvasSize, arcCanvasSize);
-    archtype.customAttributes.arc = function (xloc, yloc, value, total, R) {
-        var alpha = 360 / total * value,
-            a = (90 - alpha) * Math.PI / 180,
-            x = xloc + R * Math.cos(a),
-            y = yloc - R * Math.sin(a),
-            path;
-        if (total == value) {
-            path = [
-                ["M", xloc, yloc - R],
-                ["A", R, R, 0, 1, 1, xloc - 0.01, yloc - R]
-            ];
-        } else {
-            path = [
-                ["M", xloc, yloc - R],
-                ["A", R, R, 0, +(alpha > 180), 1, x, y]
-            ];
-        }
-        return {
-            path: path
-        };
-    };
-
-    //make an centered arc with a radius of arcCanvasSize * 0.45 (because we 
-    // have to account for the size of the circle stroke) that grows
-    // from 0 to 99.99% for 2000 seconds.
-
-    var my_arc = archtype.path().attr({
-        "stroke": "#cccc00",
-            "stroke-width": 4,
-        arc: [arcCanvasSize/2, arcCanvasSize/2, 0, 100, arcCanvasSize*0.45]
-    });
-
-    my_arc.animate({
-        arc: [arcCanvasSize/2, arcCanvasSize/2, 99.99, 100, arcCanvasSize*0.45]
-    }, 3000, function(){ 
-    
-    // Trigger set of fades directly after Raphael animation
-
-            $('#canvas').animate({'opacity': 0},1000, function() {
-                $('#postRaphaelmessage').animate({'opacity': 1},1000, function(){
-                    $('#postRaphaelmessage span').animate({'opacity': 1},1000, function () {
-
-                   var cycledObject = $('#canvas, i.icon-angle-down');
-                    function cycleOpacity() {
-                        cycledObject.animate({opacity:'+=1'}, 3000);
-                        cycledObject.animate({opacity:'-=1'}, 3000, cycleOpacity);
-                    }
-                           cycleOpacity();
-                    });
-                });                
-            });
-        }); 
-
-    // Function which cycles through each page checking for the nested
-    // image height.  After adding it to an array, the function then gets
-    // the max value of the array and the sets the book to that height.
-    // This function is fired on DOM ready and on window.resize so that
-    // the bookblock best displays itself no matter how the user is
-    // seeing the function.
-    var Bookblockcall = 0;
-    function fixBookblockHeight () {
-        var bookImgHeight = [];
-        var bookPages = $('.bb-item').length - 1;
-        for (var i = 0; i < bookPages; i++) {
-            var pageImgHeight = $('.bb-item img').eq(i).height();
-            bookImgHeight.push(pageImgHeight);
-        };
-        var biggestImg = Math.max.apply(Math,bookImgHeight);
-        $('.bb-custom-wrapper .bb-bookblock').css('height',biggestImg);
-    }
-
-    fixBookblockHeight();
-    $(window).resize(function() {
-       fixBookblockHeight(); 
-    });
-
-    ///Check after 1.5 second if everything is right 
-    setTimeout(function(){
-        var BookblockHeight = $('.bb-custom-wrapper .bb-bookblock').height();
-        console.log('Bookblock height is '+BookblockHeight+"px and this is call "+Bookblockcall+" of the fixBookblockHeight function");
-        Bookblockcall++
-        // Fix if images haven't loaded quickly enough
-        if (BookblockHeight===0) {
             fixBookblockHeight();
-        }
-    },1500)
+            $(window).resize(function() {
+               fixBookblockHeight(); 
+            });
 
-    // Cycle Bookblock pages with change of buttons
-    currentPage = 0;
-    var portfolioDesc = $('.portfolio-desc article').length;
-    function fadez (showSelector) {
-        $('.portfolio-desc article').hide();
-        $('.portfolio-desc article').eq(showSelector).fadeIn('slow');
-    }
+            ///Check after 1.5 second if everything is right 
+            setTimeout(function(){
+                var BookblockHeight = $('.bb-custom-wrapper .bb-bookblock').height();
+                console.log('Bookblock height is '+BookblockHeight+"px and this is call "+Bookblockcall+" of the fixBookblockHeight function");
+                Bookblockcall++
+                // Fix if images haven't loaded quickly enough
+                if (BookblockHeight===0) {
+                    fixBookblockHeight();
+                }
+            },1500)
 
-    $('#bb-nav-next').click(function(){
-        if (currentPage < portfolioDesc-1) {
-            currentPage++;
-            fadez(currentPage);
-            //  console.log('Current page is '+currentPage)
-        }
-    })
 
-    $('#bb-nav-prev').click(function(){
-        if (currentPage > 0) {
-            currentPage--;
-            fadez(currentPage);
-        }
-    })
-
-    $('#bb-nav-first').click(function(){
-            currentPage=0;
-            fadez(currentPage);            
-    })
-
-    $('#bb-nav-last').click(function(){
-        currentPage=portfolioDesc-1;
-        fadez(currentPage);
-    })
-
-})
