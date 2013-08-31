@@ -84,6 +84,7 @@
                                 <p>We build appropriate brands <br>
                                    that are delicious as they are thoughtful.</p>
                             </div>
+                            <div id="brandingCanvas"></div>
                         </span>                        
                     </div>
                     <div id="pin-frame-color" class="pin-frame bg5">
@@ -295,14 +296,12 @@
 <script type="text/javascript" src="plugins/js/TweenMax.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write("<script src='js/vendor/jquery.js'><\/script>")</script>
-
 <script src="plugins/js/jquery.superscrollorama.js"></script>
 <script>
     $(document).ready(function() {
 
         var controller = $.superscrollorama();
-        // individual element tween examples
-        
+
         controller.addTween('#fade1', 
             TweenMax.from( $('#fade1'), .5, {
                 css:{opacity: 0},
@@ -328,7 +327,108 @@
                     },250)                    
                 }
             }));
-        controller.addTween('#fade2', TweenMax.from( $('#fade2'), .5, {css:{opacity: 0}}));
+
+        // Given that iPads render javascript very slowly, remove some of the tweens
+        // to lighten the load on the safari browser
+        var isiPad = navigator.userAgent.match(/iPad/i) != null;
+
+        if (isiPad === false) {
+            controller.addTween('#fade2', TweenMax.from( $('#fade2'), .5, {css:{opacity: 0}}));
+            controller.addTween('#fade5', TweenMax.from( $('#fade5'), .5, {css:{opacity: 0}}));
+           // set duration, in pixels scrolled, for pinned element
+            var pinDur = 4000;
+            // create animation timeline for pinned element
+            var pinAnimations = new TimelineLite();
+            pinAnimations
+                .append(TweenMax.from($('#pin-frame-pin span'), .5, {css:{marginTop:0}, ease: Quad.easeInOut}))
+                .append([
+                    TweenMax.to($('#pin-frame-sliding-right'), 1, {css:{marginLeft:0}}),
+                    TweenMax.to($('#pin-frame-pin'), 1, {css:{marginLeft:'100%'}})
+                ], .5)
+                .append([
+                    TweenMax.to($('#pin-frame-wipe'), .5, {css:{top:0}}),
+                    TweenMax.from($('#pin-frame-wipe h2'), .5, {css:{marginTop:'-600px'}})
+                ], .5)
+                .append([
+                    TweenMax.to($('#pin-frame-sliding-left'), 1, {css:{left:0},
+                        onComplete:function(){
+                            // Animated circle with two rectangles (plus sign) named verticalPlus and
+                            // horizontalPlus that move from left to right.
+                            // 
+
+                            // Creates canvas 1000 × 400 at brandingCanvas
+                            var brandingCanvas = Raphael(document.getElementById("brandingCanvas"), 1200, 400);
+
+
+                            var plusCircle = brandingCanvas.circle(45, 105, 90).attr({"fill":"#cccc00",
+                                            "fill-opacity": 0.5
+                                            })
+
+                            // Creates rectangle verticalPlus
+                            var verticalPlus =  brandingCanvas.path("M30,60 L60,60 L60,150 L30,150Z")
+                                    .attr({"fill" : "#cccc00",
+                                    "fill-opacity": 0.8, 
+                                    "stroke": "#FFFFFF",
+                                    "stroke-width":0});
+                            var horizontalPlus = brandingCanvas.path("M0,90 L90,90 L90,120 L0,120z")
+                                    .attr({"fill" : "#cccc00",
+                                    "fill-opacity": 0.8, 
+                                    "stroke": "#FFFFFF",
+                                    "stroke-width":0});
+                            
+
+                            function moveIt(variable) {
+                                variable
+                                variable.animate({
+                                        transform: "t" + [665 , 0] + "r" + (720)
+                                    },3000, "elastic")  
+                            }
+
+                            moveIt(horizontalPlus);
+                            moveIt(verticalPlus);
+                            moveIt(plusCircle);
+
+                        }
+                }),
+                ], .5)
+                .append(TweenMax.from($('#pin-frame-color'), .25, {css:{opacity:0}}), .5)
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'blue'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'orange'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'green'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'red'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'yellow'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'purple'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'orange'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'blue'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'red'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'green'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'black'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'#cccc00'}})
+                ])
+                .append(TweenMax.to($('#pin-frame-unpin'), .5, {css:{top:'100px'}}));
+            
+            // pin element, use onPin and onUnpin to adjust the height of the element
+            controller.pin($('#examples-pin'), pinDur, {
+                anim:pinAnimations, 
+                onPin: function() {
+                    $('#examples-pin').css('height','100%');
+                }, 
+                onUnpin: function() {
+                    $('#examples-pin').css('height','1000px');
+                }
+            });            
+        } 
         controller.addTween('#fade3', 
             TweenMax.from( $('#fade3'), .5, {
                 css:{opacity: 0},
@@ -367,70 +467,10 @@
 
                         $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':0}, 500);
                     }
-                },
-
-                onComplete: function(){
-                    // alert('finished')
                 }
             }));
-        controller.addTween('#fade5', TweenMax.from( $('#fade5'), .5, {css:{opacity: 0}}));
 
-
-        // Photoreel
-                // set duration, in pixels scrolled, for pinned element
-                var pinDur = 4000;
-                // create animation timeline for pinned element
-                var pinAnimations = new TimelineLite();
-                pinAnimations
-                    .append(TweenMax.from($('#pin-frame-pin span'), .5, {css:{marginTop:0}, ease: Quad.easeInOut}))
-                    .append([
-                        TweenMax.to($('#pin-frame-sliding-right'), 1, {css:{marginLeft:0}}),
-                        TweenMax.to($('#pin-frame-pin'), 1, {css:{marginLeft:'100%'}})
-                    ], .5)
-                    .append([
-                        TweenMax.to($('#pin-frame-wipe'), .5, {css:{top:0}}),
-                        TweenMax.from($('#pin-frame-wipe h2'), .5, {css:{marginTop:'-600px'}})
-                    ], .5)
-                    .append([
-                        TweenMax.to($('#pin-frame-sliding-left'), 1, {css:{left:0}}),
-                    ], .5)
-.append(TweenMax.from($('#pin-frame-color'), .25, {css:{opacity:0}}), .5)
-                    .append([
-                        TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'blue'}}),
-                        TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'orange'}})
-                    ])
-                    .append([
-                        TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'green'}}),
-                        TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'red'}})
-                    ])
-                    .append([
-                        TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'yellow'}}),
-                        TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'purple'}})
-                    ])
-                    .append([
-                        TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'orange'}}),
-                        TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'blue'}})
-                    ])
-                    .append([
-                        TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'red'}}),
-                        TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'green'}})
-                    ])
-                    .append([
-                        TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'#222438'}}),
-                        TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'#FFB000'}})
-                    ])
-                    .append(TweenMax.to($('#pin-frame-unpin'), .5, {css:{top:'100px'}}));
-                
-                // pin element, use onPin and onUnpin to adjust the height of the element
-                controller.pin($('#examples-pin'), pinDur, {
-                    anim:pinAnimations, 
-                    onPin: function() {
-                        $('#examples-pin').css('height','100%');
-                    }, 
-                    onUnpin: function() {
-                        $('#examples-pin').css('height','1000px');
-                    }
-                });
+ 
     });
 </script>
 <script src="plugins/js/raphael.min.js"></script>
@@ -520,11 +560,8 @@ jQuery(document).ready(function($){
           }, 200);
     })
 </script>
-<script src="plugins/js/jquerypp.custom.js"></script>
 <script src="plugins/js/jquery.bookblock.js"></script>
 <script src="js/main.js"></script>
-
-
 
 <script>
         // Creates canvas 320 × 200 at id Notepad

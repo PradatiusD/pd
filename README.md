@@ -20,7 +20,7 @@ This was originally meant as a starter template for mobile-first projects, using
 
 
 ### Licensing
-Please respect the licenses of the individual plugins and frameworks utilized in this project.
+Please respect the licenses of the individual plugins and frameworks utilized in this project.  In case of the photography, all rights are reserved to Prada Desigenrs.
 
 ### Libraries that I would like to use
 * http://www.outyear.co.uk/smint/

@@ -500,76 +500,6 @@ h6 {
 	}
 }
 
-
-// For Tabulous
-
-#tabs {
-	width: 699px;
-
-	margin: 0 auto;
-	margin-bottom: 40px;
-	ul {
-		margin:0 auto;
-		li {
-			float: left;
-			margin-right: 2px;
-			list-style-type:none;
-			font-weight: 200;
-			a {
-				display: block;
-				padding: 17px 30px;
-				background: #383D39;
-				text-decoration: none;
-				color: #CC0;
-				&:hover {
-					background:$white;
-					color:$green;
-				}
-			}
-		}		
-	}
-
-	#tabs_container {
-		padding: 40px;
-		overflow: hidden;
-		position: relative;
-		background: #383D39;
-		div {
-			margin-right: 40px;
-			p {
-				color: #7E7E7B;
-				font-weight: 200;
-			}
-			span.thicken {
-				font-weight:400;
-			}
-		}
-	}
-// Media query for #tabs on mobile browsers
-	@media only screen and (min-width:481px) and (max-width:652px) {
-		width:480px;
-		ul li a {
-			padding:13px;
-		}
-	}
-	@media only screen and (max-width:480px) {
-		width: 120%;
-		margin: 0 auto;
-		position: relative;
-		right: 10%;
-		ul li a {
-			padding: 1em 0.5em;
-			font-size: 0.8em;
-			margin: 0;
-		}
-		#tabs_container {
-			font-size: 0.9em;
-			#tabs-1, #tabs-2, #tabs-3, #tabs-4, #tabs-5 {
-			}
-		}
-	}
-}
-
 footer {
 	h6 {
 		@media only screen and (max-width:480px) {
@@ -624,14 +554,14 @@ footer {
 }
 
 .bg4 {
-	background:url(../img/bg4.jpg);
+	background-image:url(pw_maze_black.png);
 }
 
 .bg5 {
 	background-image:url(../img/bg5.png);
 }
 
-.bg1, .bg3, .bg4, .bg5 {
+.bg1, .bg3, .bg5 {
 	background-size:100% auto;
 	background-repeat:no-repeat;
 }
@@ -651,6 +581,40 @@ footer {
 #pin-frame-color  {  }
 #pin-frame-unpin  { top:100%; }
 
+@media only screen and (max-device-width: 1024px) { 
+	#examples-pin {
+		height:auto;
+		margin:0;
+	}
+
+	.pin-frame {
+		position:static;
+		height:512px;
+		div.tagline {
+			h2 {
+				font-size:2.42em;
+			}
+			p {
+				font-size:1.5em;
+			}
+
+		}
+	}
+	#pin-frame-sliding-left, #pin-frame-sliding-right, #pin-frame-wipe, #pin-frame-unpin {
+		margin:0;
+		left:0;
+		top:0;
+	}
+
+	#pin-frame-unpin {
+		height:0;
+	}
+
+	#pin-frame-sliding-right {
+		height:auto;
+	}	
+}
+
 
 #notepad {
 	display: inline-block;
@@ -658,8 +622,6 @@ footer {
 	margin-left: 11%;
 
 }
-
-
 
 
 

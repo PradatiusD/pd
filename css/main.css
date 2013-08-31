@@ -5241,56 +5241,6 @@ h6 {
     right: 5px;
     top: 2px; }
 
-#tabs {
-  width: 699px;
-  margin: 0 auto;
-  margin-bottom: 40px; }
-  #tabs ul {
-    margin: 0 auto; }
-    #tabs ul li {
-      float: left;
-      margin-right: 2px;
-      list-style-type: none;
-      font-weight: 200; }
-      #tabs ul li a {
-        display: block;
-        padding: 17px 30px;
-        background: #383D39;
-        text-decoration: none;
-        color: #CC0; }
-        #tabs ul li a:hover {
-          background: white;
-          color: #cccc00; }
-  #tabs #tabs_container {
-    padding: 40px;
-    overflow: hidden;
-    position: relative;
-    background: #383D39; }
-    #tabs #tabs_container div {
-      margin-right: 40px; }
-      #tabs #tabs_container div p {
-        color: #7E7E7B;
-        font-weight: 200; }
-      #tabs #tabs_container div span.thicken {
-        font-weight: 400; }
-  @media only screen and (min-width: 481px) and (max-width: 652px) {
-    #tabs {
-      width: 480px; }
-      #tabs ul li a {
-        padding: 13px; } }
-  @media only screen and (max-width: 480px) {
-    #tabs {
-      width: 120%;
-      margin: 0 auto;
-      position: relative;
-      right: 10%; }
-      #tabs ul li a {
-        padding: 1em 0.5em;
-        font-size: 0.8em;
-        margin: 0; }
-      #tabs #tabs_container {
-        font-size: 0.9em; } }
-
 @media only screen and (max-width: 480px) {
   footer h6 {
     text-align: center; } }
@@ -5337,12 +5287,12 @@ h6 {
   background: url(../img/bg3.jpg); }
 
 .bg4 {
-  background: url(../img/bg4.jpg); }
+  background-image: url(pw_maze_black.png); }
 
 .bg5 {
   background-image: url(../img/bg5.png); }
 
-.bg1, .bg3, .bg4, .bg5 {
+.bg1, .bg3, .bg5 {
   background-size: 100% auto;
   background-repeat: no-repeat; }
 
@@ -5361,6 +5311,29 @@ h6 {
 #pin-frame-unpin {
   top: 100%; }
 
+@media only screen and (max-device-width: 1024px) {
+  #examples-pin {
+    height: auto;
+    margin: 0; }
+
+  .pin-frame {
+    position: static;
+    height: 512px; }
+    .pin-frame div.tagline h2 {
+      font-size: 2.42em; }
+    .pin-frame div.tagline p {
+      font-size: 1.5em; }
+
+  #pin-frame-sliding-left, #pin-frame-sliding-right, #pin-frame-wipe, #pin-frame-unpin {
+    margin: 0;
+    left: 0;
+    top: 0; }
+
+  #pin-frame-unpin {
+    height: 0; }
+
+  #pin-frame-sliding-right {
+    height: auto; } }
 #notepad {
   display: inline-block;
   vertical-align: top;
