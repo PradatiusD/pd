@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Prada Designers Homepage</title>
+        <meta name="description" content="A family branding, design & development shop aimed at revitalizing small businesses">
+        <meta name="keywords" content="Web Development, Photography, Websites, Design, Business Cards, Custom Powerpoint Slides">
+        <meta name="author" content="http://twitter.com/PradaDesigners">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="plugins/js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="logo">
+        <div id="canvas" style=""></div>
+        <div class="circle" style="">
+            <a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)."><img src="img/pd-logo.png" alt="Prada Designers Logo" width="190" height="190"></a>      
+        </div>
+    </div>
+    <section class="row">
+        <div class="small-12 columns">
+            <div id="postRaphaelmessage" style="opacity:0;">
+                    <h1>We are Prada Designers<br><span style="opacity:0;">Art that Talks Business</span><br><i class="icon-angle-down" style="opacity:0;"></i> </h1>
+            </div>
+        </div>
+    </section>
+    <section id="fade1" style="opacity:0;">
+        <div class="letterwall">
+            <p>We firmly believe that  <span class="whiten">luck</span> is the residue of <span class="whiten">design</span>.  We are two ludicrously <span class="whiten">good-looking</span> siblings trying to make it big as advisors to growing <span class="whiten">small business</span> and <span class="whiten">start-ups</span>.  We are <span class="whiten">humble</span>.  We are <span class="yellowen">Prada Designers</span>, not the fashion <span class="whiten">company</span>. Key lime pie is objectively <span class="whiten">orgasmic</span>.  Great <span class="whiten">design</span> is about <span class="whiten">empathy</span> towards the <span class="whiten">consumer</span>.  <span class="whiten">Modern</span> Flamenco dancing <span class="yellowen">is a design & development consultancy that prides</span> itself in obliterating its enemies. Frisbee should be an olympic sport.  He blurted incoherently as if trying to fit a <span class="whiten">phrase</span> into a larger <span class="whiten">poetic</span> form, "<span class="yellowen">itself in making its</span>".  Running out of <span class="whiten">thoughtful</span> things to say. I'm making my<span class="yellowen"> clients happy</span> by working on this <span class="whiten">website</span>(as opposed to theirs, right?).</p>
+        </div>
+    </section>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Start series of pics -->
+
+        <div class="simple-demo">
+            <div id="content-wrapper">
+                <div id="examples-pin">
+                    <div id="pin-frame-pin" class="pin-frame bg1">
+                        <span>
+                            <h2>Our Services</h2><br>
+                            <div class="tagline">
+                                <p>We work with all types <br>
+                                    of business owners</p>
+                            </div>
+                        </span>
+                    </div>
+                    <div id="pin-frame-sliding-right" class="pin-frame bg2">
+                        <span>
+                            <h2>Web Development</h2><br>
+                            <div class="tagline">
+                                <p>Our sites are coded with the latest techniques<br>
+                                     and designed with evergreen styles*. <br>
+                                    <small>*(Not to mention with lots of Colombian food)</small> </p>
+                            </div>
+                            <div id="notepad"></div>                                
+                        </span>
+                    </div>
+                    <div id="pin-frame-wipe" class="pin-frame bg3">
+                        <span>
+                            <h2>Strategy</h2><br>
+                            <div class="tagline">
+                                <p>Why get a designer or a developer when you can have <br>
+                                    consultants that do both?</p>                                
+                            </div>
+                        </span>                        
+                    </div>
+                    <div id="pin-frame-sliding-left" class="pin-frame bg4">
+                        <span>
+                            <h2>Branding</h2><br>
+                            <div class="tagline">
+                                <p>We build appropriate brands <br>
+                                   that are delicious as they are thoughtful.</p>
+                            </div>
+                            <div id="brandingCanvas"></div>
+                        </span>                        
+                    </div>
+                    <div id="pin-frame-color" class="pin-frame bg5">
+                        <span>
+                            <h2>Photography</h2><br>
+                            <div class="tagline">
+                                <p>Done from our own studio, we <br>
+                                    ensure your enterprise glows.</p>                                
+                            </div>
+                        </span>                             
+                    </div>
+                    <div id="pin-frame-unpin" class="pin-frame">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End series of pics -->
+
+
+        <div id="fade2">
+            <section class="row">
+                <div class="small-12 large-8 large-centered columns welcome">
+                    <h2>Portfolio</h2>
+                    <p class="center">We work diligently to create websites that truly match the technical needs and overall goals of our clients.</p>
+                </div>
+            </section>
+            <section class="row">
+                <div class="small-12 columns">
+                    <div class="bb-custom-wrapper" style="position:relative;z-index:3000">
+                        <div id="bb-bookblock" class="bb-bookblock">
+                            <div class="bb-item">
+                                <a href="http://fleurmiami.com"><img src="img/slide-fleur.jpg" alt="" width="970"></a>
+                            </div>
+                            <div class="bb-item">
+                                <a href="http://lovingdaymiami.com"><img src="img/slide-loving.jpg" alt="" width="970"></a>
+                            </div>
+                            <div class="bb-item">
+                                <a href="http://the360site.com"><img src="img/slide-360.jpg" alt="" width="970"></a>
+                            </div>
+                            <div class="bb-item">
+                                <a href="http://alainpupo.com"><img src="img/slide-alain.jpg" alt="" width="970"></a>
+                            </div>
+                            <div class="bb-item">
+                                <a href="http://studioissa.com"><img src="img/slide-studio-issa.jpg" alt="" width="970"></a>
+                            </div>
+                            <div class="bb-item">
+                                <a href="http://collegeunwrapped.com"><img src="img/slide-college.jpg" alt="" width="970"></a>
+                            </div>
+                            <div class="bb-item">
+                                <a href="http://brownclubofmiami.com"><img src="img/slide-brown.jpg" alt="" width="970"></a>
+                            </div>
+                            <div class="bb-item">
+                                <a href="http://estrellamorena.com"><img src="img/slide-estrella.jpg" alt="" width="970"></a>
+                            </div>
+                            <aside class="portfolio-desc">
+                                <article>
+                                    <h2>Fleur-De-Lis Designs: <span>Bringing flowers to life</span></h2>
+                                    <p>A dramatic re-branding for a local flower shop on Flagler street, this e-commerce site showcases our product photography and branding, giving the shop a polished, modern, and clean aesthetic.</p>
+                                    <p class="info-links"><strong><a target="_blank" href="http://fleurmiami.com">Website</a></strong> and <strong><a target="_blank" href="http://github.com/PradatiusD/fleur">GitHub</a></strong></p>
+                                </article>
+                                <article style="display:none">
+                                    <h2>Loving Day: <span>Celebrating interracial marriage</span></h2>
+                                    <p>In 1967 the U.S. Supreme Court ruled bans on interracial marriage unconstitutional, and this site is part of a Miami charity project to celebrate thise event.  Our focus centered on a one-page, mobile-responsive design that displayed instagram images with tags #lovingdaymia and #mixedinmia.</p>
+                                    <p class="info-links"><strong><a target="_blank" href="http://lovingdaymiami.com">Website</a></strong> and <strong><a target="_blank" href="http://github.com/PradatiusD/lovingmiami">GitHub</a></strong></p>
+                                </article>
+                                <article style="display:none">
+                                    <h2>The 360 Site: <span>Rebranding for an artist management.</span></h2>
+                                    <p>We focused on a website content format that visually displayed the amount of distinctive artists this company manages in one glance.  Keeping with the website, we built a identity that also conveyed a classic, elite, and professional energy.</p>
+                                    <p class="info-links"><strong><a target="_blank" href="http://the360group.com">Website</a></strong> and <strong><a target="_blank" href="http://github.com/PradatiusD/the360site">GitHub</a></strong></p>
+                                </article>
+                                <article style="display:none">
+                                    <h2>Alain Pupo: <span>Connecting viewers with their clarivoyant</span></h2>
+                                    <p>A Miami TV & radio celibrity, Alain Pupo needed a website that communicated spirituality, read easily for older eyes, and remained mobile-friendly&mdash;since more than 50% of visitors accessed his content via their phones.  To better keep in touch with his fans, we also integrated Mailchimp's email platform alongside Twitter Feeds.</p>
+                                    <p class="info-links"><strong><a target="_blank" href="http://AlainPupo.com">Website</a></strong> and <strong><a target="_blank" href="http://github.com/PradatiusD/alain">GitHub</a></strong></p>
+                                </article>
+                                <article style="display:none">
+                                    <h2>Studio Issa: <span>Adaptive Design</span></h2>
+                                    <p>This is a Providence based creative studio that asked me for help with their website's performance and appearance on mobile and tablet devices.  Our involvement in the project was to improve the presentation of the site at mobile, tablet, and desktop resolutions.<a target="_blank" href=""></a></p>
+                                    <p class="info-links"><strong><a target="_blank" href="http://StudioIssa.com">Website</a></strong> and <strong><a target="_blank" href="http://github.com/PradatiusD/StudiIssa">GitHub</a></strong></p>
+                                </article>
+                                <article style="display:none">
+                                    <h2>College Unwrapped: <span>Stories from Ivy League college students</span></h2>
+                                    <p>Often prestigious colleges aren't in the plans of low-income high school grads because those schools are too distant from their experiences.  For this reason, we produced a site that displayed these visual anecdotes (collected by this organization) in the most accessible, shareable, and readable way.</p>
+                                    <p class="info-links"><strong><a target="_blank" href="http://CollegeUnwrapped.com">Website</a></strong> and <strong><a target="_blank" href="http://github.com/PradatiusD/collegeunwrapped">GitHub</a></strong></p>                    
+                                </article>
+                                <article style="display:none">
+                                    <h2>Brown Club of Miami: <span>Making Miami cooler than all the other cities</span></h2>
+                                    <p>As an alum, I was amazed by how unexciting and antiquated other Brown club sites were (<a target="_blank" href="http://www.brownnyc.org/">NYC</a>, <a target="_blank" href="http://alumni.brown.edu/clubs/BrownClubofChicago/">Chicago</a>, <a target="_blank" href="http://www.brownclubofboston.com/">Boston</a>).  With a logo designed from a Spring Weekend concert t-shirt, we bult a site with a leaner, funner, and cooler typography and color palette.</p>
+                                    <p class="info-links"><strong><a target="_blank" href="http://brownclubofmiami.com">Website</a></strong></p>
+                                </article>
+                                <article style="display:none">
+                                    <h2>Estrella Morena: <span>A Charity project for a local Flamenco Artist</span></h2>
+                                    <p>A total redesign, this newly built mobile-friendly site has a touch-based enabled slideshow, a prettyPhoto gallery, and integration with Google Maps API.</p>
+                                    <p class="info-links"><strong><a target="_blank" href="http://estrellamorena.com">Website</a></strong> and <strong><a target="_blank" href="http://github.com/PradatiusD/morena">GitHub</a></strong></p>
+                                </article>
+                            </aside>
+                            <nav>
+                                <a id="bb-nav-prev" href="#"><i class="icon-chevron-left"></i></a>
+                                <a id="bb-nav-next" href="#"><i class="icon-chevron-right"></i></a>
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+       <div id="fade3" class="show-for-landscape">
+            <section class="row">
+                <div class="small-12 large-8 large-centered columns welcome">
+                    <h2>Custom Presentations</h2>
+                    <p class="center">Each presentation below involved not only designing, but crafting and compressing the messaging to a point where it could be told visually.</p>
+                </div>
+            </section>
+           <section class="row slide-decks">
+                <div class="large-4 small-12 columns">
+                    <article>
+                        <b>ScholarSort</b>
+                        <i class="icon-book"></i>
+                        <a class="overlay" data-reveal-id="scholarsort"></a>
+                        <span class="entypo">&#127891;</span>
+                        <span id="canvas1">
+                        </span>
+                    </article>
+                </div>
+                <div class="large-4 small-12 columns">
+                    <article>
+                        <b>WHS</b>
+                        <i class="icon-home"></i>
+                        <a class="overlay" data-reveal-id="whs"></a>
+                        <span class="entypo">&#127758;</span>
+                        <span id="canvas2">
+                        </span>
+                    </article>
+                </div>
+                <div class="large-4 small-12 columns">
+                    <article>
+                        <b>Coachify</b>
+                        <i class="icon-trophy"></i>
+                        <a class="overlay" data-reveal-id="coachify"></a>
+                        <span class="entypo">&#128227;</span>
+                        <span id="canvas3">
+                        </span>
+                    </article>
+                </div>
+           </section>
+       </div>
+       <div id="fade5">
+            <section class="row">
+                <div class="small-12 large-8 large-centered columns welcome">
+                    <h2>Let's talk</h2>
+                    <p class="center">If you would like me to stop by your company and listen to your story, send me a quick e-mail to <a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :).">daniel@pradadesigners.com</a> and we'll start the conversation.</p>
+                </div>
+            </section>
+            <section class="row">
+                <div class="social small-12 columns">
+                    <a target="_blank" href="https://github.com/PradatiusD" class="entypo-social">&#62208;<span class="friend-count friend-github"></span></a><a target="_blank" href="http://twitter.com/PradaDesigners" class="entypo-social">&#62217;<span class="friend-count friend-twitter"></span></a><a target="_blank" href="https://www.facebook.com/PradaDesigners" class="entypo-social">&#62220;<span class="friend-count friend-facebook"></span></a><a target="_blank" href="http://pinterest.com/PradaDesigners" class="entypo-social">&#62226;</a><a target="_blank" href="http://www.linkedin.com/company/prada-designers" class="entypo-social">&#62232;</a><a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)." class="entypo">&#9993;</a>
+                </div>
+                <div class="social font-awesome small-12 columns">
+                    <a target="_blank" href="https://github.com/PradatiusD"><i class="icon-github-alt"></i><span class="friend-count friend-github"></span></a><a target="_blank" href="http://twitter.com/PradaDesigners"><i class="icon-twitter"></i><span class="friend-count friend-twitter"></span></a><a target="_blank" href="https://www.facebook.com/PradaDesigners"><i class="icon-facebook"></i><span class="friend-count friend-facebook"></span></a><a target="_blank" href="http://pinterest.com/PradaDesigners"><i class="icon-pinterest"></i></a><a target="_blank" href="http://www.linkedin.com/company/prada-designers"><i class="icon-linkedin"></i></a><a href="mailto:daniel@pradadesigners.com?subject=I'm so excited to become your new client!&body=Let's make my day better :)."><i class="icon-envelope"></i></a>
+                </div>
+            </section>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer class="row">
+            <div class="large-5 push-7 small-12 columns">
+                <h6>The code for this site is available on <a href="https://github.com/PradatiusD/pd">GitHub</a></h6>
+            </div>
+        </footer>
+        <br>
+        <br>
+        <br>
+
+<!-- Modals for Custom Presentations -->
+    <div id="scholarsort" class="reveal-modal medium">
+        <h2>Scholar Sort</h2>
+        <p class="subheader">How do we use big data to optimize classrooms?</p>
+        <p>At Start-up Weekend Orlando EDU, our team built an idea around using educational APIs to tailor and optimize clasroom seating arrangements. This presentation, alongside our awesome team, <strong>earned us 1st place</strong> in this competition.</p>
+        <a class="button" target="_blank" href="assets/ScholarSort.pptx"><span class="entypo">&#128229;</span>Download the file!</a>
+        <h4><small><u>Note:</u> The file size of this PPT is 7.4MB.</small></h4>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+    <div id="whs" class="reveal-modal medium">
+        <h2>World Housing Solution</h2>
+        <p class="subheader">Showcasing technology visually</p>
+        <p>In this project I broke down the numerous benefits of this company's flagship building technology and rebuilt a <strong>visually compelling presentation based on easily digestible components.</strong></p>
+        <a target="_blank" href="assets/WHS.pptx" class="button"><span class="entypo">&#128229;</span> Download the file!</a>
+        <h4><small><u>Note:</u> The file size of this PPT is 31.5MB.</small></h4>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+    <div id="coachify" class="reveal-modal medium">
+        <h2>Coachify</h2>
+        <p class="subheader">Making corporate wellness fun(ny)!</p>
+        <p>Corporate wellness has not won awards for being sexy as an industry, so my challenge was to design a light-hearted story that follows a <strong>real use case, and concludes with a concise summary</strong> of all the advantages this platform offers to coachees interested in personal improvement.</p>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+
+<script type="text/javascript" src="plugins/js/TweenMax.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="plugins/js/jquery.superscrollorama.js"></script>
+<script>
+    $(document).ready(function() {
+
+        var controller = $.superscrollorama();
+
+        $('#fade1').css('opacity','');
+
+        controller.addTween('#fade1', 
+            TweenMax.from( $('#fade1'), .5, {
+                css:{opacity: 0},
+                onStart : function() {
+                        setTimeout(function(){
+                                $('.slogan').animate({
+                                    opacity: 1
+                                },2000)
+                                $('.slogan-bg').animate({
+                                    width: '600px',
+                                    opacity: 1
+                                },1000)
+
+                        }, 4000)
+                },
+                onReverseComplete: function () {
+                    $('.slogan').animate({
+                            opacity: 0
+                    },250)
+                    $('.slogan-bg').animate({
+                        width: '0',
+                        opacity: 0
+                    },250)                    
+                }
+            }));
+
+        // Given that iPads render javascript very slowly, remove some of the tweens
+        // to lighten the load on the safari browser
+        var isiPad = navigator.userAgent.match(/iPad/i) != null;
+
+        if (isiPad === false) {
+            controller.addTween('#fade2', TweenMax.from( $('#fade2'), .5, {css:{opacity: 0}}));
+            controller.addTween('#fade5', TweenMax.from( $('#fade5'), .5, {css:{opacity: 0}}));
+           // set duration, in pixels scrolled, for pinned element
+            var pinDur = 4000;
+            // create animation timeline for pinned element
+            var pinAnimations = new TimelineLite();
+            pinAnimations
+                .append(TweenMax.from($('#pin-frame-pin span'), .5, {css:{marginTop:0}, ease: Quad.easeInOut}))
+                .append([
+                    TweenMax.to($('#pin-frame-sliding-right'), 1, {css:{marginLeft:0}}),
+                    TweenMax.to($('#pin-frame-pin'), 1, {css:{marginLeft:'100%'}})
+                ], .5)
+                .append([
+                    TweenMax.to($('#pin-frame-wipe'), .5, {css:{top:0}}),
+                    TweenMax.from($('#pin-frame-wipe h2'), .5, {css:{marginTop:'-600px'}})
+                ], .5)
+                .append([
+                    TweenMax.to($('#pin-frame-sliding-left'), 1, {css:{left:0},
+                        onComplete:function(){
+                            // Animated circle with two rectangles (plus sign) named verticalPlus and
+                            // horizontalPlus that move from left to right.
+                            // 
+
+                            // Creates canvas 1000 × 400 at brandingCanvas
+                            var brandingCanvas = Raphael(document.getElementById("brandingCanvas"), 1200, 400);
+
+
+                            var plusCircle = brandingCanvas.circle(45, 105, 90).attr({"fill":"#cccc00",
+                                            "fill-opacity": 0.5
+                                            })
+
+                            // Creates rectangle verticalPlus
+                            var verticalPlus =  brandingCanvas.path("M30,60 L60,60 L60,150 L30,150Z")
+                                    .attr({"fill" : "#cccc00",
+                                    "fill-opacity": 0.8, 
+                                    "stroke": "#FFFFFF",
+                                    "stroke-width":0});
+                            var horizontalPlus = brandingCanvas.path("M0,90 L90,90 L90,120 L0,120z")
+                                    .attr({"fill" : "#cccc00",
+                                    "fill-opacity": 0.8, 
+                                    "stroke": "#FFFFFF",
+                                    "stroke-width":0});
+                            
+
+                            function moveIt(variable) {
+                                variable
+                                variable.animate({
+                                        transform: "t" + [665 , 0] + "r" + (720)
+                                    },3000, "elastic")  
+                            }
+
+                            moveIt(horizontalPlus);
+                            moveIt(verticalPlus);
+                            moveIt(plusCircle);
+
+                        }
+                }),
+                ], .5)
+                .append(TweenMax.from($('#pin-frame-color'), .25, {css:{opacity:0}}), .5)
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'blue'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'orange'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'green'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'red'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'yellow'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'purple'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'orange'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'blue'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'red'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'green'}})
+                ])
+                .append([
+                    TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'black'}}),
+                    TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'#cccc00'}})
+                ])
+                .append(TweenMax.to($('#pin-frame-unpin'), .5, {css:{top:'100px'}}));
+            
+            // pin element, use onPin and onUnpin to adjust the height of the element
+            controller.pin($('#examples-pin'), pinDur, {
+                anim:pinAnimations, 
+                onPin: function() {
+                    $('#examples-pin').css('height','100%');
+                }, 
+                onUnpin: function() {
+                    $('#examples-pin').css('height','1000px');
+                }
+            });            
+        } 
+        controller.addTween('#fade3', 
+            TweenMax.from( $('#fade3'), .5, {
+                css:{opacity: 0},
+                onStart : function() {
+                    if ($('body').width() > 480) {
+                        function stretchCircle (canvasSize,  HTMLid) {
+                            // Creates square canvas with size CanvasSize inside the contents of HTMLid
+                        var paper = Raphael(HTMLid, canvasSize, canvasSize);
+
+                            // Creates centered circle
+                        var circle = paper.circle(canvasSize/2, canvasSize/2, 10);
+
+                            // Sets the fill and stroke
+                            circle.attr({"fill": "#CC0"});
+
+                            circle.animate({"r": canvasSize/2
+                                            },1000, ">");
+                        }
+
+                        setTimeout(function(){
+                            stretchCircle(250, 'canvas1');
+                            },0)
+                        setTimeout(function(){
+                            stretchCircle(250, 'canvas2');
+                            },125)
+                        setTimeout(function(){
+                            stretchCircle(250, 'canvas3');
+                            },250)
+
+                        $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':1}, 500);
+                    }
+                },
+                onReverseComplete: function () {
+                    if ($('body').width() > 480) {
+                        $('#canvas1, #canvas2, #canvas3').empty();
+
+                        $('.slide-decks article b, .slide-decks article span.entypo').animate({'opacity':0}, 500);
+                    }
+                }
+            }));
+
+ 
+    });
+</script>
+<script src="plugins/js/raphael.min.js"></script>
+<script>
+jQuery(document).ready(function($){
+
+    // FOR RAPHAEL CIRCLE BEHIND LOGO ON PAGE LOAD 
+    if ($('body').width() > 480) {
+        var arcCanvasSize = 345;
+    } 
+    else {
+        var arcCanvasSize = 300;
+    }
+
+    $('#canvas').css({
+        'width':arcCanvasSize,
+        'height':arcCanvasSize
+    })
+
+    var archtype = Raphael("canvas", arcCanvasSize, arcCanvasSize);
+    archtype.customAttributes.arc = function (xloc, yloc, value, total, R) {
+        var alpha = 360 / total * value,
+            a = (90 - alpha) * Math.PI / 180,
+            x = xloc + R * Math.cos(a),
+            y = yloc - R * Math.sin(a),
+            path;
+        if (total == value) {
+            path = [
+                ["M", xloc, yloc - R],
+                ["A", R, R, 0, 1, 1, xloc - 0.01, yloc - R]
+            ];
+        } else {
+            path = [
+                ["M", xloc, yloc - R],
+                ["A", R, R, 0, +(alpha > 180), 1, x, y]
+            ];
+        }
+        return {
+            path: path
+        };
+    };
+
+    //make an centered arc with a radius of arcCanvasSize * 0.45 (because we 
+    // have to account for the size of the circle stroke) that grows
+    // from 0 to 99.99% for 2000 seconds.
+
+    var my_arc = archtype.path().attr({
+        "stroke": "#cccc00",
+            "stroke-width": 4,
+        arc: [arcCanvasSize/2, arcCanvasSize/2, 0, 100, arcCanvasSize*0.45]
+    });
+
+    my_arc.animate({
+        arc: [arcCanvasSize/2, arcCanvasSize/2, 99.99, 100, arcCanvasSize*0.45]
+    }, 3000, function(){ 
+    
+    // Trigger set of fades directly after Raphael animation
+
+            $('#canvas').animate({'opacity': 0},1000, function() {
+                $('#postRaphaelmessage').animate({'opacity': 1},1000, function(){
+                    $('#postRaphaelmessage span').animate({'opacity': 1},1000, function () {
+
+                   var cycledObject = $('#canvas, i.icon-angle-down');
+                    function cycleOpacity() {
+                        cycledObject.animate({opacity:'+=1'}, 3000);
+                        cycledObject.animate({opacity:'-=1'}, 3000, cycleOpacity);
+                    }
+                           cycleOpacity();
+                    });
+                });                
+            });
+        }); 
+
+})    
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="plugins/js/jquery.approach.min.js"></script>
+<script>
+    // For leterwall
+    jQuery(document).ready(function(){
+        $(".yellowen").approach({
+            "color": "#cccc00"
+          }, 700);
+        $(".whiten").approach({
+            "color": "#B6B6B6"
+          }, 200);
+    })
+</script>
+<script src="plugins/js/jquery.bookblock.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+        // Creates canvas 320 × 200 at id Notepad
+    var paper = Raphael(document.getElementById("notepad"), 320, 320);
+
+    // Create line at 10,10 that goes to 20, 20
+    var shape = paper.path("M0,0 \
+                320,0 \
+                L320,320 \
+                L0,320Z \
+            ").attr({
+                stroke: "#cccc00",
+                "stroke-width": 0,
+                "fill-opacity":0.8,
+                fill:"#000000"
+            });
+
+    var paths = ["M160,0C71.635,0,0,71.634,0,160c0,88.365,71.635,160,160,160s160-71.635,160-160C320,71.634,248.365,0,160,0 z M205.279,34.685c3.753,0,7.507,0,11.259,0c0,7.56,0,15.12,0,22.68c5.33,0,10.66,0,15.99,0c0,3.753,0,7.506,0,11.259 c-9.027-0.108-18.492,0.217-27.249-0.163C205.279,57.203,205.279,45.944,205.279,34.685z M161.714,34.685c3.915,0,7.832,0,11.748,0 c2.267,3.988,4.801,7.708,7.017,11.748c2.779-3.584,4.934-7.792,7.342-11.748c3.971,0,7.94,0,11.911,0 c-0.108,11.259,0.218,22.952-0.162,33.939c-3.7,0-7.397,0-11.097,0c0-5.493,0-10.987,0-16.48c-2.735,3.193-5.104,8.166-7.994,11.748 c-2.232-3.26-4.647-7.414-6.854-10.606c-0.221-0.32-0.449-1.297-0.979-0.979c0,5.438,0,10.878,0,16.317c-3.644,0-7.287,0-10.931,0 C161.714,57.311,161.714,45.998,161.714,34.685z M160.5,188.204c8.942,0.01,17.85,0.054,26.668,0.187 c-0.938,9.506-1.716,19.172-2.611,28.719c-8.089,2.091-16.102,4.257-24.057,6.484V188.204z M159.5,166.037 c-9.65,0-19.302,0-28.952,0c-0.627-7.586-1.443-14.982-1.958-22.68c10.304,0,20.606,0,30.91,0V166.037z M125.489,34.685 c10.389,0,20.776,0,31.166,0c-0.109,3.698,0.217,7.832-0.163,11.259c-3.264,0-6.527,0-9.791,0 c-0.108,7.505,0.218,15.447-0.163,22.68c-3.698,0-7.396,0-11.095,0c0-7.56,0-15.12,0-22.68c-3.264-0.109-6.962,0.217-9.954-0.164 C125.489,42.082,125.489,38.383,125.489,34.685z M87.634,34.685c3.753,0,7.507,0,11.259,0c0,3.698,0,7.396,0,11.095 c3.101,0.381,6.907,0.054,10.28,0.164c0.381-3.427,0.055-7.561,0.163-11.259c3.754,0,7.506,0,11.258,0 c-0.108,11.259,0.218,22.952-0.163,33.939c-3.644-0.108-7.723,0.217-11.095-0.163c0-3.753,0-7.505,0-11.258 c-3.48,0-6.961,0-10.443,0c0,3.807,0,7.614,0,11.421c-3.699-0.108-7.832,0.217-11.259-0.163 C87.634,57.203,87.634,45.944,87.634,34.685z M71.317,83.962c29.393,0,58.788,0,88.183,0v37.039c-18.407,0-36.814,0-55.223,0 c-0.19,0.028-0.177,0.258-0.163,0.49c2.126,22.132,3.969,44.547,6.036,66.737c16.373,0.068,32.921-0.038,49.35-0.026v35.524 c-8.008-2.381-16.478-4.298-24.383-6.781c-0.61-5.807-0.993-11.844-1.633-17.621c-7.451,0-14.902,0-22.354,0 c1.014,11.658,2.085,23.26,3.101,34.918c13.104,3.643,26.643,7.531,39.813,11.258c1.786,0.507,3.953,1.311,5.455,1.442v38.346 c-23.866-6.931-48.338-13.262-72.193-20.208C82.069,204.73,76.346,143.981,71.317,83.962z M232.528,265.244 c-24.065,6.579-48.124,13.166-72.028,19.907v-38.225c1.477-0.185,3.441-0.953,5.129-1.427c13.454-3.764,26.525-7.631,39.813-11.094 c2.124-22.734,4.006-45.707,6.201-68.37c-17.048,0-34.096,0-51.144,0v-22.68c17.7,0,35.4,0,53.102,0 c0.633-7.472,1.378-14.831,1.957-22.355c-18.353,0-36.706,0-55.059,0V83.962c29.395,0,58.79,0,88.183,0 C243.257,144.345,237.822,204.729,232.528,265.244z", 
+        " M316.678,132.881c-7.112-41.522-27.641-71.257-55.117-94.996 C235.354,15.245,197.424-2.746,149.813,0.347c-42.999,2.792-76.091,21.71-101.176,45.2c-24.326,22.779-42.34,57.016-46.812,97.294 c-8.91,80.233,38.992,137.111,89.095,161.648c7.565,3.706,17.394,9.247,27.181,6.127c4.736-7.962,1.147-24.371,2.266-36.007 c-20.2,3.635-37.592,1.356-47.567-9.192c-5.979-6.322-7.389-16.283-12.836-23.749c-5.582-7.646-14.113-8.612-16.61-17.619 c25.955-7.682,28.222,20.542,44.546,29.111c9.053,4.749,20.588,3.973,33.224-0.767c-0.801-9.743,8.487-17.619,7.549-21.45 c-43.649-3.85-72.395-32.549-70.219-81.208c0.821-18.353,7.542-30.016,16.611-41.368c-5.306-11.235-3.612-33.102,2.265-42.136 c19.771,0.369,30.428,9.985,43.794,16.854c21.758-7.311,56.652-6.887,78.524,0c12.708-7.533,23.935-16.573,43.792-16.854 c4.663,10.593,6.833,31.138,1.51,42.901c9.593,10.59,16.076,23.033,16.611,41.37c1.396,47.872-26.227,77.851-71.729,79.674 c1.469,4.693,5.572,7.691,7.551,13.789c5.993,18.474-1.648,48.515,4.53,66.65c10.021,3.841,19.406-3.098,27.182-6.895 C282.243,277.774,331.139,217.304,316.678,132.881z",
+        "M M160,0C71.635,0,0,71.635,0,160s71.635,160,160,160s160-71.635,160-160S248.365,0,160,0z M179.395,33.926 c10.337,0,20.675,0,31.013,0c0,2.982,0,5.965,0,8.945c-4.573,0-9.145,0-13.717,0c2.152,8.585,16.104,10.533,14.313,25.049 c-10.536,0-21.072,0-31.609,0c0-3.18,0-6.361,0-9.543c4.573,0,9.145,0,13.718,0C191.169,49.981,177.421,48.227,179.395,33.926z  M141.823,33.926c10.337,0,20.675,0,31.012,0c0,2.982,0,5.965,0,8.945c-4.573,0-9.145,0-13.717,0 c3.754,9.367,16.014,10.229,14.312,25.049c-10.535,0-21.071,0-31.607,0c0-3.18,0-6.361,0-9.543c4.771,0,9.542,0,14.312,0 C153.993,49.984,140.07,48.204,141.823,33.926z M109.021,33.926c8.945,0,17.892,0,26.837,0c0,3.181,0,6.361,0,9.543 c-4.969,0-9.94,0-14.909,0c-1.385,3.584-0.204,9.735-0.596,14.312c5.167,0,10.336,0,15.505,0c0,3.379,0,6.76,0,10.139 c-8.945,0-17.892,0-26.837,0C109.021,56.588,109.021,45.257,109.021,33.926z M71.449,84.619c-0.051-0.848-0.099-1.689,0.596-1.789 c29.152,0,58.304,0,87.455,0v35.488c-18.266,0.249-36.533,0.496-55.249,0.294c0.394,7.56,1.358,14.545,1.789,22.066 c17.914-0.021,35.857-0.072,53.46,0.22v22.443c-8.676,0-17.352,0-26.027,0c0.173,7.977,1.448,14.854,1.79,22.664 c8.079,0,16.158,0,24.237,0v34.582c-0.128,0-0.254,0.011-0.382,0.008c-8.201-0.178-15.729-5.297-23.855-6.561 c-0.113-6.051-1.406-10.92-1.192-17.295c-7.555,0-15.108,0-22.663,0c0.501,12.221,1.887,23.559,2.981,35.188 c7.704,1.676,15.038,4.422,22.662,6.559c7.028,1.97,15.514,5.703,22.449,5.942v39.751c-23.869-6.794-48.006-13.326-71.948-20.049 C81.827,204.652,76.669,144.605,71.449,84.619z M160.5,163.342v-22.423c10.216,0.177,20.318,0.467,30.228,0.952 c-0.719,7.236-0.475,15.432-2.387,21.471C179.062,163.342,169.78,163.342,160.5,163.342z M187.148,186.006 c-1.436,9.1-1.546,19.523-2.983,28.625c-8.334,0.311-15.562,5.537-23.665,5.938v-34.562 C169.383,186.006,178.266,186.006,187.148,186.006z M232.474,264.131c-24.026,6.705-48.523,12.94-71.974,20.22v-39.907 c6.928-0.112,15.349-3.963,22.474-5.957c7.632-2.135,15.018-4.715,22.663-6.559c3.543-37.807,7.002-75.697,10.138-113.912 c-18.727-0.205-37.003,0.04-55.274,0.289V82.83c29.358,0,58.717,0,88.076,0C243.25,143.305,237.701,203.561,232.474,264.131z", 
+
+        "M160,0C71.633,0,0,71.635,0,160 c0,88.366,71.633,160,160,160c88.366,0,160-71.634,160-160C320,71.635,248.366,0,160,0z M17.005,159.999 c0-20.062,4.139-39.157,11.601-56.486C51.214,164.7,73.813,225.896,95.738,287.767C49.041,264.232,17.005,215.861,17.005,159.999z  M160,302.994c-13.838,0-27.212-1.973-39.867-5.64c13.851-41.232,27.757-82.41,42.432-122.82 c15.338,39.652,29.443,80.533,44.411,120.556C192.261,300.205,176.456,302.994,160,302.994z M179.878,93.099 c9.072-0.949,21.956,1.76,21.801-7.054c-0.176-9.98-27.012-3.848-42.962-3.848c-15.004,0-42.543-5.225-45.528,1.282 c-3.792,8.271,8.355,10.21,19.879,9.619c5.572,15.46,11.606,30.689,17.313,46.168c1.788,4.85,5.167,11.928,5.13,16.031 c-0.058,6.238-5.292,16.567-7.694,23.725c-8.217,24.471-15.452,48.186-24.367,69.895C107.222,196.533,87.527,144.196,72.15,93.099 c9.142-1.119,22.972,2.452,21.161-9.619c-3.412-4.71-10.737-2.97-16.673-2.564c-11.604,0.791-24.54,1.636-36.55,1.282 c-0.083,0.125-0.163,0.254-0.246,0.38c-0.021-0.004-0.04-0.009-0.062-0.013C65.238,43.124,109.564,17.005,160,17.005 c38.718,0,73.835,15.396,99.582,40.389c-2.048-1.557-4.08-2.614-5.964-2.77c-16.909-1.396-25.643,21.653-20.519,37.191 c6.98,21.166,25.629,33.258,24.366,64.123c-0.745,18.235-7.449,33.082-11.541,46.81c-4.509,15.127-8.536,28.332-14.108,44.887 C214.214,196.414,196.938,144.862,179.878,93.099z M234.192,282.265c2.198-4.746,3.768-13.554,5.961-19.882 c12.208-35.229,25.947-73.611,37.832-107.085c5.395-15.191,9.665-30.38,9.619-48.734c-0.018-6.721-1.076-11.977-2.892-16.553 c11.637,20.688,18.281,44.562,18.281,69.988C302.994,211.807,275.442,257.179,234.192,282.265z"]
+
+
+    var pathsCounter = -1;
+    function constantAnimation () {
+        pathsCounter++;
+
+        if (pathsCounter< paths.length) {
+            shape.animate({ path: paths[pathsCounter]}, 2000, 'bounce', function(){
+                    setTimeout(function(){
+                        constantAnimation();
+                    },3000)
+            })
+        } else {
+            pathsCounter = -1;
+                constantAnimation();
+        }
+
+    }
+
+    constantAnimation();
+
+    </script>
+<script>
+    jQuery(document).ready(function($){
+        // Get follower/friends counts via JSONP for Facebook, Twitter, and GitHub
+
+        $.ajax({
+            url: 'https://graph.facebook.com/https://www.facebook.com/PradaDesigners',
+            dataType: 'jsonp',
+            jsonp: 'callback',
+        }).done(function (information) {
+                $('.friend-facebook').text(information.likes);
+            })
+
+        $.ajax({
+            url: 'https://twitter.com/users/PradaDesigners.json',
+            dataType: 'jsonp',
+            jsonp: 'callback',
+        }).done(function (information) {
+                $('.friend-twitter').text(information.followers_count);
+            })
+
+        $.ajax({
+            url: 'https://api.github.com/users/PradatiusD',
+            dataType: 'jsonp',
+            jsonp: 'callback',
+        }).done(function (information) {
+                $('.friend-github').text(information.data.followers);
+            })
+        // If any of these spans remain empty after 1.5 seconds, remove them from the DOM
+        setTimeout(function(){
+            $('.friend-count').each(function(i, obj){
+                var countText = $(this).text();
+                if (countText === '') {
+                    $(this).remove();
+                }
+            })
+        },1500)
+
+        // Also for contact icons make sure you hide entypo if its windows and show alternate
+        if (navigator.appVersion.indexOf("Windows")!=-1){
+            $('.social, article .entypo, reveal-modal .entypo').hide();
+            $('.social.font-awesome, article i').show();
+        }
+    })
+</script>
+<script src="js/homepage.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34638866-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </body>
+</html>
