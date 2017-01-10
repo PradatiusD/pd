@@ -13,10 +13,21 @@ module.exports = function (grunt) {
         src: 'theme',
         dest: 'dprada',
       }
+    },
+    watch: {
+      scripts: {
+        files: 'theme/*',
+        tasks: [],
+        options: {
+          livereload: true,
+        },
+      },
     }
   });
 
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['ftp-deploy']);
+  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('ftp', ['ftp-deploy']);
 };
