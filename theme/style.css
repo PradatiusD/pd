@@ -7350,7 +7350,10 @@ body {
   text-align: center;
   background: black;
   color: white;
-  padding: 1em;
+  padding: 1.5em 1em 1em 1em;
+}
+.site-footer a {
+  color: #7fc4ff;
 }
 
 .site-title {
@@ -7359,6 +7362,10 @@ body {
 
 .site-header {
   padding: 1em;
+}
+
+h1.site-title a, h2.entry-title a {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
