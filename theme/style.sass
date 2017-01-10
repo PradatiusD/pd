@@ -44,10 +44,22 @@ body
 
 .site-title
   text-transform: uppercase
+  @extend .h1
 
 .site-header
   padding: 1em
 
-h1.site-title, h2.entry-title
+.site-title, h2.entry-title
   a
     color: black
+
+.entry-title
+  @extend .h2
+
+.featured-img-container
+  display: block
+
+  img
+    max-height: 100%
+    width: auto
+    margin: 0 auto

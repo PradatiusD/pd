@@ -1496,7 +1496,8 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1,
+.site-title, .h2, .entry-title, .h3, .h4, .h5, .h6 {
   font-family: "Oswald", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 500;
   line-height: 1.1;
@@ -1510,8 +1511,11 @@ h4 .small, h5 small,
 h5 .small, h6 small,
 h6 .small,
 .h1 small,
-.h1 .small, .h2 small,
-.h2 .small, .h3 small,
+.site-title small,
+.h1 .small,
+.site-title .small, .h2 small, .entry-title small,
+.h2 .small,
+.entry-title .small, .h3 small,
 .h3 .small, .h4 small,
 .h4 .small, .h5 small,
 .h5 .small, .h6 small,
@@ -1521,18 +1525,20 @@ h6 .small,
   color: #777777;
 }
 
-h1, .h1,
-h2, .h2,
+h1, .h1, .site-title,
+h2, .h2, .entry-title,
 h3, .h3 {
   margin-top: 25px;
   margin-bottom: 12.5px;
 }
 h1 small,
-h1 .small, .h1 small,
+h1 .small, .h1 small, .site-title small,
 .h1 .small,
+.site-title .small,
 h2 small,
-h2 .small, .h2 small,
+h2 .small, .h2 small, .entry-title small,
 .h2 .small,
+.entry-title .small,
 h3 small,
 h3 .small, .h3 small,
 .h3 .small {
@@ -1557,11 +1563,11 @@ h6 .small, .h6 small,
   font-size: 75%;
 }
 
-h1, .h1 {
+h1, .h1, .site-title {
   font-size: 46px;
 }
 
-h2, .h2 {
+h2, .h2, .entry-title {
   font-size: 38px;
 }
 
@@ -5465,7 +5471,8 @@ a.badge:hover, a.badge:focus {
   background-color: #eeeeee;
 }
 .jumbotron h1,
-.jumbotron .h1 {
+.jumbotron .h1,
+.jumbotron .site-title {
   color: inherit;
 }
 .jumbotron p {
@@ -5494,7 +5501,8 @@ a.badge:hover, a.badge:focus {
     padding-right: 60px;
   }
   .jumbotron h1,
-  .jumbotron .h1 {
+  .jumbotron .h1,
+  .jumbotron .site-title {
     font-size: 81px;
   }
 }
@@ -7364,8 +7372,17 @@ body {
   padding: 1em;
 }
 
-h1.site-title a, h2.entry-title a {
+.site-title a, h2.entry-title a {
   color: black;
+}
+
+.featured-img-container {
+  display: block;
+}
+.featured-img-container img {
+  max-height: 100%;
+  width: auto;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

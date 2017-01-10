@@ -4,7 +4,7 @@ include_once(get_template_directory() . '/lib/init.php');
 
 define('CHILD_THEME_NAME', 'Daniel Prada Child Theme');
 define('CHILD_THEME_URL', 'http://github.com/PradatiusD/dprada');
-define('CHILD_THEME_VERSION', '1.0.3');
+define('CHILD_THEME_VERSION', '1.0.4');
 
 //* Add HTML5 markup structure
 add_theme_support('html5', array('search-form','comment-form','comment-list','gallery','caption'));
@@ -27,5 +27,17 @@ if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
   add_action( 'wp_enqueue_scripts', 'local_livereload');
 }
 
-wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald|Roboto:400,400i,700', array(), '1.0.0', "all");
+wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald|Roboto:400,400i,700', array(), '1.0.0', 'all');
 
+
+
+add_action( 'genesis_entry_header', 'featured_post_image', 8);
+function featured_post_image() {
+    ob_start();
+  ?>
+  <a href="<?php echo get_the_permalink();?>" class="featured-img-container">
+    <?php echo the_post_thumbnail('post-image', array('class'=>'img-responsive')); ?>
+  </a>
+  <?php
+  echo ob_get_clean();
+}
