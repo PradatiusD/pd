@@ -6,16 +6,32 @@
  * Template: genesis
  */
 
+@import './../bower_components/bourbon/app/assets/stylesheets/bourbon'
+
 $body-bg: #fefefe
-$font-size-base: 17px
+$font-size-base: 18px
+
+$headings-font-family: 'Oswald', $helvetica
+$font-family-sans-serif: 'Roboto', $helvetica
 
 @import './../bower_components/bootstrap-sass/assets/stylesheets/bootstrap'
+
 
 body
   -webkit-font-smoothing: antialiased
 
-.content-sidebar-wrap
+.site-inner
   @extend .container
+
+.content-sidebar-wrap
+  @extend .row
+
+  .content
+    @extend .col-md-8
+
+  .sidebar
+    @extend .col-md-4
+
 
 .site-footer
   text-align: center
@@ -25,3 +41,6 @@ body
 
 .site-title
   text-transform: uppercase
+
+.site-header
+  padding: 1em

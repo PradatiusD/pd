@@ -22,4 +22,7 @@ if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
   }
 
   add_action( 'wp_enqueue_scripts', 'local_livereload');
-}  
+}
+
+wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald|Roboto:400,400i,700', array(), '1.0.0', "all");
+
