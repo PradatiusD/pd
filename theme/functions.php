@@ -4,10 +4,13 @@ include_once(get_template_directory() . '/lib/init.php');
 
 define('CHILD_THEME_NAME', 'Daniel Prada Child Theme');
 define('CHILD_THEME_URL', 'http://github.com/PradatiusD/dprada');
-define('CHILD_THEME_VERSION', '1.0.2');
+define('CHILD_THEME_VERSION', '1.0.3');
 
 //* Add HTML5 markup structure
-add_theme_support( 'html5', array('search-form','comment-form','comment-list','gallery','caption'));
+add_theme_support('html5', array('search-form','comment-form','comment-list','gallery','caption'));
+
+//* Add Meta viewport
+add_theme_support('genesis-responsive-viewport');
 
 if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
 
