@@ -16,7 +16,7 @@ module.exports = function (grunt) {
     },
     watch: {
       files: {
-        files: 'theme/*.php',
+        files: ['theme/*.php','theme/*.js'],
         tasks: [],
         options: {
           livereload: true,

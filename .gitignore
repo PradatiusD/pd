@@ -6,3 +6,5 @@ bower_components
 
 .sass-cache
 theme/style.css.map
+theme/lib
+theme/config.php
