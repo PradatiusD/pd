@@ -12,6 +12,7 @@ module.exports = function (grunt) {
         },
         src: 'theme',
         dest: 'dprada',
+        forceVerbose: true
       }
     },
     watch: {

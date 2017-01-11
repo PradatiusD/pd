@@ -1,4 +1,5 @@
 <?php
+
 require "lib/autoload.php";
 require "config.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
