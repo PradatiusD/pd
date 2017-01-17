@@ -12,7 +12,8 @@ module.exports = function (grunt) {
         },
         src: 'theme',
         dest: 'dprada',
-        forceVerbose: true
+        forceVerbose: true,
+        exclusions: ['theme/lib']
       }
     },
     watch: {

@@ -1996,7 +1996,7 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .content-sidebar-wrap .sidebar, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .content-sidebar-wrap .content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .site-header, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .content-sidebar-wrap .content, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2421,7 +2421,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .content-sidebar-wrap .sidebar, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .content-sidebar-wrap .content, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .site-header, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .content-sidebar-wrap .content, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -2437,7 +2437,7 @@ pre code {
     width: 25%;
   }
 
-  .col-md-4, .content-sidebar-wrap .sidebar {
+  .col-md-4, .site-header {
     width: 33.33333%;
   }
 
@@ -2593,7 +2593,7 @@ pre code {
     margin-left: 25%;
   }
 
-  .col-md-offset-4 {
+  .col-md-offset-4, .content-sidebar-wrap .content {
     margin-left: 33.33333%;
   }
 
@@ -7354,26 +7354,41 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.site-footer {
-  text-align: center;
+.site-header {
+  position: fixed;
+  height: 100%;
+  padding: 1em;
+  z-index: 1;
   background: black;
-  color: white;
-  padding: 1.5em 1em 1em 1em;
 }
-.site-footer a {
-  color: #7fc4ff;
+@media only screen and (max-width: 991px) {
+  .site-header {
+    position: inherit;
+  }
 }
 
 .site-title {
   text-transform: uppercase;
 }
 
-.site-header {
-  padding: 1em;
+.site-title a, .site-description {
+  color: white;
 }
 
-.site-title a, h2.entry-title a {
+.entry-title a {
   color: black;
+}
+
+.site-footer {
+  text-align: center;
+  background: black;
+  color: white;
+  padding: 1.5em 1em 1em 1em;
+  position: relative;
+  z-index: 1000;
+}
+.site-footer a {
+  color: #7fc4ff;
 }
 
 .featured-img-container {
@@ -7393,6 +7408,40 @@ body {
 .twitter-user {
   border-radius: 100%;
   margin-right: 0.5em;
+}
+
+#custom-twitter-timeline {
+  overflow-y: hidden;
+}
+
+.social-profiles {
+  text-align: center;
+}
+.social-profiles a {
+  line-height: 40px;
+  border-radius: 100%;
+  width: 100%;
+  font-size: 1.2em;
+  color: white;
+  display: inline-block;
+}
+.social-profiles li {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0.5em;
+}
+.social-profiles .github-alt a {
+  background: #0d2636;
+}
+.social-profiles .twitter a {
+  background: #1da1f2;
+}
+.social-profiles .linkedin a {
+  background: #009688;
+}
+.social-profiles .android a {
+  background: #a4c639;
 }
 
 /*# sourceMappingURL=style.css.map */

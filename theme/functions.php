@@ -1,31 +1,6 @@
 <?php
 
-include_once(get_template_directory() . '/lib/init.php');
-
-define('CHILD_THEME_NAME', 'Daniel Prada Child Theme');
-define('CHILD_THEME_URL', 'http://github.com/PradatiusD/dprada');
-define('CHILD_THEME_VERSION', '1.1.0');
-
-//* Add HTML5 markup structure
-add_theme_support('html5', array('search-form','comment-form','comment-list','gallery','caption'));
-
-//* Add Meta viewport
-add_theme_support('genesis-responsive-viewport');
-
-if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
-  
-  // For live reloading
-  function local_livereload() {
-    wp_register_script('livereload', 'http://localhost:35729/livereload.js', null, false, true);
-    wp_enqueue_script('livereload');    
-  }
-
-  add_action( 'wp_enqueue_scripts', 'local_livereload');
-}
+include_once('init.php');
 
 wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald|Roboto:400,400i,700', array(), '1.0.0', 'all');
 
@@ -41,7 +16,18 @@ function featured_post_image() {
   echo ob_get_clean();
 }
 
+//* Customize the post info function
+add_filter( 'genesis_post_info', 'custom_post_metadata_filter' );
+function custom_post_metadata_filter ($post_info) {
+if ( !is_page() ) {
+  $post_info = 'Published [post_date]';
+  return $post_info;
+}}
+
+
 function theme_scripts () {
+
+  wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/d85b630b69.js', array(), '4.7.0', false);
   wp_enqueue_script('angular', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js', array(), '1.6.1', true);
   wp_enqueue_script('twitter-feed', get_stylesheet_directory_uri() . "/twitter-feed.js", array('angular'), '1.0.0', true);
 }
@@ -83,6 +69,32 @@ class Twitter_Widget extends WP_Widget {
   }
 }
 
-add_action( 'widgets_init', function(){
-  register_widget( 'Twitter_Widget' );
+add_action('widgets_init', function (){
+  register_widget('Twitter_Widget');
 });
+
+
+function user_metadata () {
+
+    $profiles = array(
+      'github-alt' => 'https://github.com/pradatiusd',
+      'twitter' => 'https://twitter.com/pradatiusd',
+      'linkedin' => 'https://www.linkedin.com/in/danielprada',
+      'android'  =>  'https://play.google.com/store/apps/details?id=pradadesigners.com.tequesta'
+    );
+
+  ?>
+  <ul class="list-unstyled social-profiles">
+    <?php foreach ($profiles as $provider => $url):?>
+      <li class="<?php echo $provider;?>">
+        <a href="<?php echo $url;?>" target="_blank">
+          <i class="fa fa-<?php echo $provider;?>" aria-hidden="true"></i>
+        </a>
+      </li>
+    <?php endforeach;?>
+  </ul>
+  <?php
+  echo ob_get_clean();
+}
+
+add_action('genesis_header_right', 'user_metadata');

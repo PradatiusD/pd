@@ -7,6 +7,15 @@
  */
 
 @import './../bower_components/bourbon/app/assets/stylesheets/bourbon'
+@import './../bower_components/sass-mediaqueries/media-queries'
+
+@mixin max-screen($max)
+  @include mq($max-width: $max)
+    @content
+
+@mixin min-screen($max)
+  @include mq($min-width: $max)
+    @content
 
 $body-bg: #fefefe
 $font-size-base: 18px
@@ -20,6 +29,29 @@ $font-family-sans-serif: 'Roboto', $helvetica
 body
   -webkit-font-smoothing: antialiased
 
+.site-header
+  @extend .col-md-4
+  position: fixed
+  height: 100%
+  padding: 1em
+  z-index: 1
+  background: black
+
+  +max-screen(991px)
+    position: inherit
+
+.site-title
+  text-transform: uppercase
+  @extend .h1
+
+.site-title a, .site-description
+  color: white
+
+.entry-title
+  @extend .h2
+  a
+    color: black
+
 .site-inner
   @extend .container
 
@@ -28,9 +60,7 @@ body
 
   .content
     @extend .col-md-8
-
-  .sidebar
-    @extend .col-md-4
+    @extend .col-md-offset-4
 
 
 .site-footer
@@ -38,23 +68,11 @@ body
   background: black
   color: white
   padding: 1.5em 1em 1em 1em
+  position: relative
+  z-index: 1000
 
   a
     color: #7fc4ff
-
-.site-title
-  text-transform: uppercase
-  @extend .h1
-
-.site-header
-  padding: 1em
-
-.site-title, h2.entry-title
-  a
-    color: black
-
-.entry-title
-  @extend .h2
 
 .featured-img-container
   display: block
@@ -72,3 +90,35 @@ body
   border-radius: 100%
   margin-right: 0.5em
 
+#custom-twitter-timeline
+  overflow-y: hidden
+
+
+$profile-size: 40px
+
+.social-profiles
+  text-align: center
+  a
+    line-height: $profile-size
+    border-radius: 100%
+    width: 100%
+    font-size: 1.2em
+    color: white
+    display: inline-block
+  li
+    display: inline-block
+    height: $profile-size
+    width: $profile-size
+    margin: 0.5em
+
+  .github-alt a
+    background: #0d2636
+
+  .twitter a
+    background: #1da1f2
+
+  .linkedin a
+    background: #009688
+
+  .android a
+    background: #a4c639
