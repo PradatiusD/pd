@@ -26,7 +26,6 @@ if ( !is_page() ) {
 
 
 function theme_scripts () {
-
   wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/d85b630b69.js', array(), '4.7.0', false);
   wp_enqueue_script('angular', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js', array(), '1.6.1', true);
   wp_enqueue_script('twitter-feed', get_stylesheet_directory_uri() . "/twitter-feed.js", array('angular'), '1.0.0', true);
@@ -98,3 +97,20 @@ function user_metadata () {
 }
 
 add_action('genesis_header_right', 'user_metadata');
+
+
+add_action('wp_head', 'custom_browser_bar_background');
+
+function custom_browser_bar_background () {
+
+  $color = '#000000';
+  $meta_names = array(
+    'theme-color',                           // Chrome, Firefox OS and Opera
+    'msapplication-navbutton-color',         // Windows Phone
+    'apple-mobile-web-app-status-bar-style'  // iOS Safari
+  );
+
+  foreach ($meta_names as $meta_key) {
+    echo '<meta name="'.$meta_key.'" content="'.$color.'">'.PHP_EOL;
+  }
+}
