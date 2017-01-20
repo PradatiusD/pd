@@ -9,14 +9,6 @@
 @import './../bower_components/bourbon/app/assets/stylesheets/bourbon'
 @import './../bower_components/sass-mediaqueries/media-queries'
 
-@mixin max-screen($max)
-  @include mq($max-width: $max)
-    @content
-
-@mixin min-screen($max)
-  @include mq($min-width: $max)
-    @content
-
 $body-bg: #fefefe
 $font-size-base: 18px
 
@@ -40,6 +32,19 @@ body
   +max-screen(991px)
     position: inherit
 
+
+#canvas
+  width: 100px
+  height: 100px
+  display: inline-block
+  vertical-align: top
+  margin-top: 1em
+  +screen(992px, 1185px)
+    display: none
+
+.site-title-container
+  display: inline-block
+
 .site-title
   text-transform: uppercase
   @extend .h1
@@ -47,10 +52,36 @@ body
 .site-title a, .site-description
   color: white
 
-.entry-title
-  @extend .h2
-  a
-    color: black
+
+.entry-header
+  position: relative
+  overflow: hidden
+
+  .entry-meta, .entry-title a, h1.entry-title
+    color: white
+    text-shadow: 1px 1px 4px black
+
+  .entry-title
+    padding-top: 2em
+    @extend .h2
+
+  .entry-title, .entry-meta
+    padding-left: 15px
+
+.black-gradient
+  +background(linear-gradient(rgba(255,0,0,0), black) left repeat)
+  width: 100%
+  height: 100%
+  position: absolute
+
+.featured-img-container
+  position: absolute
+  z-index: -1
+
+.home
+  .entry-content
+    font-size: 1.1em
+    margin-top: 0.3em
 
 .site-inner
   @extend .container
@@ -110,6 +141,9 @@ $profile-size: 40px
     height: $profile-size
     width: $profile-size
     margin: 0.5em
+    +transition(all, 0.5s, ease-in)
+    &:hover
+      +transform(translateY(-5px))
 
   .github-alt a
     background: #0d2636

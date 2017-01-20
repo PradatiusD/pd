@@ -1497,7 +1497,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1,
-.site-title, .h2, .entry-title, .h3, .h4, .h5, .h6 {
+.site-title, .h2, .entry-header .entry-title, .h3, .h4, .h5, .h6 {
   font-family: "Oswald", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 500;
   line-height: 1.1;
@@ -1513,9 +1513,9 @@ h6 .small,
 .h1 small,
 .site-title small,
 .h1 .small,
-.site-title .small, .h2 small, .entry-title small,
+.site-title .small, .h2 small, .entry-header .entry-title small,
 .h2 .small,
-.entry-title .small, .h3 small,
+.entry-header .entry-title .small, .h3 small,
 .h3 .small, .h4 small,
 .h4 .small, .h5 small,
 .h5 .small, .h6 small,
@@ -1526,7 +1526,7 @@ h6 .small,
 }
 
 h1, .h1, .site-title,
-h2, .h2, .entry-title,
+h2, .h2, .entry-header .entry-title,
 h3, .h3 {
   margin-top: 25px;
   margin-bottom: 12.5px;
@@ -1536,9 +1536,9 @@ h1 .small, .h1 small, .site-title small,
 .h1 .small,
 .site-title .small,
 h2 small,
-h2 .small, .h2 small, .entry-title small,
+h2 .small, .h2 small, .entry-header .entry-title small,
 .h2 .small,
-.entry-title .small,
+.entry-header .entry-title .small,
 h3 small,
 h3 .small, .h3 small,
 .h3 .small {
@@ -1567,7 +1567,7 @@ h1, .h1, .site-title {
   font-size: 46px;
 }
 
-h2, .h2, .entry-title {
+h2, .h2, .entry-header .entry-title {
   font-size: 38px;
 }
 
@@ -7367,6 +7367,23 @@ body {
   }
 }
 
+#canvas {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1em;
+}
+@media only screen and (min-width: 992px) and (max-width: 1185px) {
+  #canvas {
+    display: none;
+  }
+}
+
+.site-title-container {
+  display: inline-block;
+}
+
 .site-title {
   text-transform: uppercase;
 }
@@ -7375,8 +7392,37 @@ body {
   color: white;
 }
 
-.entry-title a {
-  color: black;
+.entry-header {
+  position: relative;
+  overflow: hidden;
+}
+.entry-header .entry-meta, .entry-header .entry-title a, .entry-header h1.entry-title {
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+.entry-header .entry-title {
+  padding-top: 2em;
+}
+.entry-header .entry-title, .entry-header .entry-meta {
+  padding-left: 15px;
+}
+
+.black-gradient {
+  background: -webkit-linear-gradient(rgba(255, 0, 0, 0), black) left repeat;
+  background: linear-gradient(rgba(255, 0, 0, 0), black) left repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.featured-img-container {
+  position: absolute;
+  z-index: -1;
+}
+
+.home .entry-content {
+  font-size: 1.1em;
+  margin-top: 0.3em;
 }
 
 .site-footer {
@@ -7430,6 +7476,16 @@ body {
   height: 40px;
   width: 40px;
   margin: 0.5em;
+  -webkit-transition: all, 0.5s, ease-in;
+  -o-transition: all, 0.5s, ease-in;
+  transition: all, 0.5s, ease-in;
+}
+.social-profiles li:hover {
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 .social-profiles .github-alt a {
   background: #0d2636;
