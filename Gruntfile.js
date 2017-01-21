@@ -1,7 +1,7 @@
 
 module.exports = function (grunt) {
 
-  grunt.initConfig({
+  var options = {
     pkg: grunt.file.readJSON('package.json'),
     'ftp-deploy': {
       build: {
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
         src: 'theme',
         dest: 'dprada',
         forceVerbose: true,
-        exclusions: ['theme/lib']
+        exclusions: ['theme/lib','.DS_Store','theme/fonts']
       }
     },
     watch: {
@@ -26,23 +26,33 @@ module.exports = function (grunt) {
       },
       styles: {
         files: 'theme/*.sass',
-        tasks: ['sass'],
+        tasks: ['sass:dev'],
         options: {
           livereload: true,
         }
       }
     },
     sass: {
-      dist: {
+      dev: {
         options: {
           style: 'expanded'
         },
         files: {
-          'theme/style.css': 'theme/style.sass',
+          'theme/style.css': 'theme/style.sass'
+        }
+      },
+      dist: {
+        options: {
+          style: 'compressed'
+        },
+        files: {
+          'theme/style.css': 'theme/style.sass'
         }
       }
     }
-  });
+  };
+
+  grunt.initConfig(options);
 
   grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -50,5 +60,5 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('ftp', ['ftp-deploy']);
+  grunt.registerTask('ftp', ['sass:dist','ftp-deploy']);
 };
