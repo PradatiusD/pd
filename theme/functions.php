@@ -1,7 +1,7 @@
 <?php
 include_once('init.php');
 
-wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald|Roboto:400,400i,700', array(), '1.0.0', 'all');
+wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Oswald', array(), '1.0.0', 'all');
 
 //* Add Raphael Canvas
 add_action('genesis_site_title', 'add_raphael_canvas', 0);
@@ -169,4 +169,11 @@ class Twitter_Widget extends WP_Widget {
 add_action('widgets_init', function (){
   register_widget('Twitter_Widget');
 });
+
+//* Unregister the secondary navigation menu
+add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
+
+//* Move navigation to header right
+remove_action('genesis_after_header', 'genesis_do_nav');
+add_action('genesis_header_right', 'genesis_do_nav');
 

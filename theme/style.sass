@@ -10,19 +10,38 @@
 @import './../bower_components/sass-mediaqueries/media-queries'
 
 $body-bg: #fefefe
-$font-size-base: 18px
+$font-size-base: 16px
+$line-height-base: 1.5
 
 $headings-font-family: 'Oswald', $helvetica
-$font-family-sans-serif: 'Roboto', $helvetica
+$font-family-sans-serif: $helvetica
+$font-family-serif: 'Merriweather', $georgia
+$font-family-base: $font-family-serif
 
 @import './../bower_components/bootstrap-sass/assets/stylesheets/bootstrap'
 
-$fa-font-path: "fonts"
+$fa-font-path: 'fonts'
 @import './../bower_components/font-awesome/scss/font-awesome'
+
+blockquote
+  font-style: italic
+  background: #f7f7f7
 
 body
   -webkit-font-smoothing: antialiased
 
+/* Scaffolding */
+.site-inner
+  @extend .container
+
+.content-sidebar-wrap
+  @extend .row
+
+  .content
+    @extend .col-md-8
+    @extend .col-md-offset-4
+
+/* Header */
 .site-header
   @extend .col-md-4
   position: fixed
@@ -34,7 +53,6 @@ body
 
   +max-screen(991px)
     position: inherit
-
 
 #canvas
   width: 100px
@@ -56,6 +74,29 @@ body
   color: white
 
 
+/* Navigation */
+.genesis-nav-menu
+  list-style-type: none
+  padding-left: 0
+
+  & li:first-child a
+    border-top: 1px solid rgba(white, 0.30)
+
+  .menu-item a
+    color: white
+    display: block
+    text-align: center
+    border-bottom: 1px solid rgba(white, 0.30)
+    padding: 0.4em 1em
+    +transition(background 0.3s ease-in)
+    &:hover
+      text-decoration: none
+      background: darken(#f44336, 30)
+
+  .current-menu-item a
+    background: darken(#f44336, 50)
+
+/* Entry Header */
 .entry-header
   position: relative
   overflow: hidden
@@ -95,6 +136,7 @@ body
 .entry-content
   font-size: 1.1em
   margin-top: 0.5em
+  min-height: 10px
 
 /* Home Content */
 body.home
@@ -116,17 +158,6 @@ body.home
     margin-top: 1.5em
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.11)
 
-.site-inner
-  @extend .container
-
-.content-sidebar-wrap
-  @extend .row
-
-  .content
-    @extend .col-md-8
-    @extend .col-md-offset-4
-
-
 .site-footer
   text-align: center
   background: black
@@ -141,6 +172,7 @@ body.home
     padding: 5px 16px
     text-transform: uppercase
     font-style: italic
+    font-family: $helvetica
     font-size: 0.85em
     color: white
     border-radius: 1em
