@@ -16,8 +16,8 @@ export default {
       states: [
         'Fetching latest content from Amazon Cloudfront',
         'Inflating HackerRank score',
-        'Changing permission on files',
-        'Do loading screens even make pages faster?'
+        'Giving up on Webpack config',
+        'Wondering if loading screens even make pages faster'
       ]
     }
   }

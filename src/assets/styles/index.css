@@ -1,3 +1,30 @@
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=8a489a71-8df8-4016-872f-b8aecc7c2661");
+
+@font-face{
+    font-family:"Sofia W01 Light1446819";
+    src:url("/fonts/8d11b8a0-868c-4a53-8b26-9f0ccbd58247.woff2") format("woff2"),url("/fonts/9b976f15-23b7-45cd-ad4b-59c95b2889f9.woff") format("woff");
+}
+@font-face{
+    font-family:"Sofia W01 Regular1446825";
+    src:url("/fonts/8b31e0d7-5f53-45c2-b318-064f0b532543.woff2") format("woff2"),url("/fonts/476fe015-ab32-40a2-8fed-0a5af9a3bba4.woff") format("woff");
+}
+@font-face{
+    font-family:"Sofia W01 Regular Itali1446873";
+    src:url("/fonts/87cd0dd6-3e8b-46f1-b677-ab7644ea015e.woff2") format("woff2"),url("/fonts/90682d0e-e5df-4a2e-a2ff-6899b8ae8e4b.woff") format("woff");
+}
+@font-face{
+    font-family:"Sofia W01 Bold1446843";
+    src:url("/fonts/80042803-0630-405f-b2d2-af97b4e50b46.woff2") format("woff2"),url("/fonts/ec41d681-0313-4b04-88c0-820aebb51f4e.woff") format("woff");
+}
+@font-face{
+    font-family:"Trend W01 Sns One";
+    src:url("/fonts/96a9d3c6-d628-44d9-a368-5b7349531024.woff2") format("woff2"),url("/fonts/8b5ad6a6-4604-43ef-9d98-9bfa8485f100.woff") format("woff");
+}
+
+.font-custom-thin {
+    font-family: "Sofia W01 Light1446819", "sans-serif"
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,4 +40,3 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
 }
-

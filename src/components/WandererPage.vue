@@ -17,7 +17,7 @@ export default {
         'Fetching my favorite quotes',
         'Rereading the actually funny Cards Against Humanity',
         'Heating up the 🔥 emoji',
-        'Using demographic data to increase chances of sounding cool'
+        'Using demographic data to increase probabilities of sounding cool'
       ]
     }
   }

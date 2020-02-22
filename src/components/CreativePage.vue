@@ -14,9 +14,9 @@ export default {
   data () {
     return {
       states: [
-        'Finding closest unicorn',
+        'Finding closest unicorn, arepa, or croqueta',
         'Copying the Sims 3 loading jokes',
-        'Wondering about what Tinder for Dogs looks like'
+        'Wondering about what "Tinder for dogs" looks like'
       ]
     }
   }

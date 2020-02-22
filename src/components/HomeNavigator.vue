@@ -1,9 +1,9 @@
 <template>
   <div class="container mx-auto">
-    <h1 class="text-white font-display text-center mt-6 text-4xl" :class="mainTitleAnimationState">¡Hola friend!</h1>
-    <p class="text-white font-body text-center text-md" :class="isMainSubtitleP1AnimationState">It looks like you are looking for something.</p>
-    <p class="text-white font-body text-center mb-5 text-md" :class="isMainSubtitleP2AnimationState">For me to first answer, I must know, who are you good friend?</p>
-    <div>
+    <h1 class="text-white font-display text-center mt-6 text-5xl" :class="mainTitleAnimationState">¡Hola friend!</h1>
+    <p class="text-white font-body text-center text-xl" :class="isMainSubtitleP1AnimationState">It looks like you are looking for something.</p>
+    <p class="text-white font-body text-center mb-5 text-xl" :class="isMainSubtitleP2AnimationState">For me to first answer, I must know, who are you good friend?</p>
+    <div class="flex flex-col md:flex-row">
       <NavButton
           title="Nerd"
           emoji="🤓"
@@ -12,6 +12,7 @@
           :animation-timeout="this.animationInterval * 4"
           background-color="rgba(255, 0, 0, 0.15)"
           route="/nerd"
+          class="md:w-1/3 flex"
       />
       <NavButton
           title="Wanderer"
@@ -21,6 +22,7 @@
           :animation-timeout="this.animationInterval * 5"
           background-color="rgba(0, 255, 184, 0.15)"
           route="/wanderer"
+          class="md:w-1/3 flex"
       />
       <NavButton
           title="Creative"
@@ -30,6 +32,7 @@
           :animation-timeout="this.animationInterval * 6"
           background-color="rgba(0, 0, 255, 0.15)"
           route="/creative"
+          class="md:w-1/3 flex"
       />
     </div>
   </div>

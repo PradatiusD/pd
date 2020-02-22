@@ -1,6 +1,6 @@
 <template>
-  <div class="loader-page">
-    <div class="loader-container text-6xl text-white font-display leading-tight font-light">
+  <div class="loader-page z-50">
+    <div class="loader-container text-white leading-tight font-light text-4xl sm:text-6xl w-8/12">
       {{activeMessage}}
     </div>
     <div class="progress-indicator" :style="{width: barWidth+'%'}"></div>
@@ -27,15 +27,16 @@ export default {
     changeActiveMessage: function () {
       setTimeout(() => {
         this.iterator++
-        if (this.iterator % 3 === 0) {
+        const maxDots = 4
+        if (this.iterator % maxDots === 0) {
           this.barWidth = 100
-          this.activeMessage = this.states[this.iterator / 3]
+          this.activeMessage = this.states[this.iterator / maxDots]
         } else {
-          this.barWidth = (this.iterator % 3 / 3) * 100
+          this.barWidth = (this.iterator % maxDots / maxDots) * 100
           this.activeMessage = this.activeMessage + '.'
         }
 
-        if ((this.iterator / 3) + 1 / 3 < this.states.length) {
+        if ((this.iterator / maxDots) + 1 / maxDots < this.states.length) {
           this.changeActiveMessage()
         }
       }, 1000)
@@ -69,6 +70,7 @@ export default {
     width: 100%;
     height: 100%;
     position: fixed;
+    font-family: 'Sofia W01 Light1446819', 'sans-serif';
   }
 
   @keyframes colorchange {
