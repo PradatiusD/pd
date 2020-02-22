@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    height: 100%
+}
+
+body {
+    background: rgb(91,11,180);
+    background: linear-gradient(45deg, rgba(91,11,180,1) 0%, rgb(125, 15, 248) 50%);
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+}

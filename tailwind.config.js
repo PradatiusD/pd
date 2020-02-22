@@ -1,11 +1,11 @@
 module.exports = {
   theme: {
     fontFamily: {
-      display: ['Georgia', 'sans-serif'],
-      body: ['Georgia', 'sans-serif']
+      display: ['Merriweather', 'sans-serif'],
+      body: ['Open Sans', 'sans-serif']
     },
-    extend: {},
+    extend: {}
   },
   variants: {},
-  plugins: [],
+  plugins: []
 }
