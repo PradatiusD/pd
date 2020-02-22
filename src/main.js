@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
-import HomeNavigator from './components/HomeNavigator'
-import NerdPage from './components/NerdPage'
-import WandererPage from './components/WandererPage'
-import CreativePage from './components/CreativePage'
+import HomeNavigator from './components/pages/HomeNavigator'
+import NerdPage from './components/pages/NerdPage'
+import WandererPage from './components/pages/WandererPage'
+import CreativePage from './components/pages/CreativePage'
 
 import './assets/styles/index.css'
 

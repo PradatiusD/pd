@@ -25,11 +25,15 @@
     font-family: "Sofia W01 Light1446819", "sans-serif"
 }
 
+.font-custom-bold, .font-bold {
+    font-family: "Sofia W01 Bold1446843", "sans-serif"
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
+html, body, #app, #app > div {
     height: 100%
 }
 

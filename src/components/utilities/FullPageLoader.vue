@@ -1,7 +1,9 @@
 <template>
   <div class="loader-page z-50">
-    <div class="loader-container text-white leading-tight font-light text-4xl sm:text-6xl w-8/12">
-      {{activeMessage}}
+    <div class="loader-page-pattern">
+      <div class="loader-container text-white leading-tight font-light text-4xl sm:text-6xl w-8/12">
+        {{activeMessage}}
+      </div>
     </div>
     <div class="progress-indicator" :style="{width: barWidth+'%'}"></div>
   </div>
@@ -38,6 +40,8 @@ export default {
 
         if ((this.iterator / maxDots) + 1 / maxDots < this.states.length) {
           this.changeActiveMessage()
+        } else {
+          this.$emit('onCompleteLoad')
         }
       }, 1000)
     }
@@ -62,6 +66,11 @@ export default {
     transition: all;
     transition-duration: 0.8s;
     transition-timing-function: linear;
+  }
+
+  .loader-page-pattern {
+    background: url("/images/square-bg.png");
+    height: 100%;
   }
 
   .loader-page {
