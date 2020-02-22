@@ -1,5 +1,9 @@
 <template>
-    <div :class="animationClass" :style="{backgroundColor: backgroundColor}" class="nav-button-container text-white py-2 px-4 rounded shadow-md ml-5 mr-5 mt-2 mb-1 border-solid border cursor-pointer transition duration-500 ease-in-out transform hover:translate-x-2 transition-all flex-row flex">
+    <div
+        :class="animationClass"
+        :style="{backgroundColor: backgroundColor}"
+        @click="navigate()"
+        class="nav-button-container text-white py-2 px-4 rounded shadow-md ml-5 mr-5 mt-2 mb-1 border-solid border cursor-pointer transition duration-500 ease-in-out transform hover:translate-x-2 transition-all flex-row flex">
         <span class="text-5xl mr-4 active-emoji">{{emoji}}</span>
         <span class="text-5xl mr-4 hover-emoji hidden">{{hoverEmoji}}</span>
         <p class="text-white">
@@ -18,7 +22,8 @@ export default {
     hoverEmoji: String,
     description: String,
     backgroundColor: String,
-    animationTimeout: Number
+    animationTimeout: Number,
+    route: String
   },
   data () {
     return {
@@ -37,6 +42,11 @@ export default {
     setTimeout(() => {
       this.animateIntoScreen = true
     }, this.animationTimeout)
+  },
+  methods: {
+    navigate: function () {
+      this.$router.push(this.route)
+    }
   }
 }
 </script>
