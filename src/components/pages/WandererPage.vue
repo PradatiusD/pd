@@ -9,25 +9,25 @@
           color="white"
           :authorAppearDelay="10000"
           class="bg-green-500" />
-      <div class="bg-gray-100 full-page">
+      <div class="bg-gray-100">
         <SectionHeading
             class="leading-relaxed"
             title="The Wanderer"
             description="That quote always impacted me, bringing back an Aristotelian awareness of the pretense of knowledge that we have whenever we look at the world around us.  With that in mind, nothing stirs my mind like a night in contemplation, from the silliest to the most profound things.  I distract myself frequently by working on the following things:"/>
-        <div class="flex flex-row">
+        <div class="flex flex-row flex-wrap">
           <Card :title="card.title" :label="card.type" :description="card.description" v-for="card in cards" v-bind:key="card.title" />
         </div>
       </div>
       <SectionHeading
           title="Thoughts are messy"
           description="I wanted to be an engineer, then graduated as an economist, and now I'm a programmer.  Regardless, I reflect constantly about that juicy intermingling of culture, history, economics, and politics."
-          class="bg-orange-500 full-page"/>
+          class="bg-gray-300 full-page"/>
       <FeaturedQuote
           quote="The paradox of education is precisely this - that as one begins to become conscious one begins to examine the society in which he is being educated."
           author="James Baldwin"
           color="white"
           :authorAppearDelay="10000"
-          class="bg-yellow-500" />
+          class="bg-orange-500" />
     </div>
   </div>
 </template>
@@ -58,7 +58,7 @@ export default {
         {
           title: 'Slay',
           type: 'Start up',
-          description: 'I work with two badass ladies on a start up that allows you to find the nearest beauty salons near you'
+          description: 'I work with two badass ladies on a start up that allows you to find the nearest beauty salons near you.'
         },
         {
           title: 'South Florida Ultimate',

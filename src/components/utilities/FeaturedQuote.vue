@@ -1,11 +1,11 @@
 <template>
 <section class="quote-container">
   <div class="container mx-auto p-4">
-    <p class="font-custom-thin text-5xl p-4 leading-snug" :style="primaryTextColor">
-      &ldquo;<vue-typer id="typewriter" :text='formattedQuote' :repeat="0" :style="primaryTextColor"/>&rdquo;
+    <p class="font-custom-thin text-2xl md:text-5xl p-4 leading-snug" :style="primaryTextStyle">
+      &ldquo;<vue-typer :text='formattedQuote' :repeat="0" :style="primaryTextStyle"/>&rdquo;
     </p>
-    <p class="font-display text-4xl p-4 mb-10" :style="primaryTextColor">
-      <vue-typer :text=' "~" + author' :repeat="0" :pre-type-delay="authorAppearDelay" :style="primaryTextColor" />
+    <p class="font-display text-4xl p-4 mb-10" :style="secondaryTextStyle">
+      <vue-typer :text=' "~" + author' :repeat="0" :pre-type-delay="authorAppearDelay" :style="secondaryTextStyle" />
     </p>
   </div>
 </section>
@@ -22,17 +22,27 @@ export default {
     quote: String,
     author: String,
     color: String,
-    authorAppearDelay: Number
+    authorAppearDelay: Number,
+    font: String
   },
   computed: {
-    primaryTextColor: function () {
+    primaryTextStyle: function () {
+      if (this.font) {
+        return {
+          color: this.color,
+          'font-family': this.font
+        }
+      }
+      return this.secondaryTextStyle
+    },
+    secondaryTextStyle: function () {
       return {
         color: this.color
       }
     },
     formattedQuote: function () {
       const splitByWords = this.quote.split(' ')
-      const maxChars = 30
+      const maxChars = window.innerWidth < 768 ? 18 : 30
       const linesByNewArray = [
         ''
       ]
@@ -59,10 +69,17 @@ export default {
   }
 
   .custom.caret {
-    color: white;
+    background-color: white !important;
   }
 
   .quote-container {
     height: 100vh;
+    position: relative;
+  }
+
+  .quote-container .container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:w-1/3 xl:w-1/4 w-1/2">
+  <div class="w-full lg:w-1/3 xl:w-1/4">
     <article class="rounded overflow-hidden shadow-lg box-content m-3 border-solid border-2 border-gray-200">
       <div>
         <img class="card-header" :src="imgPath" :alt="title" v-if="imgPath">

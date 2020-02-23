@@ -69,8 +69,10 @@ export default {
   }
 
   .loader-page-pattern {
-    background: url("/images/square-bg.png");
+    background: url("/images/patterns/y-serious.png");
+    background-size: 800px 800px;
     height: 100%;
+    animation: colorchange 15s;
   }
 
   .loader-page {
@@ -83,19 +85,19 @@ export default {
   }
 
   @keyframes colorchange {
-    0%   {background: rgba(255, 0, 0, 0.20);}
-    25%  {background: rgba(255, 255, 0, 0.20);}
-    50%  {background: rgba(0, 0, 255, 0.20);}
-    75%  {background: rgba(0, 128, 0, 0.21);}
-    100% {background: rgba(255, 0, 0, 0.2);}
+    0%   {background-color: rgba(255, 0, 0, 0.20);}
+    25%  {background-color: rgba(255, 255, 0, 0.20);}
+    50%  {background-color: rgba(0, 0, 255, 0.20);}
+    75%  {background-color: rgba(0, 128, 0, 0.21);}
+    100% {background-color: rgba(255, 0, 0, 0.2);}
   }
 
   @-webkit-keyframes colorchange {
-    0%   {background: rgba(255, 0, 0, 0.20);}
-    25%  {background: rgba(255, 255, 0, 0.20);}
-    50%  {background: rgba(0, 0, 255, 0.20);}
-    75%  {background: rgba(0, 128, 0, 0.21);}
-    100% {background: rgba(255, 0, 0, 0.2);}
+    0%   {background-color: rgba(255, 0, 0, 0.20);}
+    25%  {background-color: rgba(255, 255, 0, 0.20);}
+    50%  {background-color: rgba(0, 0, 255, 0.20);}
+    75%  {background-color: rgba(0, 128, 0, 0.21);}
+    100% {background-color: rgba(255, 0, 0, 0.2);}
   }
 
 </style>

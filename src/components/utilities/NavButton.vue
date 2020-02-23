@@ -6,7 +6,7 @@
         class="nav-button-container text-white py-2 px-4 rounded shadow-md ml-5 mr-5 mt-2 mb-1 border-solid border cursor-pointer transition duration-500 ease-in-out transform hover:translate-x-2 transition-all">
         <span class="text-5xl mr-4 active-mobile-emoji md:hidden">{{emoji}}</span>
         <span class="text-5xl mr-4 hover-mobile-emoji hidden">{{hoverEmoji}}</span>
-        <p class="text-white md:text-center md:pb-4">
+        <p class="w-full text-white md:text-center md:pb-4">
             <span class="text-5xl mr-4 active-desktop-emoji">{{emoji}}</span>
             <span class="text-5xl mr-4 hover-desktop-emoji hidden">{{hoverEmoji}}</span>
             <strong class="font-display text-xl mb-1 block">A {{title}}</strong>
