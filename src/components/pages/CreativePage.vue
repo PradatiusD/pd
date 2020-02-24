@@ -12,8 +12,41 @@
       <div class="bg-gray-200 pb-10">
         <SectionHeading
             title="The Creative"
-            description="I often think about being an immigrant in two places, too Colombian for one world and too American for another.  I love the stories of my family, and write them, as often what happens in real life surpasses fiction in wondrous ways."/>
+            description="Below I house projects that I've built alone or with friends, mostly that produce ridiculous, sentimental, or ridiculously sentimental works.  For me, a great day is one where I can laugh, thank, cry, and remember."/>
       </div>
+
+      <section class="bg-purple-500">
+        <div class="container p-8 w-2/3">
+          <h2 class="creative-work-title">Biografia de La Familia Prado</h2>
+          <h4 class="creative-work-year font-custom-bold">2018</h4>
+          <p class="creative-work-description font-custom-thin">I love the stories of my family, and write them as often as I can, because what happens in real life surpasses fiction in wondrous ways.</p>
+          <a class="creative-work-button" href="https://medium.com/@PradatiusD/la-biografia-de-la-familia-prado-e07ea8a77075" target="_blank">Read Story</a>
+        </div>
+      </section>
+
+      <section class="bg-pink-500">
+        <div class="container mx-auto p-8 grid grid-cols-2">
+          <div>
+            <h2 class="creative-work-title">Are you ready for marriage?</h2>
+            <h4 class="creative-work-year font-custom-bold">2019</h4>
+            <p class="creative-work-description font-custom-thin">Best heard with headphones! A goofy, disorganized, silly, homage to MST3K as a wedding gift, and after seeing it all these times, I still laugh at this.</p>
+          </div>
+          <div>
+            <iframe class="w-full rounded" width="560" height="315" src="https://www.youtube.com/embed/x4Emt4QnIbk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-teal-500">
+        <div class="container mx-auto p-8">
+          <h2 class="creative-work-title">Zombie Rap</h2>
+          <h4 class="creative-work-year font-custom-bold">2009</h4>
+          <p class="creative-work-description font-custom-thin mb-6">The literal reason why all my social media handles are PradatiusD.  A big thanks to my friend Owen.  God I am terrible at rapping, but lord do I laugh at this still today.</p>
+          <audio controls class="w-full">
+            <source src="/media/zombie-rap-without-chorus.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </section>
 
       <FeaturedQuote
           quote="It's a poor sort of memory that only works backwards."
@@ -60,5 +93,20 @@ export default {
 <style scoped>
   .creative-page {
     height: 100%;
+  }
+  .creative-work-title {
+    @apply font-display text-2xl leading-tight pt-10 mb-2;
+  }
+  .creative-work-description {
+    @apply text-2xl mt-0 leading-relaxed;
+  }
+  .creative-work-button {
+    @apply font-display text-xl p-4 mt-4 inline-block;
+    background-color: rgba(255, 255, 255, 0.66);
+  }
+
+  .creative-work-year {
+    @apply text-xl leading-tight mb-3;
+    color: rgba(0, 0, 0, 0.66);
   }
 </style>
