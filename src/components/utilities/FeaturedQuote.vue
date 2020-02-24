@@ -4,7 +4,7 @@
     <p class="font-custom-thin text-2xl md:text-5xl p-4 leading-snug" :style="primaryTextStyle">
       &ldquo;<vue-typer :text='formattedQuote' :repeat="0" :style="primaryTextStyle"/>&rdquo;
     </p>
-    <p class="font-display text-4xl p-4 mb-10" :style="secondaryTextStyle">
+    <p class="font-display text-4xl p-4 mb-10 quote-author" :style="secondaryTextStyle">
       <vue-typer :text=' "~" + author' :repeat="0" :pre-type-delay="authorAppearDelay" :style="secondaryTextStyle" />
     </p>
   </div>
@@ -82,4 +82,6 @@ export default {
     top: 50%;
     transform: translateY(-50%);
   }
+
+  .quote-author {}
 </style>

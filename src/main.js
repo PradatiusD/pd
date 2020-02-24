@@ -8,6 +8,22 @@ import CreativePage from './components/pages/CreativePage'
 
 import './assets/styles/index.css'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret, faArrowRight, faFan, faSnowflake, faGrinHearts, faCog, faAtom } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faUserSecret)
+library.add(faArrowRight)
+
+// Full Page Loader
+library.add(faFan)
+library.add(faSnowflake)
+library.add(faGrinHearts)
+library.add(faCog)
+library.add(faAtom)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 

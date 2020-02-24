@@ -20,7 +20,10 @@
           <h2 class="creative-work-title">Biografia de La Familia Prado</h2>
           <h4 class="creative-work-year font-custom-bold">2018</h4>
           <p class="creative-work-description font-custom-thin">I love the stories of my family, and write them as often as I can, because what happens in real life surpasses fiction in wondrous ways.</p>
-          <a class="creative-work-button" href="https://medium.com/@PradatiusD/la-biografia-de-la-familia-prado-e07ea8a77075" target="_blank">Read Story</a>
+          <a class="creative-work-button transition duration-500 ease-in-out transform hover:translate-x-2" href="https://medium.com/@PradatiusD/la-biografia-de-la-familia-prado-e07ea8a77075" target="_blank">
+            Read Story
+            <font-awesome-icon icon="arrow-right" />
+          </a>
         </div>
       </section>
 
@@ -97,12 +100,18 @@ export default {
   .creative-work-title {
     @apply font-display text-2xl leading-tight pt-10 mb-2;
   }
+
   .creative-work-description {
     @apply text-2xl mt-0 leading-relaxed;
   }
+
   .creative-work-button {
-    @apply font-display text-xl p-4 mt-4 inline-block;
-    background-color: rgba(255, 255, 255, 0.66);
+    @apply font-display text-xl p-4 mt-4 inline-block shadow-md rounded;
+    background-color: rgba(255, 255, 255, 0.80);
+  }
+
+  .creative-work-button:hover {
+    @apply translate-x-1;
   }
 
   .creative-work-year {

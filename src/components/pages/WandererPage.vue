@@ -13,7 +13,7 @@
         <SectionHeading
             class="leading-relaxed"
             title="The Wanderer"
-            description="That quote always impacted me, bringing back an Aristotelian awareness of the pretense of knowledge that we have whenever we look at the world around us.  With that in mind, nothing stirs my mind like a night in contemplation, from the silliest to the most profound things.  I distract myself frequently by working on the following things:"/>
+            description="That quote always impacted me, bringing back an Aristotelian awareness of the pretense of knowledge that we have hold while we look around us.  With that in mind, nothing stirs my mind like a night in contemplation, from the silliest to the most profound.  I distract myself frequently by working on the following things:"/>
         <div class="flex flex-row flex-wrap">
           <Card :title="card.title" :label="card.type" :description="card.description" v-for="card in cards" v-bind:key="card.title" />
         </div>

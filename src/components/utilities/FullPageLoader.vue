@@ -2,6 +2,7 @@
   <div class="loader-page z-50">
     <div class="loader-page-pattern">
       <div class="loader-container text-white leading-tight font-light text-4xl sm:text-6xl w-8/12">
+        <font-awesome-icon :icon="icon" class="fa-spin text-6xl"/>
         {{activeMessage}}
       </div>
     </div>
@@ -17,6 +18,8 @@ export default {
   },
   data () {
     return {
+      icon: 'fan',
+      icons: ['fan', 'snowflake', 'grin-hearts', 'cog', 'atom'],
       iterator: 0,
       barWidth: 0,
       activeMessage: 'Loading'
@@ -33,6 +36,7 @@ export default {
         if (this.iterator % maxDots === 0) {
           this.barWidth = 100
           this.activeMessage = this.states[this.iterator / maxDots]
+          this.icon = this.icons[(this.iterator / maxDots) % this.icons.length]
         } else {
           this.barWidth = (this.iterator % maxDots / maxDots) * 100
           this.activeMessage = this.activeMessage + '.'
@@ -69,7 +73,6 @@ export default {
   }
 
   .loader-page-pattern {
-    background: url("/images/patterns/y-serious.png");
     background-size: 800px 800px;
     height: 100%;
     animation: colorchange 15s;
@@ -99,5 +102,4 @@ export default {
     75%  {background-color: rgba(0, 128, 0, 0.21);}
     100% {background-color: rgba(255, 0, 0, 0.2);}
   }
-
 </style>
