@@ -5,6 +5,7 @@ import HomeNavigator from './components/pages/HomeNavigator'
 import NerdPage from './components/pages/NerdPage'
 import WandererPage from './components/pages/WandererPage'
 import CreativePage from './components/pages/CreativePage'
+import VueAnalytics from 'vue-analytics'
 
 import './assets/styles/index.css'
 
@@ -37,6 +38,11 @@ const routes = [
 const router = new VueRouter({
   routes,
   mode: 'history'
+})
+
+Vue.use(VueAnalytics, {
+  id: 'UA-34638866-3',
+  router
 })
 
 new Vue({
