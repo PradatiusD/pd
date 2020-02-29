@@ -5,7 +5,8 @@
   "extends": [
     "plugin:vue/essential",
     "eslint:recommended",
-    "standard"
+    "standard",
+    "plugin:cypress/recommended"
   ],
   "parserOptions": {
     "parser": "babel-eslint"
