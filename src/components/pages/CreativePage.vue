@@ -16,7 +16,7 @@
       </div>
 
       <section class="bg-purple-500">
-        <div class="container p-8 w-2/3">
+        <div class="container p-8 w-full md:w-2/3">
           <h2 class="creative-work-title">Biografia de La Familia Prado</h2>
           <h4 class="creative-work-year font-custom-bold">2018</h4>
           <p class="creative-work-description font-custom-thin">I love the stories of my family, and write them as often as I can, because what happens in real life surpasses fiction in wondrous ways.</p>
@@ -28,7 +28,7 @@
       </section>
 
       <section class="bg-pink-500">
-        <div class="container mx-auto p-8 grid grid-cols-2">
+        <div class="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2">
           <div>
             <h2 class="creative-work-title">Are you ready for marriage?</h2>
             <h4 class="creative-work-year font-custom-bold">2019</h4>

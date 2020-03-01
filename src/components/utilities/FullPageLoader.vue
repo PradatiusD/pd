@@ -1,8 +1,16 @@
 <template>
   <div class="loader-page z-50">
+    <div class="svg-animation-wallpaper flex flex-row flex-wrap w-full text-center">
+      <div class="flex flex-col" v-for="rowIndex in backgroundAnimation.columns" v-bind:key="rowIndex" :style="{width: (1/backgroundAnimation.columns * 100) + '%'}">
+        <div :class="(rowIndex + columnIndex) % 2 === 0 ? 'text-5xl': 'text-2xl'" v-for="columnIndex in backgroundAnimation.rows" v-bind:key="columnIndex" >
+          <font-awesome-icon :icon="icon" />
+        </div>
+      </div>
+    </div>
     <div class="loader-page-pattern">
-      <div class="loader-container text-white leading-tight font-light text-4xl sm:text-6xl w-8/12">
-        <font-awesome-icon :icon="icon" class="fa-spin text-6xl"/>
+      <div class="loader-container text-white leading-tight font-light text-4xl sm:text-6xl w-8/12 text-center">
+        <font-awesome-icon :icon="icon" class="fa-spin featured-loader"/>
+        <br/>
         {{activeMessage}}
       </div>
     </div>
@@ -22,7 +30,11 @@ export default {
       icons: ['fan', 'snowflake', 'grin-hearts', 'cog', 'atom'],
       iterator: 0,
       barWidth: 0,
-      activeMessage: 'Loading'
+      activeMessage: 'Loading',
+      backgroundAnimation: {
+        columns: parseInt(window.innerWidth / 100),
+        rows: parseInt(window.innerHeight / 100)
+      }
     }
   },
   mounted () {
@@ -54,11 +66,29 @@ export default {
 </script>
 
 <style scoped>
+  .featured-loader {
+    font-size: 1.5em;
+  }
+
   .loader-container {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+  }
+
+  .svg-animation-wallpaper {
+    position: absolute;
+    top:0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.10);
+    height: 100%;
+    width: 100%;
+  }
+
+  .svg-animation-wallpaper > div {
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .progress-indicator {

@@ -43,4 +43,5 @@ body {
     background-repeat: no-repeat;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
+    background-attachment: fixed;
 }

@@ -15,13 +15,17 @@
             title="The Wanderer"
             description="That quote always impacted me, bringing back an Aristotelian awareness of the pretense of knowledge that we have hold while we look around us.  With that in mind, nothing stirs my mind like a night in contemplation, from the silliest to the most profound.  I distract myself frequently by working on the following things:"/>
         <div class="flex flex-row flex-wrap">
+          <Card :title="card.title" :label="card.type" :description="card.description" v-for="card in activities" v-bind:key="card.title" />
+        </div>
+      </div>
+      <div class="bg-blue-300 full-page">
+        <SectionHeading
+            title="Thoughts are messy"
+            description="I wanted to be an engineer, then graduated as an economist, and now I'm a programmer.  Regardless, I reflect constantly about that juicy intermingling of culture, history, economics, and politics.  Below are some of the things currently running through my head:" />
+        <div class="flex flex-row flex-wrap">
           <Card :title="card.title" :label="card.type" :description="card.description" v-for="card in cards" v-bind:key="card.title" />
         </div>
       </div>
-      <SectionHeading
-          title="Thoughts are messy"
-          description="I wanted to be an engineer, then graduated as an economist, and now I'm a programmer.  Regardless, I reflect constantly about that juicy intermingling of culture, history, economics, and politics."
-          class="bg-gray-300 full-page"/>
       <FeaturedQuote
           quote="The paradox of education is precisely this - that as one begins to become conscious one begins to examine the society in which he is being educated."
           author="James Baldwin"
@@ -54,7 +58,7 @@ export default {
         'Heating up \n the 🔥 emoji',
         'Using demographic data to increase probabilities of sounding cool'
       ],
-      cards: [
+      activities: [
         {
           title: 'Slay',
           type: 'Start up',
@@ -74,6 +78,23 @@ export default {
           title: 'Targetbridge',
           type: 'Famly Business',
           description: 'My father started several businesses, always with the hope that one day his children would reap the benefits of that prosperity.  On weekends here and there, I help my sister on our family marketing consulting firm.'
+        }
+      ],
+      cards: [
+        {
+          title: 'Our Legacy',
+          type: 'Question',
+          description: 'What will societies 200 years of now think of how we treated?'
+        },
+        {
+          title: 'Kids Should Teach Adults for Once',
+          type: 'Idea',
+          description: 'I genuinely believe that a tech conference where only kids give talks would be something fascinating to consider.'
+        },
+        {
+          title: 'Data for Latino Lives',
+          type: 'Idea',
+          description: 'What is the conscious political implication of splitting Latinx communities by ethnicity and race?  How does that data affect public policy?'
         }
       ]
     }

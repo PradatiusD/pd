@@ -24,7 +24,8 @@
             quote="Don’t try to be original, just try to be good."
             author="Paul Rand"
             color="#f7fafc"
-            :authorAppearDelay="8000" />
+            :authorAppearDelay="8000"
+            :mobileMaxChars="12" />
       </div>
     </div>
   </div>

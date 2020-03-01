@@ -23,7 +23,8 @@ export default {
     author: String,
     color: String,
     authorAppearDelay: Number,
-    font: String
+    font: String,
+    mobileMaxChars: Number
   },
   computed: {
     primaryTextStyle: function () {
@@ -42,7 +43,7 @@ export default {
     },
     formattedQuote: function () {
       const splitByWords = this.quote.split(' ')
-      const maxChars = window.innerWidth < 768 ? 18 : 30
+      const maxChars = window.innerWidth < 768 ? this.mobileMaxChars || 18 : 30
       const linesByNewArray = [
         ''
       ]
