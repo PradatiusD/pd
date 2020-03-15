@@ -45,3 +45,27 @@ body {
     -moz-osx-font-smoothing: auto;
     background-attachment: fixed;
 }
+
+
+
+.creative-work-title {
+    @apply font-display text-2xl leading-tight pt-10 mb-2;
+}
+
+.creative-work-description {
+    @apply text-2xl mt-0 leading-relaxed;
+}
+
+.creative-work-button {
+    @apply font-display text-xl p-4 mt-4 inline-block shadow-md rounded;
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+.creative-work-button:hover {
+    @apply translate-x-1;
+}
+
+.creative-work-year {
+    @apply text-xl leading-tight mb-3;
+    color: rgba(0, 0, 0, 0.66);
+}

@@ -26,12 +26,27 @@
           <Card :title="card.title" :label="card.type" :description="card.description" v-for="card in cards" v-bind:key="card.title" />
         </div>
       </div>
+
+      <section class="bg-purple-400">
+        <div class="container p-8 w-full md:w-2/3 pb-12">
+          <h2 class="creative-work-title">Every Entrepreneur is a Social Entrepreneur</h2>
+          <h4 class="creative-work-year font-custom-bold">2012</h4>
+          <p class="creative-work-description font-custom-thin">A highly opinionated essay that embodied just how passionate I was about libertarianism in college.  When I look at it now I laugh at my conviction, but still ultimately believe in the same underlying principles.</p>
+          <a class="creative-work-button transition duration-500 ease-in-out transform hover:translate-x-2" href="https://www.browndailyherald.com/2012/02/14/daniel-prada-12-every-entrepreneur-is-a-social-entrepreneur/" target="_blank">
+            Read Opinion
+            <font-awesome-icon icon="arrow-right" />
+          </a>
+        </div>
+      </section>
+
       <FeaturedQuote
           quote="The paradox of education is precisely this - that as one begins to become conscious one begins to examine the society in which he is being educated."
           author="James Baldwin"
           color="white"
-          :authorAppearDelay="10000"
-          class="bg-orange-500" />
+          :author-appear-delay="10000"
+          class="bg-orange-500"
+          :disable-scroll-down="true"
+      />
     </div>
   </div>
 </template>
@@ -95,6 +110,11 @@ export default {
           title: 'Data for Latino Lives',
           type: 'Idea',
           description: 'What is the conscious political implication of splitting Latinx communities by ethnicity and race?  How does that data affect public policy?'
+        },
+        {
+          title: 'Pandemic + Climate Change',
+          type: 'Question',
+          description: 'Why does the unlikely pandemic motivate immense global action, but near certain climate change receive an international 🤷'
         }
       ]
     }
@@ -115,4 +135,5 @@ export default {
   .full-page {
     height: 100vh;
   }
+
 </style>

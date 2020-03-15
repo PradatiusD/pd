@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FullPageLoader :states="states" @onCompleteLoad="onCompleteLoad" v-if="showLoader"  />
+    <FullPageLoader :states="states" @onCompleteLoad="onCompleteLoad" v-if="showLoader" />
     <div v-if="!showLoader" class="nerd-page">
       <!-- Nerd -->
       <div class="bg-gray-500">
@@ -24,8 +24,10 @@
             quote="Don’t try to be original, just try to be good."
             author="Paul Rand"
             color="#f7fafc"
-            :authorAppearDelay="8000"
-            :mobileMaxChars="12" />
+            :author-appear-delay="8000"
+            :mobile-max-chars="12"
+            :disable-scroll-down="true"
+        />
       </div>
     </div>
   </div>

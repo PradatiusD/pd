@@ -10,7 +10,7 @@ import VueAnalytics from 'vue-analytics'
 import './assets/styles/index.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faArrowRight, faFan, faSnowflake, faGrinHearts, faCog, faAtom } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faArrowRight, faFan, faSnowflake, faGrinHearts, faCog, faAtom, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faUserSecret)
@@ -22,6 +22,7 @@ library.add(faSnowflake)
 library.add(faGrinHearts)
 library.add(faCog)
 library.add(faAtom)
+library.add(faArrowDown)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

@@ -10,7 +10,7 @@
           hoverEmoji="🧐"
           description="Looking for technologies, tools, & an overview of what I finagle with?"
           :animation-timeout="this.animationInterval * 4"
-          background-color="rgba(255, 0, 0, 0.15)"
+          background-color="rgb(141, 10, 206)"
           route="/nerd"
           class="md:w-1/3 flex"
       />
@@ -20,7 +20,7 @@
           hoverEmoji="😻"
           description="Are you a lover of quotes, history, economics, and just plain random things?"
           :animation-timeout="this.animationInterval * 5"
-          background-color="rgba(0, 255, 184, 0.15)"
+          background-color="rgb(106, 51, 239)"
           route="/wanderer"
           class="md:w-1/3 flex"
       />
@@ -30,7 +30,7 @@
           hoverEmoji="😃"
           description="If stories are what drive you, go here."
           :animation-timeout="this.animationInterval * 6"
-          background-color="rgba(0, 0, 255, 0.15)"
+          background-color="rgb(107, 13, 249)"
           route="/creative"
           class="md:w-1/3 flex"
       />
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { SVG } from '@svgdotjs/svg.js'
 import NavButton from './../utilities/NavButton'
 export default {
   name: 'HomeNavigator',
@@ -65,6 +66,7 @@ export default {
     }
   },
   mounted () {
+    this.beginAnimating()
     setTimeout(() => {
       this.isMainTitleAnimated = true
     }, this.animationInterval)
@@ -75,6 +77,9 @@ export default {
       this.isMainSubtitleAnimatedP2 = true
     }, this.animationInterval * 3)
   },
+  destroyed () {
+    document.getElementById('playground').innerHTML = ''
+  },
   methods: {
     getAnimationKeys: function (key) {
       return {
@@ -82,10 +87,35 @@ export default {
         'opacity-1 translate-y-0': this[key],
         'opacity-0 translate-y-2': !this[key]
       }
+    },
+    beginAnimating: function () {
+      const draw = SVG().addTo('#playground').size(window.innerWidth, window.innerHeight).size('100%', '100%')
+      const smallerSize = window.innerWidth < window.innerHeight ? window.innerWidth : innerHeight
+      let i = 0
+      while (i < 13) {
+        const x = Math.random() * window.innerWidth
+        const y = Math.random() * window.innerHeight
+        const circleSize = smallerSize * Math.random()
+        const circle = draw.circle(1).move(x, y)
+        circle.fill('rgba(1,1,1,0.04)')
+        circle.animate({ delay: i * 300 }).size(circleSize, circleSize)
+        i++
+      }
     }
   }
 }
 </script>
+
+<style>
+  #playground {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -100;
+  }
+</style>
 
 <style scoped>
 

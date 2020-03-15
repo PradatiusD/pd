@@ -16,7 +16,7 @@
       </div>
 
       <section class="bg-orange-300">
-        <div class="container p-8 w-full md:w-2/3">
+        <div class="container p-8 w-full md:w-2/3 pb-12">
           <h2 class="creative-work-title">On Technology & Love</h2>
           <h4 class="creative-work-year font-custom-bold">2011-2020</h4>
           <p class="creative-work-description font-custom-thin">Re-written several times throghout my life, this is a constant subject of my thoughts.</p>
@@ -28,7 +28,7 @@
       </section>
 
       <section class="bg-purple-400">
-        <div class="container p-8 w-full md:w-2/3">
+        <div class="container p-8 w-full md:w-2/3 pb-12">
           <h2 class="creative-work-title">Biografia de La Familia Prado</h2>
           <h4 class="creative-work-year font-custom-bold">2018</h4>
           <p class="creative-work-description font-custom-thin">I love the stories of my family, and write them as often as I can, because what happens in real life surpasses fiction in wondrous ways.</p>
@@ -67,8 +67,10 @@
           quote="It's a poor sort of memory that only works backwards."
           author="Lewis Carroll"
           color="white"
-          :authorAppearDelay="10000"
-          class="bg-red-500" />
+          :author-appear-delay="10000"
+          class="bg-red-500"
+          :disable-scroll-down="true"
+      />
     </div>
   </div>
 </template>
@@ -86,19 +88,18 @@ export default {
   },
   data () {
     return {
-      showLoader: false,
+      showLoader: true,
       states: [
         'Finding closest unicorn, arepa, or croqueta',
         'Copying the Sims 3 loading jokes',
         'Wondering about what "Tinder for dogs" looks like',
-        'Visiting gerbils inside Cloudfront servers',
+        '"Motivating" gerbils powering Cloudfront servers',
         'Trying to convert cache to cash'
       ]
     }
   },
   methods: {
     onCompleteLoad: function () {
-      console.log('loaded')
       this.showLoader = false
     }
   }
@@ -108,26 +109,5 @@ export default {
 <style scoped>
   .creative-page {
     height: 100%;
-  }
-  .creative-work-title {
-    @apply font-display text-2xl leading-tight pt-10 mb-2;
-  }
-
-  .creative-work-description {
-    @apply text-2xl mt-0 leading-relaxed;
-  }
-
-  .creative-work-button {
-    @apply font-display text-xl p-4 mt-4 inline-block shadow-md rounded;
-    background-color: rgba(255, 255, 255, 0.80);
-  }
-
-  .creative-work-button:hover {
-    @apply translate-x-1;
-  }
-
-  .creative-work-year {
-    @apply text-xl leading-tight mb-3;
-    color: rgba(0, 0, 0, 0.66);
   }
 </style>
