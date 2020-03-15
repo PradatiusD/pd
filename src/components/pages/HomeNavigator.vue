@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <h1 class="text-white font-display text-center mt-6 text-5xl" :class="mainTitleAnimationState">¡Hola friend!</h1>
+    <h1 class="text-white font-display text-center mt-8 text-5xl block" :class="mainTitleAnimationState">¡Hola friend!</h1>
     <p class="text-white font-body text-center text-xl" :class="isMainSubtitleP1AnimationState">It looks like you are looking for something.</p>
     <p class="text-white font-body text-center mb-5 text-xl" :class="isMainSubtitleP2AnimationState">For me to first answer, I must know, who are you?</p>
     <div class="flex flex-col md:flex-row">

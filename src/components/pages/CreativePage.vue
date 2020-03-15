@@ -15,7 +15,19 @@
             description="Below I house projects that I've built alone or with friends, mostly that produce ridiculous, sentimental, or ridiculously sentimental works.  For me, a great day is one where I can laugh, thank, cry, and remember."/>
       </div>
 
-      <section class="bg-purple-500">
+      <section class="bg-orange-300">
+        <div class="container p-8 w-full md:w-2/3">
+          <h2 class="creative-work-title">On Technology & Love</h2>
+          <h4 class="creative-work-year font-custom-bold">2011-2020</h4>
+          <p class="creative-work-description font-custom-thin">Re-written several times throghout my life, this is a constant subject of my thoughts.</p>
+          <a class="creative-work-button transition duration-500 ease-in-out transform hover:translate-x-2" href="https://medium.com/@PradatiusD/on-technology-love-a898a9042def" target="_blank">
+            Read Story
+            <font-awesome-icon icon="arrow-right" />
+          </a>
+        </div>
+      </section>
+
+      <section class="bg-purple-400">
         <div class="container p-8 w-full md:w-2/3">
           <h2 class="creative-work-title">Biografia de La Familia Prado</h2>
           <h4 class="creative-work-year font-custom-bold">2018</h4>
@@ -27,7 +39,7 @@
         </div>
       </section>
 
-      <section class="bg-pink-500">
+      <section class="bg-pink-400">
         <div class="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2">
           <div>
             <h2 class="creative-work-title">Are you ready for marriage?</h2>
@@ -40,7 +52,7 @@
         </div>
       </section>
 
-      <section class="bg-teal-500">
+      <section class="bg-teal-400">
         <div class="container mx-auto p-8">
           <h2 class="creative-work-title">Zombie Rap</h2>
           <h4 class="creative-work-year font-custom-bold">2009</h4>

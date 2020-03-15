@@ -3,7 +3,7 @@
         :class="animationClass"
         :style="{backgroundColor: backgroundColor}"
         @click="navigate()"
-        class="nav-button-container text-white py-2 px-4 rounded shadow-md ml-5 mr-5 mt-2 mb-1 border-solid border cursor-pointer transition duration-500 ease-in-out transform hover:translate-x-2 transition-all">
+        class="nav-button-container text-white py-2 px-4 rounded shadow-md ml-5 mr-5 mt-2 mb-1 border-solid border cursor-pointer transition duration-500 ease-in-out transform transition-all">
         <span class="text-5xl mr-4 active-mobile-emoji md:hidden">{{emoji}}</span>
         <span class="text-5xl mr-4 hover-mobile-emoji hidden">{{hoverEmoji}}</span>
         <p class="w-full text-white md:text-center md:pb-4">
@@ -34,9 +34,12 @@ export default {
   },
   computed: {
     animationClass: function () {
+      const isMobile = window.innerWidth < 768
       return {
-        'opacity-1 translate-y-2': this.animateIntoScreen,
-        'opacity-0 translate-y-0': !this.animateIntoScreen
+        'opacity-1': this.animateIntoScreen,
+        'opacity-0 translate-y-2': !this.animateIntoScreen,
+        'hover:translate-x-2': isMobile,
+        'hover:-translate-y-2': !isMobile
       }
     }
   },
